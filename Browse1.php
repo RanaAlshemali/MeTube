@@ -107,6 +107,10 @@ if (! $result) {
 					<param name="Showcontrols" value="True">
 					<param name="autoStart" value="False">
 
+    <param name="ShowStatusBar" value="True">
+    <param name="ShowDisplay" VALUE="True">
+
+
 					<embed type="application/x-mplayer2"
 						src="<?php echo $filepath;  ?>" name="MediaPlayer" width=320
 						height=240></embed>
