@@ -104,7 +104,7 @@ if (! $result) {
 					<!-- echo $result_row[2].$result_row[1];  -->
 
 
-					<param name="Showcontrols" value="True">
+					<param name="Showcontrols" value="false">
 					<param name="autoStart" value="False">
 
     <param name="ShowStatusBar" value="True">
