@@ -73,7 +73,7 @@ if (! $result) {
 			</td>
 			<td>Created On:  
 			<?php
-			echo $dateCreated; 
+			echo substr($dateCreated,0,10); 
 
 			?>
 			</td>
