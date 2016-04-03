@@ -70,6 +70,14 @@ if (! $result) {
 				?>
 					<td>
 										<?php
+										$result_row = mysql_fetch_row ( $result );
+
+										$filename = $result_row [0];
+										$username = $result_row [1];
+										$type = $result_row [2];
+										$mediaid = $result_row [3];
+										$filenpath = $result_row [4];
+										$dateCreated = $result_row [5];
 			echo $mediaid."  "; // mediaid
 			
 			?>
