@@ -159,6 +159,8 @@ if (! $result) {
 		
 		</tr>
         	<?php
+        	  echo '<br />';
+        	        	
 		}
 		?>
 	</table>
