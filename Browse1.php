@@ -104,8 +104,8 @@ if (! $result) {
 					<!-- echo $result_row[2].$result_row[1];  -->
 
 
-					<param name="Showcontrols" value="True">
-					<param name="autoStart" value="True">
+					<param name="Showcontrols" value="False">
+					<param name="autoStart" value="False">
 
 					<embed type="application/x-mplayer2"
 						src="<?php echo $filepath;  ?>" name="MediaPlayer" width=320
