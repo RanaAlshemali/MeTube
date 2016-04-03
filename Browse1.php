@@ -50,18 +50,18 @@ if (! $result) {
 		<?php
 		$num_rows = mysql_num_rows ( $result );
 		
-		echo ( int ) ($num_rows / 5) . " Rows\n";
-		$size = (( int ) ($num_rows / 5)) + 1;
+		echo ( int ) ($num_rows / 4) . " Rows\n";
+		$size = (( int ) ($num_rows / 4)) + 1;
 		
 		for($i = 1; $i <= $size; $i ++) {
 			
 			$rowSize;
-			if($num_rows>5){
-				$rowSize=5;
+			if($num_rows>4){
+				$rowSize=4;
 			}else{
 				$rowSize=$num_rows;
 			}
-			$num_rows=$num_rows-5;
+			$num_rows=$num_rows-4;
 			?>
 			<tr valign="top">
 				<?php
