@@ -49,7 +49,8 @@ if (! $result) {
 	<table width="100%" cellpadding="0" cellspacing="0">
 	
 		<?php
-		echo  mysql_num_rows ( resource $result );
+		$num_rows = mysql_num_rows($result);
+		echo "$num_rows Rows\n";
 		
 		while ( $result_row = mysql_fetch_row ( $result ) ) // filename, username, type, mediaid, path
 {
