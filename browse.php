@@ -70,21 +70,7 @@ if (! $result) {
 			</td>
 			<td><a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
 			</td>
-			<td>By:  
-					<?php
-			echo $username; // mediaid
-			?>
-			</td>
-			<td>Created On:  
-			<?php
-			echo substr($dateCreated,0,10); 
-
-			?>
-			</td>
-			<td><a href="<?php echo $filenpath;?>" target="_blank"
-				onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
-			</td>
-			<td>  <?php
+				<td>  <?php
 	if(substr($type,0,5)=="image") //view image
 	{
 
@@ -119,6 +105,21 @@ if (! $result) {
 	}
 			?>
 			</td>
+			<td>By:  
+					<?php
+			echo $username; // mediaid
+			?>
+			</td>
+			<td>Created On:  
+			<?php
+			echo substr($dateCreated,0,10); 
+
+			?>
+			</td>
+			<td><a href="<?php echo $filenpath;?>" target="_blank"
+				onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
+			</td>
+		
 		</tr>
         	<?php
 		}
