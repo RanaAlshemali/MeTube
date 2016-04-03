@@ -104,11 +104,10 @@ if (! $result) {
 					<!-- echo $result_row[2].$result_row[1];  -->
 
 
-					<param name="Showcontrols" value="false">
+					<param name="Showcontrols" value="true">
 					<param name="autoStart" value="False">
 
-    <param name="ShowStatusBar" value="True">
-    <param name="ShowDisplay" VALUE="True">
+
 
 
 					<embed type="application/x-mplayer2"
