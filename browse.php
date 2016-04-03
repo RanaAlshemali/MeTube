@@ -68,8 +68,8 @@ if (! $result) {
 			echo $mediaid; // mediaid
 			?>
 			</td>
-			<td><a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
- <?php
+			<td><a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a> <?php
+			echo '<br />';
 	if(substr($type,0,5)=="image") //view image
 	{
 
