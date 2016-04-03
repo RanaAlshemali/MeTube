@@ -83,7 +83,7 @@ if (! $result) {
 			
 			?>
 			
-			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a> <?php
+			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a> <?php
 			echo '<br />';
 			if (substr ( $type, 0, 5 ) == "image") // view image
 {
@@ -144,8 +144,8 @@ if (! $result) {
 				<?php echo '<br />';?>
 					</td>
 					<?php
-			}
-			?></tr>
+			}echo '<br />';
+			?></tr> 
 				<?php
 		}
 		?>
