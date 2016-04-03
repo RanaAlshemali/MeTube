@@ -79,11 +79,13 @@ if (! $result) {
 										$mediaid = $result_row [3];
 										$filenpath = $result_row [4];
 										$dateCreated = $result_row [5];
+			echo '<br />';
+			echo '<br />';
 			echo $mediaid."  "; // mediaid
 			
 			?>
 			
-			<a href="media.php?id=<?php echo '<br />'; echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a> <?php
+			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a> <?php
 			echo '<br />';
 			if (substr ( $type, 0, 5 ) == "image") // view image
 {
