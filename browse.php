@@ -61,9 +61,9 @@ if (! $result) {
 			echo $mediaid; // mediaid
 			?>
 			</td>
-			<td>By: <a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
+			<td><a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
 			</td>
-						<td>
+			<td>By:  
 					<?php
 			echo $username; // mediaid
 			?>
