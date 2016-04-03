@@ -50,10 +50,13 @@ if (! $result) {
 		<?php
 		while ( $result_row = mysql_fetch_row ( $result ) ) // filename, username, type, mediaid, path
 {
-			$mediaid = $result_row [3];
+			
 			$filename = $result_row [0];
 			$username = $result_row [1];
+			$type = $result_row [2];
+			$mediaid = $result_row [3];
 			$filenpath = $result_row [4];
+			$dateCreated = $result_row [5];
 			?>
         	 <tr valign="top">
 			<td>
@@ -68,8 +71,18 @@ if (! $result) {
 			echo $username; // mediaid
 			?>
 			</td>
+			<td>Created On:  
+			<?php
+			echo $dateCreated; 
+
+			?>
+			</td>
 			<td><a href="<?php echo $filenpath;?>" target="_blank"
 				onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
+			</td>
+			<td>  <?php
+			echo $username; // mediaid
+			?>
 			</td>
 		</tr>
         	<?php
