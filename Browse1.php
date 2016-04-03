@@ -53,12 +53,19 @@ if (! $result) {
 		echo ( int ) ($num_rows / 5) . " Rows\n";
 		$size = (( int ) ($num_rows / 5)) + 1;
 		
-		for($i = 0; $i < $size; $i ++) {
+		for($i = 1; $i <= $size; $i ++) {
+			$num_rows=$num_rows-5;
+			$rowSize;
+			if($num_rows>5){
+				$rowSize=5;
+			}else{
+				$rowSize=$num_rows;
+			}
 			?>
 			<tr valign="top">
 				<?php
 				echo  " Rows\n";
-			for($j = 0; $j < 5; $j ++) {
+			for($j = 0; $j < $rowSize; $j ++) {
 				?>
 					<td>
 					<?php 	echo  " data\n";?>
