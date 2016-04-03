@@ -85,7 +85,7 @@ if (! $result) {
 	{
 		echo "Viewing Picture:";
 		echo $result_row[4];
-		echo "<img src='".$filenpath."'/>";
+		echo "<img src='".$filenpath."' height='100' width='100'/>";
 	}
 	else //view movie
 	{	
