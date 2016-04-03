@@ -69,32 +69,7 @@ if (! $result) {
 			for($j = 0; $j < $rowSize; $j ++) {
 				?>
 					<td>
-					<?php 	echo  " data\n";?>
-					</td>
-					<?php
-			}
-			?></tr>
-				<?php
-		}
-		?>
-		</table>
-	<table width="100%" cellpadding="0" cellspacing="0">
-	
-		<?php
-		
-		while ( $result_row = mysql_fetch_row ( $result ) ) // filename, username, type, mediaid, path
-{
-			
-			$filename = $result_row [0];
-			$username = $result_row [1];
-			$type = $result_row [2];
-			$mediaid = $result_row [3];
-			$filenpath = $result_row [4];
-			$dateCreated = $result_row [5];
-			?>
-        	 <tr valign="top">
-			<td>
-					<?php
+										<?php
 			echo $mediaid."  "; // mediaid
 			
 			?>
@@ -155,15 +130,14 @@ if (! $result) {
 			<a href="<?php echo $filenpath;?>" target="_blank"
 				onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
 				<?php echo '<br />';?>
-			</td>
-		
-		</tr>
-        	<?php
-        	  echo '<br />';
-        	        	
+					</td>
+					<?php
+			}
+			?></tr>
+				<?php
 		}
 		?>
-	</table>
-	</div>
+		</table>
+ 
 </body>
 </html>
