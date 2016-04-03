@@ -97,6 +97,7 @@ if (! $result) {
 					<?php
 			echo $mediaid; // mediaid
 			?>
+			echo '<br />';
 			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a> <?php
 			echo '<br />';
 			if (substr ( $type, 0, 5 ) == "image") // view image
@@ -136,15 +137,18 @@ if (! $result) {
 <?php
 			}
 			?>
+			echo '<br />';
 			By:  
 					<?php
 			echo $username; // mediaid
 			?>
+			echo '<br />';
 			Created On:  
 			<?php
 			echo substr ( $dateCreated, 0, 10 );
 			
 			?>
+			echo '<br />';
 			<a href="<?php echo $filenpath;?>" target="_blank"
 				onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
 			</td>
