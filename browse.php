@@ -47,7 +47,10 @@ if (! $result) {
     <div style="background: #339900; color: #FFFFFF; width: 150px;">Uploaded
 		Media</div>
 	<table width="100%" cellpadding="0" cellspacing="0">
+	
 		<?php
+		echo  mysql_num_rows ( resource $result );
+		
 		while ( $result_row = mysql_fetch_row ( $result ) ) // filename, username, type, mediaid, path
 {
 			
@@ -83,6 +86,7 @@ if (! $result) {
 			<td>  <?php
 	if(substr($type,0,5)=="image") //view image
 	{
+		
 		echo "Viewing Picture:";
 		echo $result_row[4];
 		echo "<img src='".$filenpath."' height='286' width='320'/>";
