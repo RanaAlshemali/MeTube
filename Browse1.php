@@ -95,8 +95,8 @@ if (! $result) {
         	 <tr valign="top">
 			<td>
 					<?php
-			echo $mediaid; // mediaid
-			echo '<br />';
+			echo $mediaid."  "; // mediaid
+			
 			?>
 			
 			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a> <?php
@@ -143,7 +143,7 @@ if (! $result) {
 			By:  
 					<?php
 			echo $username; // mediaid
-			echo '<br />';
+			
 			?>
 			
 			Created On:  
@@ -154,8 +154,9 @@ if (! $result) {
 			
 			<a href="<?php echo $filenpath;?>" target="_blank"
 				onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
+				<?php echo '<br />';?>
 			</td>
-
+		
 		</tr>
         	<?php
 		}
