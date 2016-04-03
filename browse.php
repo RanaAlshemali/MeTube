@@ -88,7 +88,7 @@ if (! $result) {
 	if(substr($type,0,5)=="image") //view image
 	{
 		
-		echo "Viewing Picture: ". $result_row[4]."\n";
+		echo "Viewing Picture : ". $result_row[4]."\n";
 		echo "\n <img src='".$filenpath."' height='286' width='320'/>";
 	}
 	else //view movie
