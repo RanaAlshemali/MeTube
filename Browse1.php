@@ -47,11 +47,32 @@ if (! $result) {
     <div style="background: #339900; color: #FFFFFF; width: 150px;">Uploaded
 		Media</div>
 	<table width="100%" cellpadding="0" cellspacing="0">
+		<?php
+		$num_rows = mysql_num_rows ( $result );
+		
+		echo ( int ) ($num_rows / 5) . " Rows\n";
+		$size = (( int ) ($num_rows / 5)) + 1;
+		
+		for($i = 0; $i < $size; $i ++) {
+			?>
+			<tr valign="top">
+				<?php
+				echo  " Rows\n";
+			for($j = 0; $j < 5; $j ++) {
+				?>
+					<td>
+					<?php 	echo  " data\n";?>
+					</td>
+					<?php
+			}
+			?></tr>
+				<?php
+		}
+		?>
+		</table>
+	<table width="100%" cellpadding="0" cellspacing="0">
 	
 		<?php
-		$num_rows = mysql_num_rows($result);
-		 
-		echo (int)($num_rows/5)." Rows\n";
 		
 		while ( $result_row = mysql_fetch_row ( $result ) ) // filename, username, type, mediaid, path
 {
@@ -71,30 +92,34 @@ if (! $result) {
 			</td>
 			<td><a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a> <?php
 			echo '<br />';
-	if(substr($type,0,5)=="image") //view image
-	{
-
-		echo "\n <img src='".$filenpath."' height='286' width='320'/>";
-
-	}
-	else //view movie
-	{	
-?>
+			if (substr ( $type, 0, 5 ) == "image") // view image
+{
+				
+				echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";
+			} else // view movie
+{
+				?>
 	<!-- <p>Viewing Video:<?php echo $result_row[2].$result_row[1];?></p> -->
 
-	      
-    <object id="MediaPlayer" width=320 height=286 classid="CLSID:22D6f312-B0F6-11D0-94AB-0080C74C7E95" standby="Loading Windows Media Player components…" type="application/x-oleobject" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112">
 
-<param name="filename" value="<?php echo $result_row[4];?>">
-	<!-- echo $result_row[2].$result_row[1];  -->
-		
+				<object id="MediaPlayer" width=320 height=286
+					classid="CLSID:22D6f312-B0F6-11D0-94AB-0080C74C7E95"
+					standby="Loading Windows Media Player components…"
+					type="application/x-oleobject"
+					codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112">
 
-<param name="Showcontrols" value="True">
-<param name="autoStart" value="True">
+					<param name="filename" value="<?php echo $result_row[4];?>">
+					<!-- echo $result_row[2].$result_row[1];  -->
 
-<embed type="application/x-mplayer2" src="<?php echo $filepath;  ?>" name="MediaPlayer" width=320 height=240></embed>
 
-</object>
+					<param name="Showcontrols" value="True">
+					<param name="autoStart" value="True">
+
+					<embed type="application/x-mplayer2"
+						src="<?php echo $filepath;  ?>" name="MediaPlayer" width=320
+						height=240></embed>
+
+				</object>
 
           
           
@@ -102,7 +127,7 @@ if (! $result) {
        
               
 <?php
-	}
+			}
 			?>
 			</td>
 			<td>By:  
@@ -112,14 +137,14 @@ if (! $result) {
 			</td>
 			<td>Created On:  
 			<?php
-			echo substr($dateCreated,0,10); 
-
+			echo substr ( $dateCreated, 0, 10 );
+			
 			?>
 			</td>
 			<td><a href="<?php echo $filenpath;?>" target="_blank"
 				onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
 			</td>
-		
+
 		</tr>
         	<?php
 		}
