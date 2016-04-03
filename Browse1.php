@@ -51,7 +51,7 @@ if (! $result) {
 		<?php
 		$num_rows = mysql_num_rows($result);
 		 
-		echo var_dump((int) ($num_rows/5));." Rows\n";
+		echo var_dump((int) ($num_rows/5))." Rows\n";
 		
 		while ( $result_row = mysql_fetch_row ( $result ) ) // filename, username, type, mediaid, path
 {
