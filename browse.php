@@ -50,7 +50,7 @@ if (! $result) {
 	
 		<?php
 		$num_rows = mysql_num_rows($result);
-		echo ($num_rows/2)." Rows\n";
+		echo ($num_rows/5)." Rows\n";
 		
 		while ( $result_row = mysql_fetch_row ( $result ) ) // filename, username, type, mediaid, path
 {
@@ -88,8 +88,7 @@ if (! $result) {
 	if(substr($type,0,5)=="image") //view image
 	{
 		
-		echo "Viewing Picture:";
-		echo $result_row[4];
+		echo "Viewing Picture:". $result_row[4];
 		echo "<img src='".$filenpath."' height='286' width='320'/>";
 	}
 	else //view movie
