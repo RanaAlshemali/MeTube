@@ -25,7 +25,8 @@ function saveDownload(id)
 </head>
 
 <body>
-	<p>Welcome <?php echo $_SESSION['username'];?></p>
+<?php if (!$_SESSION["loggedIn"]) redirect_to_login();?>
+	<p>Welcome <?php echo $_SESSION['username']; ?></p>
 	<a href="logout.php">logout</a>
 	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
 	<div id='upload_result'>
