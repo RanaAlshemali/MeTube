@@ -107,9 +107,9 @@ if (! $result) {
 			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a> <?php
 				echo '<br />';
 				if (substr ( $type, 0, 5 ) == "image"){ // view image
-					?>
+
 					
-					 <img src="uploads/ralshem/Audio-Radio-icon.png" height="286" width="320"/>";<?php
+					echo "\n <img src='uploads/ralshem/Audio-Radio-icon.png' height='286' width='320'/>";
 				} else if (substr ( $type, 0, 5 ) == "audio"){ // view audio
 
 					
