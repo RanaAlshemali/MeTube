@@ -111,9 +111,9 @@ if (! $result) {
 				?>
 	<!-- <p>Viewing Video:<?php echo $result_row[2].$result_row[1];?></p> -->
 
-<video controls>
+<video controls width=320 height=286>
 
-    <source src="<?php echo $result_row[4];?>#t=6,15">
+    <source src="uploads/ralshem/My+Movie.mp4#t=6,15">
 </video>
 
 				<object id="MediaPlayer" width=320 height=286
