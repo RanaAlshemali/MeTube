@@ -94,6 +94,7 @@ if (! $result) {
 			} else // view movie
 {
 				?>
+	<!-- <p>Viewing Video:<?php echo $result_row[2].$result_row[1];?></p> -->
 
 
 				<object id="MediaPlayer" width=320 height=286
@@ -102,7 +103,7 @@ if (! $result) {
 					type="application/x-oleobject"
 					codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112">
 
-					<param name="filename" value="uploads/rana/Work+-+Rihanna+ft.+Drake+.mp3#t=10,30">
+					<param name="filename" value="uploads/rana/Work+-+Rihanna+ft.+Drake+.mp3#t=50,100">
 					<!-- echo $result_row[2].$result_row[1];  -->
 
 
@@ -113,7 +114,7 @@ if (! $result) {
 
 
 					<embed type="application/x-mplayer2"
-						src="uploads/rana/Work+-+Rihanna+ft.+Drake+.mp3#t=10,30" name="MediaPlayer" width=320
+						src="uploads/rana/Work+-+Rihanna+ft.+Drake+.mp3#t=50,100" name="MediaPlayer" width=320
 						height=240></embed>
 
 				</object>
