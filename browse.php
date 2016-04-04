@@ -28,6 +28,7 @@ function saveDownload(id)
 	
 <?php if (!$_SESSION["loggedIn"]) {?>
 		<p>Welcome New Guest</p>
+		<a href="index.php">Login or register</a>
 		<?php 
 $_SESSION["loggedIn"]= false;}
 	  else {?>
@@ -58,7 +59,7 @@ if (! $result) {
     
     <div style="background: #339900; color: #FFFFFF; width: 150px;">Uploaded
 		Media</div>
-	<table width="100%" cellpadding="0" cellspacing="0">
+	<table width="75%" cellpadding="0" cellspacing="0">
 		<?php
 		$num_rows = mysql_num_rows ( $result );
 		

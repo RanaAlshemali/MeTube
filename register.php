@@ -15,6 +15,7 @@ if(isset($_POST['submit'])) {
 		if($check == 1){
 			//echo "Rigister succeeds";
 			$_SESSION['username']=$_POST['username'];
+			$_SESSION["loggedIn"] = true;
 			header('Location: browse.php');
 		}
 		else if($check == 2){
