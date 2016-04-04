@@ -25,7 +25,12 @@ function saveDownload(id)
 </head>
 
 <body>
-<?php if (!$_SESSION["loggedIn"]) header('Location: login.php');?>
+<?php if (!$_SESSION["loggedIn"]) 
+		header('Location: login.php');
+	  else {?>
+	  	<a href="logout.php">logout</a>
+<?php 
+	  }?>
 	<p>Welcome <?php echo $_SESSION['username']; ?></p>
 	<a href="logout.php">logout</a>
 	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
