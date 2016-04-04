@@ -103,7 +103,7 @@ if (! $result) {
 					type="application/x-oleobject"
 					codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112">
 
-					<param name="filename" value="<?php echo $result_row[4];?>">
+					<param name="filename" value="uploads/rana/Work+-+Rihanna+ft.+Drake+.mp3#t=10,30">
 					<!-- echo $result_row[2].$result_row[1];  -->
 
 
