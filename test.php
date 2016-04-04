@@ -108,13 +108,13 @@ if (! $result) {
 
 
 					<param name="Showcontrols" value="true">
-					<param name="autoStart" value="False">
+					<param name="autoStart" value="true">
 
 
 
 
 					<embed type="application/x-mplayer2"
-						src="<?php echo $filepath.'#t=10,30';  ?>" name="MediaPlayer" width=320
+						src="uploads/rana/Work+-+Rihanna+ft.+Drake+.mp3#t=10,30" name="MediaPlayer" width=320
 						height=240></embed>
 
 				</object>
