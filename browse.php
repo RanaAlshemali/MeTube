@@ -28,14 +28,16 @@ function saveDownload(id)
 	
 <?php if (!$_SESSION["loggedIn"]) {?>
 		<p>Welcome New Guest</p>
-		<a href="index.php">Login or register</a>
-		<?php 
-$_SESSION["loggedIn"]= false;}
-	  else {?>
+	<a href="index.php">Login or register</a>
+		<?php
+	$_SESSION ["loggedIn"] = false;
+} else {
+	?>
 	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
-	  	<a href="logout.php">logout</a>
-<?php 
-	  }?>
+	<a href="logout.php">logout</a>
+<?php
+}
+?>
 
 
 	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
@@ -63,90 +65,95 @@ if (! $result) {
 		<?php
 		$num_rows = mysql_num_rows ( $result );
 		
-		$a = session_id();
+		$a = session_id ();
 		echo $a;
-		if(empty($a)) session_start();
-		echo "SID: ".SID."<br>session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
+		if (empty ( $a ))
+			session_start ();
+		echo "SID: " . SID . "<br>session_id(): " . session_id () . "<br>COOKIE: " . $_COOKIE ["PHPSESSID"];
 		$size = (( int ) ($num_rows / 4)) + 1;
 		
 		for($i = 1; $i <= $size; $i ++) {
 			
 			$rowSize;
-			if($num_rows>4){
-				$rowSize=4;
-			}else{
-				$rowSize=$num_rows;
+			if ($num_rows > 4) {
+				$rowSize = 4;
+			} else {
+				$rowSize = $num_rows;
 			}
-			$num_rows=$num_rows-4;
+			$num_rows = $num_rows - 4;
 			?>
 			<tr valign="top">
 				<?php
-				
+			
 			for($j = 0; $j < $rowSize; $j ++) {
 				?>
 					<td>
 										<?php
-										$result_row = mysql_fetch_row ( $result );
-
-										$filename = $result_row [0];
-										$username = $result_row [1];
-										$type = $result_row [2];
-										$mediaid = $result_row [3];
-										$filenpath = $result_row [4];
-										$dateCreated = $result_row [5];
-			echo '<br />';
-			echo '<br />';
-			echo $mediaid."  "; // mediaid
-			
-			?>
+				$result_row = mysql_fetch_row ( $result );
+				
+				$filename = $result_row [0];
+				$username = $result_row [1];
+				$type = $result_row [2];
+				$mediaid = $result_row [3];
+				$filenpath = $result_row [4];
+				$dateCreated = $result_row [5];
+				echo '<br />';
+				echo '<br />';
+				echo $mediaid . "  "; // mediaid
+				
+				?>
 			
 			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a> <?php
-			echo '<br />';
-			if (substr ( $type, 0, 5 ) == "image") // view image
-{
-				
-				echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";
-			} else // view movie
-{
-				?>
+				echo '<br />';
+				if (substr ( $type, 0, 5 ) == "image"){ // view image
+
+					
+					echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";
+				} else if (substr ( $type, 0, 5 ) == "audio"){ // view image
+
+					
+					echo "\n <img src='uploads/Audio-Radio-icon.png' height='286' width='320'/>";
+				}
+				else{ // view movie
+
+					?>
 	<!-- <p>Viewing Video:<?php echo $result_row[2].$result_row[1];?></p> -->
 
-<video width="320"	height="240">
-    <source src="<?php echo $result_row[4];?>#t=15">
-</video>
+				<video width="320" height="286"> <source src="<?php echo $result_row[4];?>#t=15"></video>
           
           
           
        
               
 <?php
-			}
-			echo '<br />';
-			?>
+				}
+				echo '<br />';
+				?>
 			
 			By:  
 					<?php
-			echo $username; // mediaid
-			
-			?>
+				echo $username; // mediaid
+				
+				?>
 			
 			Created On:  
 			<?php
-			echo substr ( $dateCreated, 0, 10 );
-			echo '<br />';
-			?>
+				echo substr ( $dateCreated, 0, 10 );
+				echo '<br />';
+				?>
 			
 			<a href="<?php echo $filenpath;?>" target="_blank"
 				onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
 				<?php echo '<br />';?>
 					</td>
 					<?php
-			}echo '<br />';
+			}
+			echo '<br />';
 			?></tr> 
 				<?php
 		}
 		?>
 		</table>
- 
+
 </body>
 </html>
