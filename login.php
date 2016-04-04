@@ -18,6 +18,7 @@ if(isset($_POST['submit'])) {
 			}
 			else if($check==0){
 				$_SESSION['username']=$_POST['username']; //Set the $_SESSION['username']
+				$_SESSION["loggedIn"] = true;
 				header('Location: browse.php');
 			}		
 		}
