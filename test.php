@@ -87,14 +87,13 @@ if (! $result) {
 			
 			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a> <?php
 			echo '<br />';
-			if (substr ( $type, 0, 5 ) == "image") // view image
-{
+			if (substr ( $type, 0, 5 ) == "image"){ // view image
+			
 				
 				echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";
 			} else // view movie
 {
 				?>
-	<!-- <p>Viewing Video:<?php echo $result_row[2].$result_row[1];?></p> -->
 
 
 				<object id="MediaPlayer" width=320 height=286
