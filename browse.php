@@ -25,10 +25,13 @@ function saveDownload(id)
 </head>
 
 <body>
-	<p>Welcome <?php echo $_SESSION['username']; ?></p>
-<?php if (!$_SESSION["loggedIn"]) 
-		header('Location: login.php');
+	
+<?php if (!$_SESSION["loggedIn"]) {
+		header('Location: login.php');?>
+		<p>Welcome New Guest</p>
+		<?php }
 	  else {?>
+	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
 	  	<a href="logout.php">logout</a>
 <?php 
 	  }?>
