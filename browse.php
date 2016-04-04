@@ -51,7 +51,8 @@ if (! $result) {
 		<?php
 		$num_rows = mysql_num_rows ( $result );
 		
-		echo ( int ) ($num_rows / 4) . " Rows\n";
+		$a = session_id();
+		echo  $a;
 		$size = (( int ) ($num_rows / 4)) + 1;
 		
 		for($i = 1; $i <= $size; $i ++) {
@@ -66,7 +67,7 @@ if (! $result) {
 			?>
 			<tr valign="top">
 				<?php
-				echo  " Rows\n";
+				
 			for($j = 0; $j < $rowSize; $j ++) {
 				?>
 					<td>
