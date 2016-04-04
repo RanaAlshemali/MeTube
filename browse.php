@@ -109,11 +109,11 @@ if (! $result) {
 				if (substr ( $type, 0, 5 ) == "image"){ // view image
 
 					
-					echo "\n <img src='uploads/ralshem/Audio-Radio-icon.png' height='286' width='320'/>";
+					//echo "\n <img src='uploads/ralshem/Audio-Radio-icon.png' height='286' width='320'/>";
 				} else if (substr ( $type, 0, 5 ) == "audio"){ // view audio
 
 					
-					echo "\n <img src='" . $thumbnail . "' height='286' width='320'/> testS";
+					//echo "\n <img src='" . $thumbnail . "' height='286' width='320'/> testS";
 				}
 				else{ // view movie
 
