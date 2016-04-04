@@ -96,7 +96,8 @@ if (! $result) {
 				$type = $result_row [2];
 				$mediaid = $result_row [3];
 				$filenpath = $result_row [4];
-				$dateCreated = $result_row [5];
+				$thumbnail= $result_row [5];
+				$dateCreated = $result_row [6];
 				echo '<br />';
 				echo '<br />';
 				echo $mediaid . "  "; // mediaid
@@ -109,10 +110,10 @@ if (! $result) {
 
 					
 					echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";
-				} else if (substr ( $type, 0, 5 ) == "audio"){ // view image
+				} else if (substr ( $type, 0, 5 ) == "audio"){ // view audio
 
 					
-					echo "\n <img src='uploads/Audio-Radio-icon.png' height='286' width='320'/>";
+					echo "\n <img src='" . $thumbnail . "' height='286' width='320'/>";
 				}
 				else{ // view movie
 
