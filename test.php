@@ -114,7 +114,7 @@ if (! $result) {
 
 
 					<embed type="application/x-mplayer2"
-						src="<?php echo $filepath."#t=10,30";  ?>" name="MediaPlayer" width=320
+						src="<?php echo $filepath.'#t=10,30';  ?>" name="MediaPlayer" width=320
 						height=240></embed>
 
 				</object>
