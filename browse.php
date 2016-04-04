@@ -28,7 +28,8 @@ function saveDownload(id)
 	
 <?php if (!$_SESSION["loggedIn"]) {?>
 		<p>Welcome New Guest</p>
-		<?php }
+		<?php 
+$_SESSION["loggedIn"]= false;}
 	  else {?>
 	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
 	  	<a href="logout.php">logout</a>
