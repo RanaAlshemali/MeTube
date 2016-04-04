@@ -113,7 +113,7 @@ if (! $result) {
 
 <video controls width=320 height=286>
 
-    <source src="uploads/ralshem/My+Movie.mp4#t=6,15">
+    <source src="uploads/ralshem/My+Movie.mp4">
 </video>
 
 				<object id="MediaPlayer" width=320 height=286
