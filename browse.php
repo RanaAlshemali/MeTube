@@ -26,8 +26,7 @@ function saveDownload(id)
 
 <body>
 	
-<?php if (!$_SESSION["loggedIn"]) {
-		header('Location: login.php');?>
+<?php if (!$_SESSION["loggedIn"]) {?>
 		<p>Welcome New Guest</p>
 		<?php }
 	  else {?>

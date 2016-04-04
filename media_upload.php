@@ -1,7 +1,7 @@
 <?php
 session_start();
- if ($_SESSION["loggedIn"]){?>
-	<a href="logout.php">logout</a>
+ if (!$_SESSION["loggedIn"]){?>
+	<a href="login.php">logout</a>
 <?php
  }
 ?>
