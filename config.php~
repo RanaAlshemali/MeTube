@@ -1,7 +1,0 @@
-<?php
-
-$dbhost = "mysql1.cs.clemson.edu";
-$dbuser = "youDbUsername";
-$dbpass = "yourpassword";
-$database = "yourDBName";
-?>
