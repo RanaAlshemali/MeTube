@@ -107,13 +107,14 @@ if (! $result) {
 			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a> <?php
 				echo '<br />';
 				if (substr ( $type, 0, 5 ) == "image"){ // view image
-
-					
-					//echo "\n <img src='uploads/ralshem/Audio-Radio-icon.png' height='286' width='320'/>";
+?>
+				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<?php echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";?></a>;
+		<?php
 				} else if (substr ( $type, 0, 5 ) == "audio"){ // view audio
 
-					
-					//echo "\n <img src='" . $thumbnail . "' height='286' width='320'/> testS";
+					?>
+				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<?php echo "\n <img src='uploads/Audio-Radio-icon.png' height='286' width='320'/>";?></a>;
+		<?php 
 				}
 				else{ // view movie
 
