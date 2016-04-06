@@ -113,7 +113,7 @@ if (! $result) {
 				} else if (substr ( $type, 0, 5 ) == "audio"){ // view audio
 
 					?>
-				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<?php echo "\n <img src='uploads/Audio-Radio-icon.png' height='286' width='320'/>";?></a>;
+				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<?php echo "\n <img src='uploads/Audio-Radio-icon.png' height='286' width='320'/>";?></a>
 		<?php 
 				}
 				else{ // view movie
@@ -121,7 +121,9 @@ if (! $result) {
 					?>
 	<!-- <p>Viewing Video:<?php echo $result_row[2].$result_row[1];?></p> -->
  
-				<video width="320" height="286"> <source src="<?php echo $result_row[4];?>#t=15"></video>
+				
+				
+				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<video width="320" height="286"> <source src="<?php echo $result_row[4];?>#t=15"></video></a>
           
           
           
