@@ -27,8 +27,8 @@ function saveDownload(id)
 #image1{
     position:relative;
     margin: auto;
-    top: 0;
-    left: 0;
+    top: 50;
+    left: 50;
     right: 0;
     bottom: 0;
 }
