@@ -83,7 +83,7 @@ if (! $result) {
 			
 			for($j = 0; $j < $rowSize; $j ++) {
 				?>
-					<td margin-top="40px" margin-left='40px'>
+					<td >
 										<?php
 				$result_row = mysql_fetch_row ( $result );
 				
@@ -114,7 +114,7 @@ if (! $result) {
 				}
 				else{ // view movie
 
-					?>
+					?><div margin-top="40px" margin-left="40px">
 	<!-- <p>Viewing Video:<?php echo $result_row[2].$result_row[1];?></p> -->
  
 				
@@ -123,7 +123,7 @@ if (! $result) {
           <?php echo "\n <img src='uploads/video-icon-150x150.png' height='150' width='150' margin-top='40px' margin-left='40px' style='position: relative'/>";?>
           
           
-       
+       </div>
               
 <?php
 				}
