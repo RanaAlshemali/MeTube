@@ -6,12 +6,7 @@ include_once "function.php";
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<style type="text/css">
-div img {
-   display:block;
-   margin:auto;
-}
-</style>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Media browse</title>
 <link rel="stylesheet" type="text/css" href="css/default.css" />
@@ -126,7 +121,7 @@ if (! $result) {
 				
 				
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<video width="320" height="286" style="position: absolute"> <source src="<?php echo $result_row[4];?>#t=15"></video></a>
-          <?php echo "\n <img src='uploads/video-icon-150x150.png' height='286' width='320' margin-top='40px' margin-left='40px' style='position: relative'/>";?>
+          <?php echo "\n <img src='uploads/video-icon-150x150.png' height='286' width='320'  style='position: relative'/>";?>
           
           
        </div>
