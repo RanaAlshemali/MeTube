@@ -23,6 +23,16 @@ function saveDownload(id)
  	);
 } 
 </script>
+<style >
+img{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+</style>
 </head>
 
 <body>
@@ -119,7 +129,7 @@ if (! $result) {
 				<video width="320" height="286" style="position: absolute"> 
 				<source src="<?php echo $result_row[4];?>#t=15">  
 				</video>
-				<?php echo "\n <img src='uploads/video-icon-150x150.png' height='100' width='100' style='position: relative; margin: auto; top: 0;left: 0;right: 0;  bottom: 0;'/>";?>
+				<?php echo "\n <img src='uploads/video-icon-150x150.png' height='100' width='100'/>";?>
 				
 				</a>
          
