@@ -61,7 +61,7 @@ if (! $result) {
     
     <div style="background: #339900; color: #FFFFFF; width: 150px;">Uploaded
 		Media</div>
-	<table width="75%" cellpadding="0" cellspacing="0" border="1">
+	<table width="75%" cellpadding="0" cellspacing="0" border="1" align="center" valign="center">
 		<?php
 		$num_rows = mysql_num_rows ( $result );
 		
