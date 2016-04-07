@@ -61,12 +61,7 @@ if (! $result) {
 	<table width="75%" cellpadding="0" cellspacing="0" border="1" align="center" valign="center">
 		<?php
 		$num_rows = mysql_num_rows ( $result );
-		
-		$a = session_id ();
-		echo $a;
-		if (empty ( $a ))
-			session_start ();
-		echo "SID: " . SID . "<br>session_id(): " . session_id () . "<br>COOKIE: " . $_COOKIE ["PHPSESSID"];
+ 
 		$size = (( int ) ($num_rows / 4)) + 1;
 		
 		for($i = 1; $i <= $size; $i ++) {
