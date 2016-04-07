@@ -125,7 +125,8 @@ if (! $result) {
  
 				
 				
-				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<video  poster="uploads/video-icon-150x150.png" width="320" height="286" style="position: absolute"> <source src="<?php echo $result_row[4];?>#t=15"></video></a>
+				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<video width="320" height="286" style="position: absolute"> <source src="<?php echo $result_row[4];?>#t=15"></video></a>
+          <?php echo "\n <img src='uploads/video-icon-150x150.png' height='286' width='320' margin-top='40px' margin-left='40px' style='position: relative'/>";?>
           
           
        </div>
