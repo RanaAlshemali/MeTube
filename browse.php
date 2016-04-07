@@ -42,11 +42,7 @@ function saveDownload(id)
 
 	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
 	<div id='upload_result'>
-<?php
-if (isset ( $_REQUEST ['result'] ) && $_REQUEST ['result'] != 0) {
-	echo upload_error ( $_REQUEST ['result'] );
-}
-?>
+]
 </div>
 	<br />
 	<br />
@@ -124,7 +120,7 @@ if (! $result) {
 				
 				
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<video width="320" height="286" style="position: absolute"> <source src="<?php echo $result_row[4];?>#t=15"></video></a>
-          <?php echo "\n <img src='uploads/video-icon-150x150.png' height='150' width='150' left='40' top='40' style='position: relative'/>";?>
+          <?php echo "\n <img src='uploads/video-icon-150x150.png' height='150' width='150' margin-top='40px' margin-left='40px' style='position: relative'/>";?>
           
           
        
@@ -142,7 +138,7 @@ if (! $result) {
 			
 			Created On:  
 			<?php
-				echo substr ( $dateCreated, 0, 10 );
+				echo substr( $dateCreated, 0, 10 );
 				echo '<br />';
 				?>
 			
