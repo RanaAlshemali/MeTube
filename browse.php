@@ -83,7 +83,7 @@ if (! $result) {
 			
 			for($j = 0; $j < $rowSize; $j ++) {
 				?>
-					<td>
+					<td margin-top="40px" margin-left='40px'>
 										<?php
 				$result_row = mysql_fetch_row ( $result );
 				
