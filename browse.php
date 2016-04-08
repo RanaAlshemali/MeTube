@@ -109,7 +109,7 @@ if (! $result) {
 				?>
 			
 			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
-			<div align="right">Type: <?php echo $type;  echo '<br />';?></div>
+			<lable align="right">&emsp;&emsp;&emsp;Type: <?php echo $type;  echo '<br />';?></lable>
 			 <?php
 			
 				if ( $type == "image"){ // view image
