@@ -104,13 +104,11 @@ if (! $result) {
 				$type = substr ( $type, 0, 5 );
 				
 
-				echo $mediaid . "  "; // mediaid
-				
 				?>
 			
 			<div>
-			<div><a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; ?></a></div>
-			<div><lable align="right">Type: <?php echo $type;  echo '<br />';?></lable></div>
+			<div  style="float: left;"><?php echo $mediaid;?><a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; ?></a></div>
+			<div  style="float: right;"><lable align="right">Type: <?php echo $type;  echo '<br />';?></lable></div>
 			</div>
 			 <?php
 			 echo '<br />';
