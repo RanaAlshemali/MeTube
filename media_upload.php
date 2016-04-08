@@ -19,9 +19,9 @@ session_start();
     <label style="color:#663399">Add a Media: <em> (Each file limit 10M)</em></label><br/>
    <input  name="file" type="file" size="50" ></input><br/>
    <label >Media Title: </label> <label style="color:red;">*</label>
-   <input type="text" name="name" required></input><br/>
+   <input type="text" name="medianame" required></input><br/>
    <label >Media Duration: (0 for images) </label><label style="color:red;">*</label>
-   <input type="text" name="title" required></input><br/>
+   <input type="text" name="duration" required></input><br/>
    <label >Media Description: </label><label style="color:red;">*</label>
    <input type="text" name="description" required></input><br/>
    <label >Media Keywords: </label><label style="color:red;">*</label>
