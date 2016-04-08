@@ -174,7 +174,7 @@ if (! $result) {
 			<?php
 				echo substr( $dateCreated, 0, 10 );
 				echo '<br />';
-				?>
+			}?>
 				</td>
 			</tr> 
 				<?php
