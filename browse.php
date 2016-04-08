@@ -26,11 +26,10 @@ function saveDownload(id)
 <style >
 #image1{
     position:relative;
-    margin: auto;
-    margin-top: 50;
-    margin-left: 50;
-    margin-right: 0;
-    margin-bottom: 0;
+   top:50%;
+   left:50%;
+   margin-top:-25px;
+   margin-left:-25px;
 }
 </style>
 </head>
@@ -110,12 +109,14 @@ if (! $result) {
 				echo '<br />';
 				if (substr ( $type, 0, 5 ) == "image"){ // view image
 ?>
-				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<?php echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";?></a>
+				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
+				<?php echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";?></a>
 		<?php
 				} else if (substr ( $type, 0, 5 ) == "audio"){ // view audio
 
 					?>
-				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	<?php echo "\n <img src='uploads/Audio-Radio-icon.png' height='286' width='320'/>";?></a>
+				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
+				<?php echo "\n <img src='uploads/Audio-Radio-icon.png' height='286' width='320'/>";?></a>
 		<?php 
 				}
 				else{ // view movie
