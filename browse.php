@@ -99,6 +99,9 @@ if (! $result) {
 				$filenpath = $result_row [4];
 				$thumbnail= $result_row [5];
 				$dateCreated = $result_row [6];
+				if(trlen($filename)>20){
+					$filename= substr ( $filename, 0, 20 );
+				}
 				echo '<br />';
 				echo '<br />';
 				echo $mediaid . "  "; // mediaid
