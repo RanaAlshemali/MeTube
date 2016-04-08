@@ -155,19 +155,8 @@ if (! $result) {
 			</div>
 			
 			
-			Created On:  
-			<?php
-				echo substr( $dateCreated, 0, 10 );
-				echo '<br />';
-				?>
+		 <?php echo '<br />';?>
 			
-			
-				<?php echo '<br />';?>
-					
-					<?php
-			
-			echo '<br />';
-			?>
 				Created On:  
 			<?php
 				echo substr( $dateCreated, 0, 10 );
