@@ -20,15 +20,16 @@ session_start();
    <input  name="file" type="file" size="50" ></input><br/>
    <label >Media Title: </label> <label style="color:red;">*</label>
    <input type="text" name="medianame" required></input><br/>
-   <label >Media Duration: (0 for images) </label><label style="color:red;">*</label>
-   <input type="text" name="duration" required></input><br/>
-   <label >Media Description: </label><label style="color:red;">*</label>
+    <label >Media Description: </label><label style="color:red;">*</label>
    <input type="text" name="description" required></input><br/>
+   <label >Media Duration: (00:00 for images) </label><label style="color:red;">*</label>
+   <input type="text" name="duration" required></input><br/>
+
    <label >Media Keywords: </label><label style="color:red;">*</label>
    <input type="text" name="keywords" required></input><br/>
-   <select>
-  <option value="volvo">Public</option>
-  <option value="saab">Privet</option>
+   <select name="privacy">
+  <option value="public">Public</option>
+  <option value="privet">Privet</option>
 
 </select>
    
