@@ -83,7 +83,7 @@ if (! $result) {
 			}
 			$num_rows = $num_rows - 4;
 			?>
-			<tr valign="top">
+			<tr>
 				<?php
 			
 			for($j = 0; $j < $rowSize; $j ++) {
@@ -127,16 +127,16 @@ if (! $result) {
 				else{ // view movie
 
 					?>
-					<div >
+					<div  style="position: relative; left: 0; top: 0;" >
 	<!-- <p>Viewing Video:<?php echo $result_row[2].$result_row[1];?></p> -->
  
 				
 				
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
-				<video id="video" width="320" height="286" style="position: static"> 
+				<video id="video" width="320" height="286"  style="position: relative; left: 0; top: 0;"> 
 				<source src="<?php echo $result_row[4];?>#t=15">  
 				</video>
-				<?php echo "\n <img id='image11' src='uploads/video-icon1.png' height='100' width='100'/>";?>
+				<?php echo "\n <img id='image11' src='uploads/video-icon1.png' height='100' width='100'  style='position: absolute; top: 30px; left: 70px;'/>";?>
 				
 				</a>
 				
