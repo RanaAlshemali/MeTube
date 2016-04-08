@@ -167,7 +167,7 @@ if (! $result) {
 				<?php echo '<br />';?>
 					
 					<?php
-			}
+			
 			echo '<br />';
 			?>
 				Created On:  
