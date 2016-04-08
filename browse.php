@@ -149,12 +149,11 @@ if (! $result) {
 				}
 				echo '<br />';
 				?>
+			<div>
+			<div  style="float: left;">By:<?php echo $username;echo '<br />';?></div>
+			<div  style="float: right;"><a href="<?php echo $filenpath;?>" target="_blank" onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a></div>
+			</div>
 			
-			By:  
-					<?php
-				echo $username; // mediaid
-				echo '<br />';
-				?>
 			
 			Created On:  
 			<?php
@@ -162,8 +161,7 @@ if (! $result) {
 				echo '<br />';
 				?>
 			
-			<a href="<?php echo $filenpath;?>" target="_blank"
-				onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
+			
 				<?php echo '<br />';?>
 					
 					<?php
