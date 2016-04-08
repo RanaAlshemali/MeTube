@@ -108,8 +108,10 @@ if (! $result) {
 				
 				?>
 			
-			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a>
-			<lable align="right">&emsp;&emsp;&emsp;Type: <?php echo $type;  echo '<br />';?></lable>
+			<div>
+			<div><a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; ?></a></div>
+			<div><lable align="right">Type: <?php echo $type;  echo '<br />';?></lable></div>
+			</div>
 			 <?php
 			 echo '<br />';
 				if ( $type == "image"){ // view image
