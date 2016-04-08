@@ -116,7 +116,7 @@ if (! $result) {
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
 				<?php echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";?></a>
 		<?php
-				} else if ( $type ) == "audio"){ // view audio
+				} else if ( $type  == "audio"){ // view audio
 
 					?>
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
