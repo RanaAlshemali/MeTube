@@ -164,7 +164,7 @@ if (! $result) {
 			<a href="<?php echo $filenpath;?>" target="_blank"
 				onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
 				<?php echo '<br />';?>
-					</td>
+					
 					<?php
 			}
 			echo '<br />';
@@ -174,6 +174,7 @@ if (! $result) {
 				echo substr( $dateCreated, 0, 10 );
 				echo '<br />';
 				?>
+				</td>
 			</tr> 
 				<?php
 		}
