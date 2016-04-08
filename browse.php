@@ -136,7 +136,7 @@ if (! $result) {
 				</a>
 				<script type="text/javascript">
 				alert(video.duration);
-} 
+ 
 </script>
 				
          
