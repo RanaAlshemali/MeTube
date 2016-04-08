@@ -108,7 +108,7 @@ if (! $result) {
 				
 				?>
 			
-			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
+			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a>
 			<lable align="right">&emsp;&emsp;&emsp;Type: <?php echo $type;  echo '<br />';?></lable>
 			 <?php
 			 echo '<br />';
@@ -152,7 +152,7 @@ if (! $result) {
 			By:  
 					<?php
 				echo $username; // mediaid
-				
+				echo '<br />';
 				?>
 			
 			Created On:  
