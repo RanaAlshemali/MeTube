@@ -40,7 +40,7 @@ if(!file_exists($dirfile))
 				else /*Successfully upload file*/
 				{
 					//insert into media table
-					$medianame = $_GET['medianame'];
+					$medianame = $_POST['medianame'];
 					$insert = "insert into media(mediaid, filename,username,type, path)".
 							  "values(NULL,'".$medianame ."','$username','".$_FILES["file"]["type"]."', '$upfile')";
 					$queryresult = mysql_query($insert)
