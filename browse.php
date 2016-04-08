@@ -52,7 +52,7 @@ function saveDownload(id)
 
 	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
 	<div id='upload_result'>
-]
+
 </div>
 	<br />
 	<br />
@@ -131,7 +131,7 @@ if (! $result) {
 				<video width="320" height="286" style="position: absolute"> 
 				<source src="<?php echo $result_row[4];?>#t=15">  
 				</video>
-				<?php echo "\n <img id='image11' src='uploads/video-icon.png' height='75' width='150'/>";?>
+				<?php echo "\n <img id='image11' src='uploads/video-icon1.png' height='75' width='150'/>";?>
 				
 				</a>
          
