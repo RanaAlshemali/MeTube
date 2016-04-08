@@ -133,7 +133,7 @@ if (! $result) {
 				
 				
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
-				<video id="video" width="320" height="286" > 
+				<video id="video" width="320" height="286" style="position: relative"> 
 				<source src="<?php echo $result_row[4];?>#t=15">  
 				</video>
 				<?php echo "\n <img id='image11' src='uploads/video-icon1.png' height='100' width='100'/>";?>
