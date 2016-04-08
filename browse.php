@@ -136,7 +136,7 @@ if (! $result) {
 				<video id="video" width="320" height="286"  style="position: relative; left: 0; top: 0;"> 
 				<source src="<?php echo $result_row[4];?>#t=15">  
 				</video>
-				<?php echo "\n <img  src='uploads/video-icon1.png' height='100' width='100'  style='position: absolute; top: 10px; left: 20px;'/>";?>
+				<?php echo "\n <img  src='uploads/video-icon1.png' height='100' width='100'  style='position: absolute; top: 100px; left: 110px;'/>";?>
 				
 				</a>
 				
