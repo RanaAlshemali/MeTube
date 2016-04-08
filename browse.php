@@ -103,8 +103,7 @@ if (! $result) {
 				}
 				$type = substr ( $type, 0, 5 );
 				
-				echo '<br />';
-				echo '<br />';
+
 				echo $mediaid . "  "; // mediaid
 				
 				?>
@@ -112,7 +111,7 @@ if (! $result) {
 			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
 			<div align="right">Type: <?php echo $type;  echo '<br />';?></div>
 			 <?php
-				echo '<br />';
+			
 				if ( $type == "image"){ // view image
 ?>
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
