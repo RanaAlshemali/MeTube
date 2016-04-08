@@ -120,7 +120,8 @@ if (! $result) {
 				}
 				else{ // view movie
 
-					?><div margin-top="40px" margin-left="40px">
+					?>
+					<div id="image1">
 	<!-- <p>Viewing Video:<?php echo $result_row[2].$result_row[1];?></p> -->
  
 				
