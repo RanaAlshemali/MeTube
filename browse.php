@@ -115,7 +115,8 @@ if (! $result) {
 			 echo '<br />';
 				if ( $type == "image"){ // view image
 ?>
-				
+				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
+				<?php echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";?></a>
 		<?php
 				} else if ( $type  == "audio"){ // view audio
 
@@ -133,7 +134,7 @@ if (! $result) {
 				
 				
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
-				<video id="video" width="320" height="286"  style="position: relative; left: 0; top: 0;"> 
+				<video id="video" width="320" height="286"  style="position: relative;"> 
 				<source src="<?php echo $result_row[4];?>#t=15">  
 				</video>
 				<?php echo "\n <img  src='uploads/video-icon1.png' height='100' width='100'  style='position: absolute; top: 100px; left: 110px;'/>";?>
