@@ -109,7 +109,7 @@ if (! $result) {
 				?>
 			
 			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
-			<lable align="right">&emsp;&emsp;&emsp;Type: <?php echo $type;  echo '<br />';?></lable>
+			<lable align="right">Type: <?php echo $type;  echo '<br />';?></lable>
 			 <?php
 			 echo '<br />';
 				if ( $type == "image"){ // view image
@@ -168,7 +168,13 @@ if (! $result) {
 					<?php
 			}
 			echo '<br />';
-			?></tr> 
+			?>
+				Created On:  
+			<?php
+				echo substr( $dateCreated, 0, 10 );
+				echo '<br />';
+				?>
+			</tr> 
 				<?php
 		}
 		?>
