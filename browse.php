@@ -108,8 +108,10 @@ if (! $result) {
 				echo $mediaid . "  "; // mediaid
 				
 				?>
+			
+			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a>
 			<p align="right">Type: <?php echo $type;?></p>
-			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a> <?php
+			 <?php
 				echo '<br />';
 				if ( $type == "image"){ // view image
 ?>
