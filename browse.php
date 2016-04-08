@@ -28,7 +28,7 @@ function saveDownload(id)
     position:relative;
    top:50%;
    left:50%;
-   margin-top:90px;
+   margin-top:100px;
    margin-left:90px;
 }
 </style>
