@@ -115,8 +115,7 @@ if (! $result) {
 			 echo '<br />';
 				if ( $type == "image"){ // view image
 ?>
-				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
-				<?php echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";?></a>
+				
 		<?php
 				} else if ( $type  == "audio"){ // view audio
 
