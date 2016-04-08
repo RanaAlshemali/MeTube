@@ -134,12 +134,7 @@ if (! $result) {
 				<?php echo "\n <img id='image11' src='uploads/video-icon1.png' height='100' width='100'/>";?>
 				
 				</a>
-				<script type="text/javascript">
-				alert(video.duration);
- 
-</script>
 				
-         
           
           
        </div>
