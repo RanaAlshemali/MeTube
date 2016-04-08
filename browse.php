@@ -25,7 +25,7 @@ function saveDownload(id)
 </script>
 <style >
 #image11{
-    position:absolute;
+    position:relative;
    top:50%;
    left:50%;
    margin-top:100px;
