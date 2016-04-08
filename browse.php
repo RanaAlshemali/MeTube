@@ -27,10 +27,10 @@ function saveDownload(id)
 #image1{
     position:relative;
     margin: auto;
-    top: 50;
-    left: 50;
-    right: 0;
-    bottom: 0;
+    margin-top: 50;
+    margin-left: 50;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 </style>
 </head>
