@@ -18,13 +18,13 @@ session_start();
   <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
     <label style="color:#663399">Add a Media: <em> (Each file limit 10M)</em></label><br/>
    <input  name="file" type="file" size="50" ></input><br/>
-   <label >Media Title: </label> <p style="color:red;">*</p>
+   <label >Media Title: <div style="color:red;">*</div></label> 
    <input type="text" name="name" required></input><br/>
-   <label >Media Duration: (0 for images) </label> <p style="color:red;">*</p>
+   <label >Media Duration: (0 for images) <div style="color:red;">*</div></label>
    <input type="text" name="title" required></input><br/>
-   <label >Media Description: </label> <p style="color:red;">*</p>
+   <label >Media Description: <div style="color:red;">*</div></label>
    <input type="text" name="description" required></input><br/>
-   <label >Media Keywords: </label> <p style="color:red;">*</p>
+   <label >Media Keywords: <div style="color:red;">*</div></label>
    <input type="text" name="keywords" required></input><br/>
    <select>
   <option value="volvo">Public</option>
