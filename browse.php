@@ -29,7 +29,7 @@ function saveDownload(id)
    top:50%;
    left:50%;
    margin-top:100px;
-   margin-left:100px;
+   margin-left:110px;
 }
 </style>
 </head>
@@ -128,12 +128,13 @@ if (! $result) {
 				
 				
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
-				<video width="320" height="286" style="position: absolute"> 
+				<video id="video" width="320" height="286" style="position: absolute"> 
 				<source src="<?php echo $result_row[4];?>#t=15">  
 				</video>
 				<?php echo "\n <img id='image11' src='uploads/video-icon1.png' height='100' width='100'/>";?>
 				
 				</a>
+				alert(video.duration);
          
           
           
