@@ -97,25 +97,26 @@ if (! $result) {
 				$type = $result_row [2];
 				$mediaid = $result_row [3];
 				$filenpath = $result_row [4];
-				$thumbnail= $result_row [5];
-				$dateCreated = $result_row [6];
+				$dateCreated = $result_row [5];
 				if(strlen($filename)>20){
 					$filename= substr ( $filename, 0, 20 );
 				}
+				$type = substr ( $type, 0, 5 );
+				
 				echo '<br />';
 				echo '<br />';
 				echo $mediaid . "  "; // mediaid
 				
 				?>
-			
+			<p align="right">Type: <?php echo $type;?></p>
 			<a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; echo '<br />';?></a> <?php
 				echo '<br />';
-				if (substr ( $type, 0, 5 ) == "image"){ // view image
+				if ( $type == "image"){ // view image
 ?>
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
 				<?php echo "\n <img src='" . $filenpath . "' height='286' width='320'/>";?></a>
 		<?php
-				} else if (substr ( $type, 0, 5 ) == "audio"){ // view audio
+				} else if ( $type ) == "audio"){ // view audio
 
 					?>
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
