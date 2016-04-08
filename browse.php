@@ -107,10 +107,11 @@ if (! $result) {
 				?>
 			
 			<div>
-			<div  style="float: left;"><?php echo $mediaid;?><a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; ?></a></div>
+			<div  style="float: left;"><?php echo $mediaid . "  ";?><a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename; ?></a></div>
 			<div  style="float: right;"><lable align="right">Type: <?php echo $type;  echo '<br />';?></lable></div>
 			</div>
 			 <?php
+			 echo '<br />';
 			 echo '<br />';
 				if ( $type == "image"){ // view image
 ?>
