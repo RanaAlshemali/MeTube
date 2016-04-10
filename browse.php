@@ -158,7 +158,7 @@ if (! $result) {
 		 <?php echo '<br />';?>
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
-			<div  style="float: right;"><?php echo "\n <img src='uploads/ralshem/Star-Full.png' height='20' width='20'/>";?></div>
+			<div  style="float: right;"><?php echo "\n <img src='uploads/ralshem/Star-Full.png' height='20' width='20' onClick='alert('Hello World!')'/>";?></div>
 			</div>
 			 <?php 	
 			}?>
