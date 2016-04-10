@@ -158,7 +158,7 @@ if (! $result) {
 		 <?php echo '<br />';?>
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
-			<div  style="float: right;"><img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="addFav()"/></div>
+			<div  style="float: right;"><img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="addFav('1','2')"/></div>
 			</div>
 			 <?php 	
 			}?>
@@ -169,11 +169,9 @@ if (! $result) {
 		?>
 		</table>
 <script>
-function addFav() {
-	 <?php 	
+function addFav(a,b) {
 	 
-?>
-alert("This Media is Successfully Added to Your Favorite List");
+alert("This Media is Successfully Added to Your Favorite List" + a+b);
 }
 
 </script>
