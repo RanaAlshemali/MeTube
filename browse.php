@@ -178,7 +178,7 @@ function addFav($mediaid,$username) {
 ?>
 alert("This Media is Successfully Added to Your Favorite List");
 }
-document.getElementById("demo").innerHTML = myFunction(4, 3);
+
 </script>
 </body>
 </html>
