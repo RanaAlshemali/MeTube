@@ -158,7 +158,7 @@ if (! $result) {
 		 <?php echo '<br />';?>
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
-			<div  style="float: right;"><img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick='alert("Hello World!")'/></div>
+			<div  style="float: right;"><img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="addFav(<?php $mediaid;?>,<?php $username;?>)"/></div>
 			</div>
 			 <?php 	
 			}?>
@@ -168,6 +168,17 @@ if (! $result) {
 		}
 		?>
 		</table>
-
+<script>
+function addFav($mediaid,$username) {
+	 <?php 	
+	 $insert = "insert into favList(favid, mediaid,username)".
+	 		"values(NULL,'".$mediaid ."','" .$username ."')";
+	 $queryresult = mysql_query($insert)
+	 or die("Insert into Media error in media_upload_process.php " .mysql_error());
+?>
+alert("This Media is Successfully Added to Your Favorite List");
+}
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
 </body>
 </html>
