@@ -2,6 +2,7 @@
 <?php
 	session_start();
 	include_once "function.php";
+
 ?>	
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -48,11 +49,6 @@ if(isset($_GET['id'])) {
 <embed type="application/x-mplayer2" src="<?php echo $filepath;  ?>" name="MediaPlayer" width=320 height=240></embed>
 
 </object>
-
-          
-          
-          
-       
               
 <?php
 	}
@@ -63,6 +59,71 @@ else
 <meta http-equiv="refresh" content="0;url=browse.php">
 <?php
 }
+?>
+<hr>
+Comments:
+<?php 
+/*Desplay comments*/
+$query = "SELECT username, dateCreated, content FROM comments WHERE mediaid='".$_GET['id']."'";
+$result = mysql_query($query);
+echo "<table border='1'>
+<tr>
+<th>username</th>
+<th>time</th>
+<th>comment</th>
+</tr>";
+
+while($row = mysql_fetch_array($result))
+{
+echo "<tr>";
+echo "<td>" . $row['username'] . "</td>";
+echo "<td>" . $row['dateCreated'] . "</td>";
+echo "<td>" . $row['content'] . "</td>";
+echo "</tr>";
+}
+echo "</table>";/*echo "<table>";
+
+while ($row = mysql_fetch_array($result))
+{
+    echo "<tr>";
+
+    foreach($row as $value)
+    {
+        echo "<td>".$value."</td>";
+    }
+
+    echo "</tr>";
+
+}
+
+echo "</table>";
+*/
+?>
+
+Add comment: <br>
+<form action = "<?php $_PHP_SELF ?>"  method="POST">
+<textarea name = "comments" cols=40 rows=6></textarea>
+<input type= "submit" />
+</form>
+
+<?php 
+//session_start();
+//include_once "function.php";
+/*Add comment*/
+//$username=$_SESSION['username'];
+// TODO: allow comment only if commenting is allowed
+if(isset($_POST['comments']) )
+{ 
+if ($_SESSION["loggedIn"]) {
+  $comment = $_POST['comments'];
+  $insert = "INSERT INTO comments(content,username,mediaid) VALUES ('$comment','".$_SESSION['username']."','".$_GET['id']."')";
+  $queryresult = mysql_query($insert) or die("Insert into Media error in media_upload_process.php " .mysql_error());
+  header("Refresh:0"); //refresh page to display new comment
+}
+else 
+header("Location: ./login.php"); /* Redirect browser to login */
+}
+ else {}
 ?>
 </body>
 </html>
