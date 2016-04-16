@@ -45,9 +45,10 @@ if(!file_exists($dirfile))
 					$keywords = $_POST['keywords'];
 					$duration = $_POST['duration'];
 					$privacy = $_POST['privacy'];
-					
-					$insert = "insert into media(mediaid, filename,username,type, path,description,keywords,duration,privacy  )".
-							  "values(NULL,'".$medianame ."','$username','".$_FILES["file"]["type"]."', '$upfile','".$description ."','".$keywords ."','".$duration ."','".$privacy ."')";
+					$category = $_POST['category'];
+				  
+					$insert = "insert into media(mediaid, filename,username,type, path,description,keywords,duration,privacy,catagory)".
+							  "values(NULL,'".$medianame ."','$username','".$_FILES["file"]["type"]."', '$upfile','".$description ."','".$keywords ."','".$duration ."','".$privacy ."', '".$categroy ."')";
 					$queryresult = mysql_query($insert)
 						  or die("Insert into Media error in media_upload_process.php " .mysql_error());
 					$result="0";

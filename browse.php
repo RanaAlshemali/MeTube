@@ -48,17 +48,66 @@ function saveDownload(id)
 <?php
 }
 ?>
+<form name="formCatagory" action = "<?php $_PHP_SELF ?>" method = "GET">
+<p>
+View by Catagory:
+<select name="formCatagory" onchange="this.form.submit()">
+<option value="" >Select Catagory...</option>  
+<option value="" >All Catagories</option>
+  <!--<option value="1=1">All Catagories</option>-->
+  <option value="Film & Animation">Film & Animation</option>
+  <option value="Autos & Vehicles">Autos & Vehicles</option>
+  <option value="Music">Music</option>
+  <option value="Pets & Animals">Pets & Animals</option>
+  <option value="Sports">Sports</option>
+  <option value="Gaming">Gaming</option>
+  <option value="People & Blogs">People & Blogs</option>
+  <option value="Comedy">Comedy</option>
+  <option value="Entertainment">Entertainment</option>
+  <option value="Film & Animation">Film & Animation</option>
+  <option value="Howto & Style">Howto & Style</option>
+  <option value="Education">Education</option>
+  <option value="Science & Technology">Science & Technology</option>
+  <option value="Nonprofits & Activism">Nonprofits & Activism</option>
 
-
+</select>
+</p> 
+</form>
 	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
 	<div id='upload_result'>
 
 </div>
 	<br />
 	<br />
+<!--<?php
+  
+if(isset($_POST['formCatagory']) )
+{
+  echo $_POST['formCatagory'];
+   
+  // - - - snip - - - 
+}
+ 
+?>-->
+
 <?php
 
+if(isset($_GET['formCatagory']) )
+ {echo $_GET['formCatagory'];
+  $where = $_GET['formCatagory'];
+  // - - - snip - - -
+}
+
+//if ($where != "")  
+if ($where == ""){
 $query = "SELECT * from media";
+} else {
+$query = "SELECT * from media WHERE catagory ='" . $where . "'";
+}
+//} else {
+//$query = "SELECT * from media";
+//}
+//$query = "SELECT * from media WHERE catagory = 'People & Blogs'";
 $result = mysql_query ( $query );
 if (! $result) {
 	die ( "Could not query the media table in the database: <br />" . mysql_error () );

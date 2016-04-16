@@ -27,7 +27,30 @@ session_start();
 
    <label >Media Keywords: </label><label style="color:red;">*</label>
    <input type="text" name="keywords" required></input><br/>
-   <select name="privacy">
+
+<p>Catagory:
+<select name="category">
+  <!--<option value="1=1">All Catagories</option>-->
+  <option value="Film & Animation">Film & Animation</option>
+  <option value="Autos & Vehicles">Autos & Vehicles</option>
+  <option value="Music">Music</option>
+  <option value="Pets & Animals">Pets & Animals</option>
+  <option value="Sports">Sports</option>
+  <option value="Gaming">Gaming</option>
+  <option value="People & Blogs" selected>People & Blogs</option> <!-- default-->
+  <option value="Comedy">Comedy</option>
+  <option value="Entertainment">Entertainment</option>
+  <option value="Film & Animation">Film & Animation</option>
+  <option value="Howto & Style">Howto & Style</option>
+  <option value="Education">Education</option>
+  <option value="Science & Technology">Science & Technology</option>
+  <option value="Nonprofits & Activism">Nonprofits & Activism</option>
+
+</select>
+</p>
+
+  
+ <select name="privacy">
   <option value="public">Public</option>
   <option value="privet">Privet</option>
 
