@@ -230,8 +230,9 @@ if (! $result) {
 	 alert("In");
 	var id = div.id
 	 alert(id);
-	 <?php $id = "<script>document.getElementByID('id').value</script>"?> 
+
 	 <?php 	
+	 $id = "<script>document.write(id)</script>";
 	     		$insert = "insert into favList(favid, mediaid,username)".
 				"values(NULL,'" . $id."','" .$_SESSION['username'] ."')";
 				$queryresult = mysql_query($insert)
