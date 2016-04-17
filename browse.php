@@ -166,7 +166,8 @@ if (! $result) {
 				if ( $FavListresult == Null) {
 					die ( "not <br />" . mysql_error () );
 				}
-				echo $FavListresult."***************";
+				$FavListresult_row = mysql_fetch_row ( $FavListresult );
+				echo mysql_num_rows (  $FavListresult)."***************";
 				?>
 			
 			<div>
