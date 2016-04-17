@@ -17,7 +17,7 @@ function addFav(){
  
 /* ... SQL EXECUTION TO UPDATE DB ... */
 
-echo "<script>window.close();</script>";
+echo "<script>window.opener = top; window.close();</script>";
 ?>
  
  
