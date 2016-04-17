@@ -230,7 +230,7 @@ if (! $result) {
 	 alert("In");
 	 <?php 	
 				$insert = "insert into favList(favid, mediaid,username)".
-				"values(NULL,'id','" .$_SESSION['username'] ."')";
+				"values(NULL,6,'" .$_SESSION['username'] ."')";
 				$queryresult = mysql_query($insert)
 				or die("Insert into Media error in media_upload_process.php " .mysql_error());
 				?>
