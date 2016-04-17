@@ -212,7 +212,7 @@ if (! $result) {
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
 			<div  id="<?php echo  $mediaid;?>" style="float: right;">
-			<img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this)"/></div>
 			</div>
 			
 			</div>
@@ -230,7 +230,7 @@ if (! $result) {
 	 alert("In");
 	var id = div.id
 	 alert(id);
-	 <?php $id = "<script>document.write(id)</script>"?> 
+	 <?php $id = "<script>document.getElementByID('id').value</script>"?> 
 	 <?php 	
 	     		$insert = "insert into favList(favid, mediaid,username)".
 				"values(NULL,'" . $id."','" .$_SESSION['username'] ."')";
