@@ -166,6 +166,7 @@ if (! $result) {
 				if ( $FavListresult == Null) {
 					die ( "not <br />" . mysql_error () );
 				}
+				echo $FavListresult."***************";
 				?>
 			
 			<div>
