@@ -237,7 +237,7 @@ if (! $result) {
 			alert("in");
 		    $.ajax({
 		        url: 'addFav.php',
-		        type: 'POST',
+		        type: 'GET',
 		        data: {id:id},
 		        success: function(data) {
 		            console.log(data); // Inspect this in your console
