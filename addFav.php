@@ -1,8 +1,8 @@
 
 	 <?php 	
 
-	$mediaid = $_POST['id'];
-	$username = $_POST['username'];
+	$mediaid = $_GET['id'];
+	$username = $_GET['username'];
 	$insert = "insert into favList(favid, mediaid,username)".
 	"values(NULL,'".$mediaid ."','" .$username ."')";
 	$queryresult = mysql_query($insert)
