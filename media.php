@@ -99,12 +99,15 @@ while ($row = mysql_fetch_array($result))
 echo "</table>";
 */
 ?>
-
+<? if(mysql_fetch_assoc(mysql_query ("SELECT allowComments FROM media where mediaid ='".$_GET['id']."'"))['allowComments'] == 1): ?>
 Add comment: <br>
 <form action = "<?php $_PHP_SELF ?>"  method="POST">
 <textarea name = "comments" cols=40 rows=6></textarea>
 <input type= "submit" />
 </form>
+<? else: ?>
+Adding comments is disabled.
+<? endif; ?>
 
 <?php 
 //session_start();
