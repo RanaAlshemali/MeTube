@@ -11,6 +11,13 @@ function addFav(){
 	"values(NULL,'".$mediaid ."','" .$username ."')";
 	$queryresult = mysql_query($insert)
 	or die("Insert into Media error in media_upload_process.php " .mysql_error());
+	
 }
+
+ 
+/* ... SQL EXECUTION TO UPDATE DB ... */
+
+echo "<script>window.close();</script>";
 ?>
+ 
  
