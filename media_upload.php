@@ -24,7 +24,8 @@ session_start();
    <input type="text" name="description" required></input><br/>
    <label >Media Duration: (00:00 for images) </label><label style="color:red;">*</label>
    <input type="text" name="duration" required></input><br/>
-
+ 	<label >Media Keywords: </label><label style="color:red;">*</label>
+     <input type="text" name="keywords" required></input><br/>
  
 
 <p>Catagory:
