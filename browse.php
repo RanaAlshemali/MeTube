@@ -228,7 +228,8 @@ if (! $result) {
  <script  >
  function addFav(id){	 
 	 alert("In");
-	 id =5;
+
+	 alert(id);
 	 <?php $id = "<script>document.write(id)</script>"?> 
 	 <?php 	
 	     		$insert = "insert into favList(favid, mediaid,username)".
