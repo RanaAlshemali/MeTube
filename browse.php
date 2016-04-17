@@ -233,7 +233,8 @@ if (! $result) {
   function add(id) {
 		alert("In");
 		alert(id);
-		var id = function(id) {
+		var id1 = function(id) {
+			alert("in");
 		    $.ajax({
 		        url: 'addFav.php',
 		        type: 'POST',

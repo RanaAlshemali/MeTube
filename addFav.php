@@ -15,3 +15,4 @@ function addFav($id){
 
 }
 ?>
+<script>alert("Im In")</script>
