@@ -226,14 +226,7 @@ if (! $result) {
 		</table>
 
   <?php
- function addFav(){	 
-
-	     		$insert = "insert into favList(favid, mediaid,username)".
-				"values(NULL,5,'" .$_SESSION['username'] ."')";
-				$queryresult = mysql_query($insert)
-				or die("Insert into Media error in media_upload_process.php " .mysql_error());
-
-		}
+ 
  ?>
  
 </body>
