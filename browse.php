@@ -232,19 +232,17 @@ if (! $result) {
  
   function add(id) {
 		alert("In");
-		$(document).ready(function() {
-		      alert("In ajax");
-					$.ajax({
-	      url:'function.php?id='+id+'&f=addFav',
-	      complete: function (response) {
-	          $('#output').html(response.responseText);
-	      },
-	      error: function () {
-	          $('#output').html('Bummer: there was an error!');
-	      }
-	  });
-					  });
-	  return false;
+		alert(id);
+		var id = function(id) {
+		    $.ajax({
+		        url: 'addFav.php',
+		        type: 'POST',
+		        data: {id:id},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		};
 	}
 	alert("out");
  
