@@ -229,9 +229,9 @@ if (! $result) {
  function addFav(id){	 
 	 alert("In");
 	 id =5;
+	 <?php $id = "<script>id</script>"?> 
 	 <?php 	
-	 $id= id;
-				$insert = "insert into favList(favid, mediaid,username)".
+	     		$insert = "insert into favList(favid, mediaid,username)".
 				"values(NULL,'" . $id."','" .$_SESSION['username'] ."')";
 				$queryresult = mysql_query($insert)
 				or die("Insert into Media error in media_upload_process.php " .mysql_error());
