@@ -225,11 +225,11 @@ if (! $result) {
 		}
 		?>
 		</table>
-		<?php
-addFav(5);?>
+ 
  <script  >
  
   function add(id) {
+		alert("In");
 	   $.ajax({
 	      url:'function.php?id='+id+'&f=addFav',
 	      complete: function (response) {
