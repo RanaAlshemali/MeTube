@@ -220,7 +220,7 @@ if (! $result) {
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
 			<div  id="<?php echo  $mediaid;?>" style="float: right;">
 			<?php if (mysql_num_rows ( $FavListresult)==1 ){?>
-			<img id="<?php echo  $mediaid;?>" src="uploads/kevin/red-star.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/kevin/red-star.png" height="20" width="20" onClick="javascript:del(this.id)"/></div>
 			<?php }else {?>
 				<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
 			<?php		
@@ -247,6 +247,22 @@ if (! $result) {
 			alert("in");
 		    $.ajax({
 		        url: 'addFav.php',
+		        type: 'GET',
+		        data: {id:id, username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		
+	}
+  function del(id) {
+		alert("In");
+		var username = "<?php echo $_SESSION['username'] ;?>";
+		alert(id);
+		alert(username);
+			alert("in");
+		    $.ajax({
+		        url: 'delFav.php',
 		        type: 'GET',
 		        data: {id:id, username:username},
 		        success: function(data) {

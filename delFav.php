@@ -6,13 +6,11 @@ $username=$_SESSION['username'];
 
 $id = $_GET['id'];
  
-	$insert = "insert into favList(favid, mediaid,username)".
-			"values(NULL,'". $id . "','" .$username."')";
+	$delete = "delete * from favList where mediaid ='". $id . "' and username='" .$username."')";
 	$queryresult = mysql_query($insert)
-	or die("Insert into favList in delFac.php " .mysql_error());
+	or die("Delete from favList in delFac.php " .mysql_error());
 
 		header('Location: browse.php');
-	
-
+ 
 
 ?>
