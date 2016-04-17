@@ -207,7 +207,7 @@ if (! $result) {
 		 <?php echo '<br />';?>
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
-			<div  style="float: right;"><a href="addFav.php?id=<?php echo $mediaid; ?>?username=<?php echo $_SESSION['username']; ?>"v>
+			<div  style="float: right;"><a href="addFav.php?id=<?php echo $mediaid; ?>?username=<?php echo $_SESSION['username']; ?>?f=addFav">
 			<img src="uploads/ralshem/Star-Full.png" height="20" width="20"></a></div>
 			
 			</div>
@@ -219,17 +219,6 @@ if (! $result) {
 		}
 		?>
 		</table>
-<script>
-function addFav($mediaid,$username) {
-	 <?php 	
-	 $insert = "insert into favList(favid, mediaid,username)".
-	 		"values(NULL,'".$mediaid ."','" .$username ."')";
-	 $queryresult = mysql_query($insert)
-	 or die("Insert into Media error in media_upload_process.php " .mysql_error());
-?>
-alert("This Media is Successfully Added to Your Favorite List");
-}
-
-</script>
+ 
 </body>
 </html>
