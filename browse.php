@@ -225,7 +225,7 @@ if (! $result) {
 		?>
 		</table>
 
- <script type="text/javascript">
+ <script  >
  function addFav(id){	 
 	 alert("In");
 		<?php 	
