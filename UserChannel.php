@@ -232,7 +232,7 @@ if (! $result) {
 				<img id="<?php echo  $mediaid;?>" src="uploads/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this.id)"/>
 			<?php		
 			}?>
-			<img  src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/></div>
 			</div>
 				
 			
