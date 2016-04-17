@@ -226,11 +226,12 @@ if (! $result) {
 		?>
 		</table>
  
- <script  >
+ <script  type="text/javascript">
  
   function add(id) {
 		alert("In");
-	   $.ajax({
+		$(document).ready(function() {
+					$.ajax({
 	      url:'function.php?id='+id+'&f=addFav',
 	      complete: function (response) {
 	          $('#output').html(response.responseText);
@@ -239,6 +240,7 @@ if (! $result) {
 	          $('#output').html('Bummer: there was an error!');
 	      }
 	  });
+					  });
 	  return false;
 	}
 	alert("out");
