@@ -212,7 +212,7 @@ if (! $result) {
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
 			<div  id="<?php echo  $mediaid;?>" style="float: right;">
-			<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="<?php echo $id="this.id"?><?php addFav($id);?>"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
 			</div>
 			
 			</div>
@@ -228,19 +228,19 @@ if (! $result) {
 		<?php
 addFav(5);?>
  <script  >
- function add(is){	 
-	 alert("In");
-	 <?php 	
-			 function addFav1($id){
-			     		$insert = "insert into favList(favid, mediaid,username)".
-						"values(NULL,'". $id . "','" .$_SESSION['username'] ."')";
-						$queryresult = mysql_query($insert)
-						or die("Insert into Media error in media_upload_process.php " .mysql_error());
-			 }
-						?>
-	 alert(id); 
-		alert("Added");
-		}
+ 
+  function add(id) {
+	   $.ajax({
+	      url:'function.php?id='+id+'&f=addFav',
+	      complete: function (response) {
+	          $('#output').html(response.responseText);
+	      },
+	      error: function () {
+	          $('#output').html('Bummer: there was an error!');
+	      }
+	  });
+	  return false;
+	}
 	alert("out");
  
 </script>
