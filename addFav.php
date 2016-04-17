@@ -17,7 +17,7 @@ function addFav(){
  
 /* ... SQL EXECUTION TO UPDATE DB ... */
 
-echo "<script>window.opener = top; window.close();</script>";
+header('Location: Browse.php');
 ?>
  
  
