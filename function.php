@@ -84,5 +84,10 @@ function other()
 {
 	//You can write your own functions here.
 }
-
+function add($id){
+	$insert = "insert into favList(favid, mediaid,username)".
+			"values(NULL,'". $id . "','" .$_SESSION['username'] ."')";
+	$queryresult = mysql_query($insert)
+	or die("Insert into Media error in media_upload_process.php " .mysql_error());
+}
 ?>
