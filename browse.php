@@ -222,9 +222,27 @@ if (! $result) {
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
 			<div  id="<?php echo  $mediaid;?>" style="float: right;"> <?php echo  $count;?>
 			<?php if (mysql_num_rows ( $FavListresult)==1 ){?>
-			<img id="<?php echo  $mediaid;?>" src="uploads/kevin/red-star.png" height="20" width="20" onClick="javascript:del(this.id)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/kevin/red-star.png" height="20" width="20" 
+				  <?php
+			  if (!$_SESSION["loggedIn"])
+			  	header('Location: index.php');
+			  else{	?>
+			  	onClick="javascript:del(this.id)"/></div>
+			 <?php  }
+			  
+			  	?>
+			  	
 			<?php }else {?>
-				<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
+				<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" 
+				  <?php
+			  if (!$_SESSION["loggedIn"])
+			  	header('Location: index.php');
+			  else{	?>
+			  onClick="javascript:add(this.id)"/></div>
+			   <?php  }
+			  
+			  	?>
+			  	
 			<?php		
 			}?></div>
 			
@@ -242,10 +260,7 @@ if (! $result) {
  <script  type="text/javascript">
  
   function add(id) {
-	  <?php
-			  if (!$_SESSION["loggedIn"])
-			  	header('Location: index.php');
-			  	?>
+
 		var username = "<?php echo $_SESSION['username'] ;?>";
 
 		    $.ajax({
@@ -259,10 +274,7 @@ if (! $result) {
 		    location.reload();
 	}
   function del(id) {
-	  <?php
-			  if (!$_SESSION["loggedIn"])
-			  	header('Location: index.php');
-			  	?>
+
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
 		        url: 'delFav.php',
