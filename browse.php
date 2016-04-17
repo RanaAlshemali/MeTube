@@ -212,7 +212,7 @@ if (! $result) {
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
 			<div  id="<?php echo  $mediaid;?>" style="float: right;">
-			<img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="addFav()"/></div>
+			<img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:addFav(5)"/></div>
 			</div>
 			
 			</div>
@@ -225,9 +225,21 @@ if (! $result) {
 		?>
 		</table>
 
-  <?php
+ <script  >
+ function addFav(id){	 
+	 alert("In");
+	 id =5;
+	 <?php $id = "<script>id</script>"?> 
+	 <?php 	
+	     		$insert = "insert into favList(favid, mediaid,username)".
+				"values(NULL,'" . $id."','" .$_SESSION['username'] ."')";
+				$queryresult = mysql_query($insert)
+				or die("Insert into Media error in media_upload_process.php " .mysql_error());
+				?>
+		alert("Added");
+		}
+	alert("out");
  
- ?>
- 
+</script>
 </body>
 </html>
