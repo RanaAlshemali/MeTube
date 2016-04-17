@@ -212,7 +212,7 @@ if (! $result) {
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
 			<div  id="<?php echo  $mediaid;?>" style="float: right;">
-			<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this.id)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:addFav1(this.id)"/></div>
 			</div>
 			
 			</div>
@@ -226,10 +226,10 @@ if (! $result) {
 		</table>
 
  <script  >
- function addFav(is){	 
+ function add(is){	 
 	 alert("In");
 	 <?php 	
-			 function add($id){
+			 function addFav1($id){
 			     		$insert = "insert into favList(favid, mediaid,username)".
 						"values(NULL,'". $id . "','" .$_SESSION['username'] ."')";
 						$queryresult = mysql_query($insert)
