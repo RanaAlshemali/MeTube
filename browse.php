@@ -160,7 +160,7 @@ if (! $result) {
 					$filename= substr ( $filename, 0, 20 );
 				}
 				$type = substr ( $type, 0, 5 );
-				$queryFavList = "SELECT * from favList WHERE username = $currentuserm AND mediaid= $mediaid ";
+				$queryFavList = "SELECT * from favList WHERE username = $currentuser AND mediaid= $mediaid ";
 				$FavListresult = mysql_query ( $queryFavList );
 				if ( $FavListresult == Null) {
 					die ( "not <br />" . mysql_error () );
