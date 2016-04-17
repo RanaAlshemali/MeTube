@@ -224,7 +224,7 @@ if (! $result) {
 			<?php if (mysql_num_rows ( $FavListresult)==1 ){?>
 			<img id="<?php echo  $mediaid;?>" src="uploads/kevin/red-star.png" height="20" width="20" onClick="javascript:del(this.id)"/></div>
 			<?php }else {?>
-				<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
+				<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/star.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
 			<?php		
 			}?></div>
 			
