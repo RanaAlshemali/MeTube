@@ -48,6 +48,11 @@ function saveDownload(id)
 <?php
 }
 ?>
+<form  method="GET" action="<?php $_PHP_SELF ?>"> 
+<input  type="text" name="search"> 
+<input  type="submit" name="submit" value="Search"> 
+</form> 
+
 <form name="formCatagory" action = "<?php $_PHP_SELF ?>" method = "GET">
 <p>
 View by Catagory:
@@ -79,30 +84,29 @@ View by Catagory:
 </div>
 	<br />
 	<br />
-<!--<?php
-  
-if(isset($_POST['formCatagory']) )
-{
-  echo $_POST['formCatagory'];
-   
-  // - - - snip - - - 
-}
- 
-?>-->
 
 <?php
-
+$where = "WHERE catagory = ''";
 if(isset($_GET['formCatagory']) )
- {echo $_GET['formCatagory'];
-  $where = $_GET['formCatagory'];
-  // - - - snip - - -
+ {
+  $catagory = $_GET['formCatagory'];
+  $where = "WHERE catagory = '$catagory'";
+  //echo $where;
 }
-
+if (isset($_GET['search'])){
+ $search = $_GET['search'];
+if ($where == "WHERE catagory = ''"){ 
+$where= 'WHERE lower(concat(username, \'\', filename, \'\', dateCreated, \'\', keywords, \'\', duration, \'\', privacy, \'\', catagory, \'\', duration)) like "%' . $search. '%"';
+} else {
+$where.= ' AND lower(concat(username, \'\', filename, \'\', dateCreated, \'\', keywords, \'\', duration, \'\', privacy, \'\', catagory, \'\', duration)) like "%' . $search. '%"';
+}
+}
 //if ($where != "")  
-if ($where == ""){
+
+if ($where == "WHERE catagory = ''"){ //All catagories
 $query = "SELECT * from media";
 } else {
-$query = "SELECT * from media WHERE catagory ='" . $where . "'";
+$query = "SELECT * from media $where ";
 }
 //} else {
 //$query = "SELECT * from media";
