@@ -46,6 +46,7 @@ function saveDownload(id)
 } else {
 	?>
 	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
+	  
 	<a href="logout.php">logout</a>
 <?php
 }
@@ -88,6 +89,7 @@ View by Catagory:
 	<br />
 
 <?php
+$currentuser=  $_SESSION['username'];
 $where = "WHERE catagory = ''";
 if(isset($_GET['formCatagory']) )
  {
@@ -110,6 +112,7 @@ $query = "SELECT * from media";
 } else {
 $query = "SELECT * from media $where ";
 }
+
 //} else {
 //$query = "SELECT * from media";
 //}
@@ -157,7 +160,8 @@ if (! $result) {
 					$filename= substr ( $filename, 0, 20 );
 				}
 				$type = substr ( $type, 0, 5 );
-				
+				$queryFavList = "SELECT * from favList WHERE username = '".$currentuser."' and mediaid= '".$mediaid ."'";
+				$FavListresult = mysql_query ( $queryFavList );
 
 				?>
 			
@@ -214,8 +218,12 @@ if (! $result) {
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
 			<div  id="<?php echo  $mediaid;?>" style="float: right;">
+			<?php if ($FavListresult == NULL){?>
 			<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
-			</div>
+			<?php }else{?>
+				<img id="<?php echo  $mediaid;?>" src="uploads/kevin/red-star.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
+			<?php		
+			}?></div>
 			
 			</div>
 			 <?php 	
