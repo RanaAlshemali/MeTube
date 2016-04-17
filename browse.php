@@ -38,7 +38,7 @@ function saveDownload(id)
 
 <body>
 	
-<?php if (!$_SESSION["loggedIn"]) {?>
+<?php if ($_SESSION['username'] == "") {?>
 		<p>Welcome New Guest</p>
 	<a href="index.php">Login or register</a>
 		<?php
@@ -46,7 +46,7 @@ function saveDownload(id)
 } else {
 	?>
 	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
-	  
+	<a href="UserChannel.php">My Channel</a>  
 	<a href="logout.php">logout</a>
 <?php
 }
@@ -125,7 +125,7 @@ if (! $result) {
     
     <div style="background: #339900; color: #FFFFFF; width: 150px;">Uploaded
 		Media</div>
-	<table width="75%" cellpadding="5" cellspacing="15"  align="center" valign="center" border="1">
+	<div ><table width="75%" cellpadding="5" cellspacing="15"  align="center" valign="center" border="1">
 		<?php
 		$num_rows = mysql_num_rows ( $result );
  
@@ -224,7 +224,7 @@ if (! $result) {
 			<?php if (mysql_num_rows ( $FavListresult)==1 ){?>
 			<img id="<?php echo  $mediaid;?>" src="uploads/red-star.png" height="20" width="20" onClick="javascript:del(this.id)"/></div>
 			<?php }else {?>
-				<img id="<?php echo  $mediaid;?>" src="uploads/star.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
+				<img id="<?php echo  $mediaid;?>" src="uploads/Star-Full.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
 			<?php		
 			}?></div>
 			
@@ -238,7 +238,7 @@ if (! $result) {
 		}
 		?>
 		</table>
- 
+ </div>
  <script  type="text/javascript">
  
   function add(id) {
