@@ -1,8 +1,11 @@
 <script>alert("Im In")</script>
 <?php 
+session_start();
 include_once "function.php";
+$username=$_SESSION['username'];
+
 $id = $_GET['id'];
-$username = $_GET['username'];
+ 
 	$insert = "insert into favList(favid, mediaid,username)".
 			"valuss(NULL,'". $id . "','" .$username."')";
 	$queryresult = mysql_query($insert)
