@@ -211,7 +211,8 @@ if (! $result) {
 		 <?php echo '<br />';?>
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
-			<div  id="<?php echo  $mediaid;?>" style="float: right;"><img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="addFav(this)"/></div>
+			<div  id="<?php echo  $mediaid;?>" style="float: right;">
+			<img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this.id)"/></div>
 			</div>
 			
 			</div>
@@ -225,9 +226,8 @@ if (! $result) {
 		</table>
 
  <script type="text/javascript">
- function addFav(div){	 
-	 var id = div.id;
-	  
+ function addFav(id){	 
+	 alert("In");
 		<?php 	$mediaid = $_GET['id'];
 		$username = $_GET['username'];
 		$insert = "insert into favList(favid, mediaid,username)".
