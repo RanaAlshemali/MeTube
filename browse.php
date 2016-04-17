@@ -230,7 +230,7 @@ if (! $result) {
 	 alert("In");
 	var id = div.id
 	 alert(id);
-	
+	  document.write('<?php add("'+id+'");?>');
 	
 		alert("Added");
 		}
