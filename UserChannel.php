@@ -227,12 +227,12 @@ if (! $result) {
 			<div  id="<?php echo  $mediaid;?>" style="float: right;"> <?php echo  $count;?>
 		
 			<?php if (mysql_num_rows ( $FavListresult)==1 ){?>
-			<img id="<?php echo  $mediaid;?>" src="uploads/red-star.png" height="20" width="20" onClick="javascript:del(this.id)"/>
+			<img id="<?php echo  $mediaid;?>" src="uploads/red-star.png" height="20" width="20" onClick="javascript:delFav(this.id)"/>
 			<?php }else {?>
-				<img id="<?php echo  $mediaid;?>" src="uploads/Star-Full.png" height="20" width="20" onClick="javascript:add(this.id)"/>
+				<img id="<?php echo  $mediaid;?>" src="uploads/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this.id)"/>
 			<?php		
 			}?>
-			<img  src="uploads/delete.png" height="20" width="20" onClick="javascript:del(this.id)"/></div>
+			<img  src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/></div>
 			</div>
 				
 			
@@ -251,7 +251,7 @@ if (! $result) {
  </div>
  <script  type="text/javascript">
  
-  function add(id) {
+  function addFav(id) {
 
 		var username = "<?php echo $_SESSION['username'] ;?>";
 
@@ -265,7 +265,20 @@ if (! $result) {
 		    });
 		    location.reload();
 	}
-  function del(id) {
+  function delFav(id) {
+
+		var username = "<?php echo $_SESSION['username'] ;?>";
+		    $.ajax({
+		        url: 'delMedia.php',
+		        type: 'GET',
+		        data: {id:id, username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		    location.reload();
+	}
+  function delMedia(id) {
 
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
@@ -278,7 +291,7 @@ if (! $result) {
 		    });
 		    location.reload();
 	}
- 
+
  
 </script>
 
