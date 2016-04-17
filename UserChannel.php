@@ -269,7 +269,7 @@ if (! $result) {
 
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
-		        url: 'delMedia.php',
+		        url: 'delFav.php',
 		        type: 'GET',
 		        data: {id:id, username:username},
 		        success: function(data) {
@@ -282,7 +282,7 @@ if (! $result) {
 
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
-		        url: 'delFav.php',
+		        url: 'delMedia.php',
 		        type: 'GET',
 		        data: {id:id, username:username},
 		        success: function(data) {
