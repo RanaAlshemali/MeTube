@@ -211,7 +211,7 @@ if (! $result) {
 		 <?php echo '<br />';?>
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
-			<div  style="float: right;"><a href="addFav.php?id=<?php echo $mediaid.'?username='. $_SESSION['username']; ?>?f=addFav">
+			<div  style="float: right;"><a href="addFav.php?id=<?php echo $mediaid.'&username='. $_SESSION['username']; ?>?f=addFav">
 			<img src="uploads/ralshem/Star-Full.png" height="20" width="20"></a></div>
 			
 			</div>
