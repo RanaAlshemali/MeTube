@@ -212,7 +212,7 @@ if (! $result) {
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
 			<div  id="<?php echo  $mediaid;?>" style="float: right;">
-			<img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this.id)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this)"/></div>
 			</div>
 			
 			</div>
@@ -226,9 +226,9 @@ if (! $result) {
 		</table>
 
  <script  >
- function addFav(id){	 
+ function addFav(div){	 
 	 alert("In");
-
+	var id = div.id
 	 alert(id);
 	 <?php $id = "<script>document.write(id)</script>"?> 
 	 <?php 	
