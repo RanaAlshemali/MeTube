@@ -163,7 +163,9 @@ if (! $result) {
 				
 				$queryFavList = "SELECT * from favList WHERE username = '".$currentuser."' AND mediaid= '".$mediaid."' ";
 				$FavListresult = mysql_query ( $queryFavList );
-	
+				$queryCountFavList = "SELECT * from favList WHERE mediaid= '".$mediaid."' ";
+				$CountFavListresult = mysql_query ( $queryCountFavList );
+				$count = mysql_num_rows ($CountFavListresult);
 				?>
 			
 			<div>
@@ -218,7 +220,7 @@ if (! $result) {
 		 <?php echo '<br />';?>
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
-			<div  id="<?php echo  $mediaid;?>" style="float: right;">
+			<div  id="<?php echo  $mediaid;?>" style="float: right;"> <?php echo  $count;?>
 			<?php if (mysql_num_rows ( $FavListresult)==1 ){?>
 			<img id="<?php echo  $mediaid;?>" src="uploads/kevin/red-star.png" height="20" width="20" onClick="javascript:del(this.id)"/></div>
 			<?php }else {?>
