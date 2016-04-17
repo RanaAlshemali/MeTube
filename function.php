@@ -84,9 +84,13 @@ function other()
 {
 	//You can write your own functions here.
 }
- 
-function addFav($id){
+if(function_exists($_GET['f'])) {
+	
 	$id = $_GET['id'];
+	addFav($id);
+}
+function addFav($id){
+	
 	$insert = "insert into favList(favid, mediaid,username)".
 			"valuss(NULL,'". $id . "','" .$_SESSION['username'] ."')";
 	$queryresult = mysql_query($insert)
