@@ -84,9 +84,7 @@ function other()
 {
 	//You can write your own functions here.
 }
-if(function_exists($_GET['f'])) {
-	$_GET['f']();
-}
+ 
 function addFav($id){
 	$id = $_GET['id'];
 	$insert = "insert into favList(favid, mediaid,username)".
