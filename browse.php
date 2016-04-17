@@ -231,7 +231,13 @@ if (! $result) {
 	var id = div.id
 	 alert(id);
 	 document.write('<?php add("'+id+'");?>');
-	 <?php 	
+	
+		alert("Added");
+		}
+	alert("out");
+ 
+</script>
+ <?php 	
 	 function add($id){
 	     		$insert = "insert into favList(favid, mediaid,username)".
 				"values(NULL,'". $id . "','" .$_SESSION['username'] ."')";
@@ -239,10 +245,5 @@ if (! $result) {
 				or die("Insert into Media error in media_upload_process.php " .mysql_error());
 	 }
 				?>
-		alert("Added");
-		}
-	alert("out");
- 
-</script>
 </body>
 </html>
