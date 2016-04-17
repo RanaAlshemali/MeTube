@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
 session_start ();
@@ -48,7 +47,7 @@ function saveDownload(id)
 <?php
 }
 ?>
-<form name="formCatagory" action = "<?php $_PHP_SELF ?>" method = "GET">
+<form method="post"  name="formCatagory" action = "<?php $_PHP_SELF ?>" >
 <p>
 View by Catagory:
 <select name="formCatagory" onchange="this.form.submit()">
@@ -151,8 +150,7 @@ if (! $result) {
 					$filename= substr ( $filename, 0, 20 );
 				}
 				$type = substr ( $type, 0, 5 );
-				
-
+ 
 				?>
 			
 			<div>
@@ -180,8 +178,6 @@ if (! $result) {
 					<div  style="position: relative; left: 0; top: 0;" >
 	<!-- <p>Viewing Video:<?php echo $result_row[2].$result_row[1];?></p> -->
  
-				
-				
 				<a href="media.php?id=<?php echo $mediaid;?>" target="_blank">	
 				<video id="video" width="320" height="286"  style="position: relative;"> 
 				<source src="<?php echo $result_row[4];?>#t=15">  
@@ -189,9 +185,7 @@ if (! $result) {
 				<?php echo "\n <img  src='uploads/video-icon1.png' height='100' width='100'  style='position: absolute; top: 100px; left: 110px;'/>";?>
 				
 				</a>
-				
-          
-          
+ 
        </div>
               
 <?php
@@ -202,12 +196,14 @@ if (! $result) {
 			<div  style="float: left;">By:<?php echo $username;echo '<br />';?></div>
 			<div  style="float: right;"><a href="<?php echo $filenpath;?>" target="_blank" onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a></div>
 			</div>
-			
-			
+	
 		 <?php echo '<br />';?>
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
-			<div  style="float: right;"><img src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="addFav('<?php echo  $mediaid;?>','<?php echo $_SESSION['username'];?>')"/></div>
+	
+			<div  style="float: right;"><img src="uploads/Star-Full.png" height="20" width="20"
+			<a href="media.php?id=<?php echo $mediaid; ?>?username=<?php echo $username; ?></a>
+			</div>
 			</div>
 			 <?php 	
 			}?>
