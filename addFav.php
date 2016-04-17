@@ -1,9 +1,6 @@
 <script>alert("Im In")</script>
 <?php 
 session_start();
-if (!$_SESSION["loggedIn"])
-	header('Location: index.php');
- 
 include_once "function.php";
 $username=$_SESSION['username'];
 

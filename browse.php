@@ -242,7 +242,10 @@ if (! $result) {
  <script  type="text/javascript">
  
   function add(id) {
-
+	  <?php
+			  if (!$_SESSION["loggedIn"])
+			  	header('Location: index.php');
+			  	?>
 		var username = "<?php echo $_SESSION['username'] ;?>";
 
 		    $.ajax({
@@ -256,7 +259,10 @@ if (! $result) {
 		    location.reload();
 	}
   function del(id) {
-
+	  <?php
+			  if (!$_SESSION["loggedIn"])
+			  	header('Location: index.php');
+			  	?>
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
 		        url: 'delFav.php',
