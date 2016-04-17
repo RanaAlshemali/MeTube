@@ -227,12 +227,14 @@ if (! $result) {
 			<div  id="<?php echo  $mediaid;?>" style="float: right;"> <?php echo  $count;?>
 		
 			<?php if (mysql_num_rows ( $FavListresult)==1 ){?>
-			<img id="<?php echo  $mediaid;?>" src="uploads/red-star.png" height="20" width="20" onClick="javascript:del(this.id)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/red-star.png" height="20" width="20" onClick="javascript:del(this.id)"/>
 			<?php }else {?>
-				<img id="<?php echo  $mediaid;?>" src="uploads/Star-Full.png" height="20" width="20" onClick="javascript:add(this.id)"/></div>
+				<img id="<?php echo  $mediaid;?>" src="uploads/Star-Full.png" height="20" width="20" onClick="javascript:add(this.id)"/>
 			<?php		
 			}?>
-				<img  src="uploads/delete.png" height="20" width="20" onClick="javascript:del(this.id)"/></div>
+			<img  src="uploads/delete.png" height="20" width="20" onClick="javascript:del(this.id)"/></div>
+			</div>
+				
 			
 			</div>
 			
