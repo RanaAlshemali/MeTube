@@ -217,7 +217,7 @@ if (! $result) {
 			
 			</div>
 			 <?php 	
-			 addFav(5);
+			 
 			}?>
 				</td>
 			</tr> 
@@ -225,7 +225,8 @@ if (! $result) {
 		}
 		?>
 		</table>
-
+		<?php
+addFav(5);?>
  <script  >
  function add(is){	 
 	 alert("In");
