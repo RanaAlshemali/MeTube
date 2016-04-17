@@ -232,7 +232,7 @@ if (! $result) {
 	 alert(id);
 	 document.write('<?php add("'+id+'");?>');
 	 <?php 	
-	 function addFav($id){
+	 function add($id){
 	     		$insert = "insert into favList(favid, mediaid,username)".
 				"values(NULL,'". $id . "','" .$_SESSION['username'] ."')";
 				$queryresult = mysql_query($insert)
