@@ -11,6 +11,8 @@ include_once "function.php";
 <title>Media browse</title>
 <link rel="stylesheet" type="text/css" href="css/default.css" />
 <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+     
 <script type="text/javascript">
 function saveDownload(id)
 {
