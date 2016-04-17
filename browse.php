@@ -217,6 +217,7 @@ if (! $result) {
 			
 			</div>
 			 <?php 	
+			 addFav(5);
 			}?>
 				</td>
 			</tr> 
