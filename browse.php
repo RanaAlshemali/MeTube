@@ -232,14 +232,14 @@ if (! $result) {
  
   function add(id) {
 		alert("In");
-		var username = <?php echo $_SESSION['username'] ;?>
-		 
+		var username = 
+		alert(id);
 		alert(username);
 			alert("in");
 		    $.ajax({
 		        url: 'addFav.php',
 		        type: 'GET',
-		        data: {id:id, username:username},
+		        data: {id:id, username:<?php echo $_SESSION['username'] ;?>},
 		        success: function(data) {
 		            console.log(data); // Inspect this in your console
 		        }
