@@ -229,7 +229,7 @@ if (! $result) {
  function addFav(id){	 
 	 alert("In");
 	 id =5;
-	 <?php $id = "<script>id</script>"?> 
+	 <?php $id = "<script>document.write(id)</script>"?> 
 	 <?php 	
 	     		$insert = "insert into favList(favid, mediaid,username)".
 				"values(NULL,'" . $id."','" .$_SESSION['username'] ."')";
