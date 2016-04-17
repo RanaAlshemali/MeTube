@@ -240,11 +240,9 @@ if (! $result) {
  <script  type="text/javascript">
  
   function add(id) {
-		alert("In");
+
 		var username = "<?php echo $_SESSION['username'] ;?>";
-		alert(id);
-		alert(username);
-			alert("in");
+
 		    $.ajax({
 		        url: 'addFav.php',
 		        type: 'GET',
@@ -253,14 +251,11 @@ if (! $result) {
 		            console.log(data); // Inspect this in your console
 		        }
 		    });
-		
+		    location.reload();
 	}
   function del(id) {
-		alert("In");
+
 		var username = "<?php echo $_SESSION['username'] ;?>";
-		alert(id);
-		alert(username);
-			alert("in");
 		    $.ajax({
 		        url: 'delFav.php',
 		        type: 'GET',
@@ -269,9 +264,9 @@ if (! $result) {
 		            console.log(data); // Inspect this in your console
 		        }
 		    });
-		
+		    location.reload();
 	}
-	alert("out");
+ 
  
 </script>
 
