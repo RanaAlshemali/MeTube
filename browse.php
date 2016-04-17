@@ -204,7 +204,7 @@ if (! $result) {
 				?>
 			<div>
 			<div  style="float: left;">By:<?php echo $username;echo '<br />';?></div>
-			<div  style="float: right;"><a href="<?php echo $filenpath;?>" target="_blank" onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a></div>
+			<div  style="float: right;"><a href="<?php echo $filenpath;?>" target="_blank" onclick="javascript:saveDownload(<?php echo $result_row[4];);">Download</a></div>
 			</div>
 			
 			
@@ -212,7 +212,7 @@ if (! $result) {
 			<div>
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
 			<div  id="<?php echo  $mediaid;?>" style="float: right;">
-			<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="add(this.id)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/ralshem/Star-Full.png" height="20" width="20" onClick="<?php add(?>this.id<?php )?>"/></div>
 			</div>
 			
 			</div>
