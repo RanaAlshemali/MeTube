@@ -2,6 +2,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
 session_start ();
+
+if (!$_SESSION["loggedIn"])
+	$currentuser="";
+else 
+	$currentuser= $_SESSION['username'];
 include_once "function.php";
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -38,7 +43,7 @@ function saveDownload(id)
 
 <body>
 	
-<?php if ($_SESSION['username'] == "") {?>
+<?php if ($currentuser == "") {?>
 		<p>Welcome New Guest</p>
 	<a href="index.php">Login or register</a>
 		<?php
