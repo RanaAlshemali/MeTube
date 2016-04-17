@@ -84,16 +84,4 @@ function other()
 {
 	//You can write your own functions here.
 }
-if(function_exists($_GET['f'])) {
-	
-	$id = $_GET['id'];
-	addFav($id);
-}
-function addFav($id){
-	
-	$insert = "insert into favList(favid, mediaid,username)".
-			"valuss(NULL,'". $id . "','" .$_SESSION['username'] ."')";
-	$queryresult = mysql_query($insert)
-	or die("Insert into Media error in media_upload_process.php " .mysql_error());
-}
 ?>
