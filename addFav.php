@@ -7,7 +7,7 @@ $username=$_SESSION['username'];
 $id = $_GET['id'];
  
 	$insert = "insert into favList(favid, mediaid,username)".
-			"valuss(NULL,'". $id . "','" .$username."')";
+			"values(NULL,'". $id . "','" .$username."')";
 	$queryresult = mysql_query($insert)
 	or die("Insert into Media error in media_upload_process.php " .mysql_error());
 
