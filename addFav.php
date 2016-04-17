@@ -1,5 +1,6 @@
 <script>alert("Im In")</script>
 <?php 
+include_once "function.php";
 $id = $_POST['id'];
 	$insert = "insert into favList(favid, mediaid,username)".
 			"valuss(NULL,'". $id . "','" .$_SESSION['username'] ."')";
