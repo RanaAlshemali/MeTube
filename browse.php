@@ -162,7 +162,9 @@ if (! $result) {
 				$type = substr ( $type, 0, 5 );
 				$queryFavList = "SELECT * from favList WHERE username = '".$currentuser."' and mediaid= '".$mediaid ."'";
 				$FavListresult = mysql_query ( $queryFavList );
-
+				if (! $FavListresult) {
+					die ( "Could not query the media table in the database: <br />" . mysql_error () );
+				}
 				?>
 			
 			<div>
