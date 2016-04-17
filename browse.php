@@ -233,7 +233,7 @@ if (! $result) {
   function add(id) {
 		alert("In");
 		alert(id);
-		var id = function(id) {
+
 			alert("in");
 		    $.ajax({
 		        url: 'addFav.php',
@@ -243,7 +243,7 @@ if (! $result) {
 		            console.log(data); // Inspect this in your console
 		        }
 		    });
-		};
+		
 	}
 	alert("out");
  
