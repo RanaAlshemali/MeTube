@@ -233,7 +233,7 @@ if (! $result) {
   function add(id) {
 		alert("In");
 		alert(id);
-		var id1 = function(id) {
+		var id = function(id) {
 			alert("in");
 		    $.ajax({
 		        url: 'addFav.php',

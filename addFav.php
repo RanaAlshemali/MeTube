@@ -1,3 +1,4 @@
+<script>alert("Im In")</script>
 <?php 
 if (isset($_POST['id'])) {
 
@@ -15,4 +16,3 @@ function addFav($id){
 
 }
 ?>
-<script>alert("Im In")</script>
