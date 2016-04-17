@@ -233,7 +233,7 @@ if (! $result) {
   function add(id) {
 		alert("In");
 		var username = <?php echo $_SESSION['username'] ;?>
-		alert(id);
+		 
 		alert(username);
 			alert("in");
 		    $.ajax({
