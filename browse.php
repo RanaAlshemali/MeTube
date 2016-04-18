@@ -237,8 +237,8 @@ if (! $result) {
 			<?php }?>
 	</div>
 			
-			<div>
-			<select name="addplaylist">
+			<div name="addplcontainer" id="<?php echo  $mediaid;?>" >
+			<select id="addplaylist" onchange="addplaylist(addplcontainer.id)">
 			<option value="addtoplaylist">Add to Playlist</option>
 			<option value="createplaylist">Create Playlist</option>
 <?php 	
@@ -305,7 +305,30 @@ if (! $result) {
 		    });
 		    location.reload();
 	}
-
+	  function addplaylist(id) {
+		var PlaylistName = document.getElementById("addplaylist").value;
+		var username = "<?php echo $_SESSION['username'] ;?>";
+		if(PlaylistName == createplaylist){
+		    $.ajax({
+		        url: 'createPlaylist.php',
+		        type: 'GET',
+		        data: {PlaylistName :PlaylistName, username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		}else{
+		    $.ajax({
+		        url: 'addtoPlaylist.php',
+		        type: 'GET',
+		        data: {id:id, PlaylistName :PlaylistName, username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		}
+		    location.reload();
+	}
  
 </script>
 
