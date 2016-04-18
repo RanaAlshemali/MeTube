@@ -250,9 +250,9 @@ if (! $result) {
 			 <option value="addtoplaylist">Add to test</option>
 	 <?php		 for($k=0; k<2; $k++){
 
-			 	?>
- 	 <option value="<?php echo  $playlistName;?>">Add  <?php echo  $playlistName;?></option>
- <?php }
+			 	
+ 	 "<option value="<?php echo  $playlistName;?>">Add  <?php echo  $playlistName;?></option>"
+ }
 			 ?>
 			 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
 
