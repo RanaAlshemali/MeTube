@@ -82,20 +82,16 @@ if (! $result) {
 			
 			for($j = 0; $j < $num_rows; $j ++) {
 				?>
-					<td >
+				<tr>	<td >
 										<?php
 				$result_row = mysql_fetch_row ( $result );
 				
 				$PlaylistName = $result_row [0];
-				
-				if(strlen($filename)>20){
-					$filename= substr ( $filename, 0, 20 );
-				}
-				
+		 
 				?>
-			<tr>
+			
 			<div> <a href="playlistdisplay.php?playlist=<?php echo $PlaylistName;?>"><?php echo $PlaylistName;?></a></div>
-			</tr> 
+			</td></tr> 
 				<?php
 		}
 		?>
