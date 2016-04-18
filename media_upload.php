@@ -50,10 +50,9 @@ session_start();
 </p>
 
   
- <select name="privacy">
+<select name="privacy">
   <option value="public">Public</option>
   <option value="privet">Privet</option>
-
 </select>
    
   
