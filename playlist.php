@@ -56,9 +56,9 @@ include_once "function.php";
  
   <p style="margin:0; padding:0">
   	<label >Playlist Name: </label><label style="color:red;">*</label>
-     <input type="text" name="PlaylistName" required></input>
+     <input type="text" name="PlaylistName" required></input><input value="Create" name="submit" type="submit" />
 
-	<input value="Create" name="submit" type="submit" />
+	
   </p>
  </form>
 <?php
