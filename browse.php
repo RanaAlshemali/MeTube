@@ -209,10 +209,9 @@ if (! $result) {
 				<?php echo "\n <img  src='uploads/video-icon1.png' height='100' width='100'  style='position: absolute; top: 100px; left: 110px;'/>";?>
 				
 				</a>
-				
-          
-          
+	   
        </div>
+       	
               
 <?php
 				}
@@ -229,12 +228,12 @@ if (! $result) {
 			<div  style="float: left;">Created On: <?php echo substr( $dateCreated, 0, 10 ); echo '<br />';?></div>
 			<div  id="<?php echo  $mediaid;?>" style="float: right;"> <?php echo  $count;?>
 			<?php if (mysql_num_rows ( $FavListresult)==1 ){?>
-			<img id="<?php echo  $mediaid;?>" src="uploads/red-star.png" height="20" width="20" onClick="javascript:delFav(this.id)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/red-star.png" height="20" width="20" onClick="javascript:delFav(this.id)"/>
 			<?php }else {?>
-				<img id="<?php echo  $mediaid;?>" src="uploads/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this.id)"/></div>
+				<img id="<?php echo  $mediaid;?>" src="uploads/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this.id)"/>
 			<?php		
 			}?></div>
-			
+			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/></div>
 			</div>
 			 <?php 	
 			 
@@ -275,7 +274,20 @@ if (! $result) {
 		    });
 		    location.reload();
 	}
- 
+  function delMedia(id) {
+
+		var username = "<?php echo $_SESSION['username'] ;?>";
+		    $.ajax({
+		        url: 'delMedia.php',
+		        type: 'GET',
+		        data: {id:id, username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		    location.reload();
+	}
+
  
 </script>
 
