@@ -112,7 +112,7 @@ $where.= ' AND lower(concat(username, \'\', filename, \'\', dateCreated, \'\', k
 }
 }
 //if ($where != "")  
-"SELECT * FROM media INNER JOIN favList ON media.mediaid =favList.mediaid WHERE favList.username ='".$currentuser."'";
+
 if ($where == "WHERE catagory = ''"){ //All catagories
 $query = "SELECT * FROM media INNER JOIN favList ON media.mediaid =favList.mediaid WHERE favList.username ='".$currentuser."'";
 } else {

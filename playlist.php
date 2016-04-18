@@ -99,48 +99,6 @@ if (! $result) {
  </div>
  <script  type="text/javascript">
  
-  function addFav(id) {
-
-		var username = "<?php echo $_SESSION['username'] ;?>";
-
-		    $.ajax({
-		        url: 'addFav.php',
-		        type: 'GET',
-		        data: {id:id, username:username},
-		        success: function(data) {
-		            console.log(data); // Inspect this in your console
-		        }
-		    });
-		    location.reload();
-	}
-  function delFav(id) {
-
-		var username = "<?php echo $_SESSION['username'] ;?>";
-		    $.ajax({
-		        url: 'delFav.php',
-		        type: 'GET',
-		        data: {id:id, username:username},
-		        success: function(data) {
-		            console.log(data); // Inspect this in your console
-		        }
-		    });
-		    location.reload();
-	}
-  function delMedia(id) {
-
-		var username = "<?php echo $_SESSION['username'] ;?>";
-		    $.ajax({
-		        url: 'delMedia.php',
-		        type: 'GET',
-		        data: {id:id, username:username},
-		        success: function(data) {
-		            console.log(data); // Inspect this in your console
-		        }
-		    });
-		    location.reload();
-	}
-
- 
 </script>
 
 </body>
