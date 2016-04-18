@@ -2,7 +2,7 @@
 <?php
 session_start ();
 
-if (!$_SESSION["loggedIn"])
+if ($_SESSION['username']=="")
 	$currentuser="";
 else 
 	$currentuser= $_SESSION['username'];
@@ -51,12 +51,14 @@ function saveDownload(id)
 	?>
 	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
 	<a href="UserChannel.php">My Channel</a>  
-	<a href="playlistdisplay.php">My Playlists</a>  
+	<a href="playlist.php">My Playlists</a>  
 	<a href="favListdisplay.php">My Favorite List</a>  
 	<a href="logout.php">logout</a>
+	
 <?php
 }
 ?>
+<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
 <form  method="GET" action="<?php $_PHP_SELF ?>"> 
 <input  type="text" name="search"> 
 <input  type="submit" name="submit" value="Search"> 
@@ -87,7 +89,7 @@ View by Catagory:
 </select>
 </p> 
 </form>
-	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
+	
 	<div id='upload_result'>
 
 </div>

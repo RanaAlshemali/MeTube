@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<?php
+session_start ();
+
+if ($_SESSION['username']==""){
+	header('Location: index.php');
+}
+else 
+	$currentuser= $_SESSION['username'];
+include_once "function.php";
+?>
+ 
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Media browse</title>
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<script type="text/javascript" src="js/jquery-latest.pack.js"></script>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+     
+<script type="text/javascript">
+ 
+
+</script>
+<style >
+#image11{
+    position:relative;
+   top:50%;
+   left:50%;
+   margin-top:100px;
+   margin-left:110px;
+}
+</style>
+</head>
+
+<body>
+	
+ 
+	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
+	<a href="UserChannel.php">My Channel</a>  
+	<a href="playlist.php">My Playlists</a>  
+	<a href="favListdisplay.php">My Favorite List</a>  
+	<a href="logout.php">logout</a>
+	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
+<?php
+ 
+?>
+
+	
+	<div id='upload_result'>
+
+</div>
+	<br />
+	<br />
+<form method="post" action="media_upload_process.php" enctype="multipart/form-data" >
+ 
+  <p style="margin:0; padding:0">
+  	<label >Playlist Name: </label><label style="color:red;">*</label>
+     <input type="text" name="PlaylistName" required></input><br/>
+
+	<input value="Create" name="submit" type="submit" />
+  </p>
+ 
+                
+ </form>
+<?php
+$currentuser=  $_SESSION['username'];
+
+$query = "SELECT DISTINCT(playlistname) AS 	playlistname from playList Where username= '".$currentuser."'";
+$result = mysql_query ( $query );
+if (! $result) {
+	die ( "Could not query the media table in the database: <br />" . mysql_error () );
+}
+?>
+    
+    <div style="background: #339900; color: #FFFFFF; width: 150px;">My Playlists: </div>
+	<div ><table width="75%" cellpadding="5" cellspacing="15"  align="center" valign="center" border="1">
+		<?php
+		$num_rows = mysql_num_rows ( $result );
+ 
+			?>
+			
+				<?php
+			
+			for($j = 0; $j < $num_rows; $j ++) {
+				?>
+					<td >
+										<?php
+				$result_row = mysql_fetch_row ( $result );
+				
+				$PlaylistName = $result_row [0];
+				
+				if(strlen($filename)>20){
+					$filename= substr ( $filename, 0, 20 );
+				}
+				
+				?>
+			<tr>
+			<div> <a href="playlistdisplay.php?playlist=<?php echo $PlaylistName;?>"><?php echo $PlaylistName;?></a></div>
+			</tr> 
+				<?php
+		}
+		?>
+		</table>
+ </div>
+ <script  type="text/javascript">
+ 
+  function addFav(id) {
+
+		var username = "<?php echo $_SESSION['username'] ;?>";
+
+		    $.ajax({
+		        url: 'addFav.php',
+		        type: 'GET',
+		        data: {id:id, username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		    location.reload();
+	}
+  function delFav(id) {
+
+		var username = "<?php echo $_SESSION['username'] ;?>";
+		    $.ajax({
+		        url: 'delFav.php',
+		        type: 'GET',
+		        data: {id:id, username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		    location.reload();
+	}
+  function delMedia(id) {
+
+		var username = "<?php echo $_SESSION['username'] ;?>";
+		    $.ajax({
+		        url: 'delMedia.php',
+		        type: 'GET',
+		        data: {id:id, username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		    location.reload();
+	}
+
+ 
+</script>
+
+</body>
+</html>
