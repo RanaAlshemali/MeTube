@@ -240,8 +240,7 @@ if (! $result) {
 			<div>
 			<select name="addplaylist">
 			 <option value="addtoplaylist">Add to Playlist</option>
-			 <option value="addtoplaylist">Add to test</option>
-			 <option value="addtoplaylist">Add to test</option>
+			 
 
 <?php 	
 			if(!($currentuser == "")){
@@ -252,8 +251,7 @@ if (! $result) {
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
  <?php }
 			} ?>
-			 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
-
+			<option value="createplaylist">Create Playlist</option>
 		</select>
 			</div>
 			 <?php 	
