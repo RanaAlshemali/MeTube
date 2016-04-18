@@ -94,7 +94,7 @@ View by Catagory:
 	<br />
 
 <?php
-$currentuser=  $_SESSION['username'];
+
 $where = "WHERE catagory = ''";
 if(isset($_GET['formCatagory']) )
  {
