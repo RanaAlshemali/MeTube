@@ -246,14 +246,8 @@ if (! $result) {
 			<div>
 			<select name="addplaylist">
 			 <option value="addtoplaylist">Add to Playlist</option>
-		 			<?php 	
-			if($username == $currentuser){
-			 for($k=0; k<$playlist_num_rows; $k++){
-			 $playlistName = $playlist_rows[0];
-			 	?>
- 	 <option value="<?php echo  $playlistName;?>"><?php echo  $playlistName;?></option>
- <?php }
-			} ?>
+			 <option value="addtoplaylist">Add to test</option>
+
 
 		</select>
 			</div>
