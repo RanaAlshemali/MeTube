@@ -52,16 +52,14 @@ include_once "function.php";
 </div>
 	<br />
 	<br />
-<form method="post" action="media_upload_process.php" enctype="multipart/form-data" >
+<form method="post" action="createPlaylist.php" enctype="multipart/form-data" >
  
   <p style="margin:0; padding:0">
   	<label >Playlist Name: </label><label style="color:red;">*</label>
-     <input type="text" name="PlaylistName" required></input><br/>
+     <input type="text" name="PlaylistName" required></input>
 
 	<input value="Create" name="submit" type="submit" />
   </p>
- 
-                
  </form>
 <?php
 $currentuser=  $_SESSION['username'];
@@ -72,8 +70,8 @@ if (! $result) {
 	die ( "Could not query the media table in the database: <br />" . mysql_error () );
 }
 ?>
-    
-    <div style="background: #339900; color: #FFFFFF; width: 150px;">My Playlists: </div>
+    <br/><br/>
+    <div style="background: #339900; color: #FFFFFF; width: 150px;">My Playlists: </div><br/>
 	<div ><table width="75%" cellpadding="5" cellspacing="15"  align="center" valign="center" border="1">
 		<?php
 		$num_rows = mysql_num_rows ( $result );
