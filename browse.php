@@ -30,13 +30,7 @@ function saveDownload(id)
 } 
 </script>
 <style >
-#image11{
-    position:relative;
-   top:50%;
-   left:50%;
-   margin-top:100px;
-   margin-left:110px;
-}
+
 </style>
 </head>
 
@@ -254,7 +248,12 @@ if (! $result) {
 			 <option value="addtoplaylist">Add to Playlist</option>
 			 <option value="addtoplaylist">Add to test</option>
 			 <option value="addtoplaylist">Add to test</option>
-			
+	 <?php		 for($k=0; k<2; $k++){
+
+			 	?>
+ 	 <option value="<?php echo  $playlistName;?>">Add  <?php echo  $playlistName;?></option>
+ <?php }
+			 ?>
 			 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
 
 		</select>
