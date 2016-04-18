@@ -100,7 +100,7 @@ View by Catagory:
 $currentuser=  $_SESSION['username'];
 $playlistname= $_GET['playlist'];
 
-$query = "SELECT * FROM media INNER JOIN playList ON media.mediaid =playList.mediaid WHERE playList.username ='".$currentuser."' and playList.playlistname='".$playlistname."' and mediaid > 0";
+$query = "SELECT * FROM media INNER JOIN playList ON media.mediaid =playList.mediaid WHERE playList.username ='".$currentuser."' and playList.playlistname='".$playlistname."' ";
 //} else {
 //$query = "SELECT * from media";
 //}
