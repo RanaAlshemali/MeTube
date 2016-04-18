@@ -254,7 +254,8 @@ if (! $result) {
 			 <option value="addtoplaylist">Add to Playlist</option>
 			 <option value="addtoplaylist">Add to test</option>
 			 <option value="addtoplaylist">Add to test</option>
-
+			
+			 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
 
 		</select>
 			</div>
