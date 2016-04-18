@@ -247,7 +247,12 @@ if (! $result) {
 			<select name="addplaylist">
 			 <option value="addtoplaylist">Add to Playlist</option>
 			 <option value="addtoplaylist">Add to test</option>
-
+			 <option value="addtoplaylist">Add to test</option>
+			 <option value="addtoplaylist">Add to test</option>
+			 <option value="addtoplaylist">Add to test</option>
+			 <option value="addtoplaylist">Add to test</option>
+			 <option value="addtoplaylist">Add to test</option>
+		 			
 
 		</select>
 			</div>
