@@ -250,15 +250,6 @@ if (! $result) {
 			 <option value="addtoplaylist">Add to test</option>
 			 <option value="addtoplaylist">Add to test</option>
 
-		 			<?php 	
-			if($username == $currentuser){
-			 for($k=0; k<2; $k++){
-			 $playlist_rows = mysql_fetch_row ( $playlistresult );
-			 $playlistName = $playlist_rows[0];
-			 	?>
- 	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
- <?php }
-			} ?>
 
 		</select>
 			</div>
