@@ -252,7 +252,7 @@ if (! $result) {
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
  <?php }
 			} ?>
-			
+				<option value="createplaylist">Create Playlist</option>
 		</select>
 			</div>
 			 <?php 	
