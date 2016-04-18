@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+<img src="phpimages/phpmkrlogo1.png" alt="MeTube Logo">
 <?php
 session_start ();
-
+error_reporting(0);
+ini_set('display_errors', 0);
 if ($_SESSION['username']=="")
 	$currentuser="";
 else 
@@ -38,7 +40,7 @@ function saveDownload(id)
 	
 <?php if ($currentuser == "") {?>
 		<p>Welcome New Guest</p>
-	<a href="index.php">Login or register</a>
+	<a href="login.php">Login or register</a>
 		<?php
 	$_SESSION ["loggedIn"] = false;
 } else {
@@ -46,6 +48,8 @@ function saveDownload(id)
 	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
 	<a href="UserChannel.php">My Channel</a>  
 	<a href="logout.php">logout</a>
+        <a href="accountlist.php">Account Panel</a>
+
 
 <?php
 

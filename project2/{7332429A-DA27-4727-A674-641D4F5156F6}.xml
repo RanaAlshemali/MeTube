@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<configuration date="2016/04/12" author="e.World Technology Ltd.">
+<project id="{7332429A-DA27-4727-A674-641D4F5156F6}" file="C:\Users\Kevin Wang\Documents\PHPMaker\Projects\project2.pmp" name="project2" product="PHPMaker" version="12.0" datetime="2016/04/12 13:04:36" languagefolder="phplang" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0">
+<table id="account" name="account" caption="Update Profile" userlevel="-2,&quot;Anonymous&quot;,37;0,&quot;Default&quot;,37" priv="1"/>
+<table id="comments" name="comments" caption="comments" userlevel="-2,&quot;Anonymous&quot;,32;0,&quot;Default&quot;,32" priv="1"/>
+<table id="favList" name="favList" caption="fav List" userlevel="-2,&quot;Anonymous&quot;,32;0,&quot;Default&quot;,32" priv="1"/>
+<table id="media" name="media" caption="media" userlevel="-2,&quot;Anonymous&quot;,32;0,&quot;Default&quot;,32" priv="1"/>
+<table id="pm" name="pm" caption="pm" userlevel="-2,&quot;Anonymous&quot;,32;0,&quot;Default&quot;,32" priv="1"/>
+<table id="users" name="users" caption="users" userlevel="-2,&quot;Anonymous&quot;,32;0,&quot;Default&quot;,32" priv="1"/>
+<table id="hello_php" name="hello.php" caption="Private Messages" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1"/>
+<table id="userlevelpermissions" name="userlevelpermissions" caption="userlevelpermissions" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1"/>
+<table id="userlevels" name="userlevels" caption="userlevels" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1"/>
+<table id="Update_Profile_php" name="Update Profile.php" caption="Update Profile" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1"/>
+</project></configuration>
