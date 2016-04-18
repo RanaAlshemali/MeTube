@@ -110,13 +110,7 @@ $where.= ' AND lower(concat(username, \'\', filename, \'\', dateCreated, \'\', k
 $queryplaylist = "SELECT DISTINCT(playlistname) AS 	playlistname from playList Where username= '".$currentuser."'";
 $playlistresult = mysql_query ( $queryplaylist );
 $playlist_num_rows = mysql_num_rows ( $playlistresult );
-echo "********".$playlist_num_rows;
-$playlist_rows = mysql_fetch_row ( $playlistresult );
-$playlistName = $playlist_rows[0];
-echo "********".$playlistName;
-$playlist_rows = mysql_fetch_row ( $playlistresult );
-$playlistName = $playlist_rows[0];
-echo "********".$playlistName;
+
 
 if ($where == "WHERE catagory = ''"){ //All catagories
 $query = "SELECT * from media";
