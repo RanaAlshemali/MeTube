@@ -251,7 +251,7 @@ if (! $result) {
 	 <?php		 for($k=0; k<2; $k++){
 
 			 	
- 	 "<option value="<?php echo  $playlistName;?>">Add  <?php echo  $playlistName;?></option>"
+ 	 echo "<option value=".  $playlistName .">Add  ".echo  $playlistName ."</option>";
  }
 			 ?>
 			 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
