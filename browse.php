@@ -251,7 +251,7 @@ if (! $result) {
 
 <?php 	
 			if(!($currentuser == "")){
-			 for($k=0; 4k <$playlist_num_rows; $k++){
+			 for($k=0; k <$playlist_num_rows; $k++){
 			 $playlist_rows = mysql_fetch_row ( $playlistresult );
 			 $playlistName = $playlist_rows[0];
 			 	?>
