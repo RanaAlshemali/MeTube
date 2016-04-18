@@ -98,7 +98,7 @@ View by Catagory:
 <!-- "SELECT * FROM media INNER JOIN favList ON media.mediaid =favList.mediaid WHERE favList.username ='".$currentuser."'"; -->
 <?php
 $currentuser=  $_SESSION['username'];
-$playlistname= $_GET['PlaylistName'];
+$playlistname= $_GET['playlist'];
 
 $query = "SELECT * FROM media INNER JOIN playList ON media.mediaid =playList.mediaid WHERE playList.username ='".$currentuser."' and playList.playlistname='".$playlistname."' and mediaid > 0";
 //} else {
