@@ -119,10 +119,10 @@ $playlist_num_rows = mysql_num_rows ( $playlistresult );
 echo "********".$playlist_num_rows;
 $playlist_rows = mysql_fetch_row ( $playlistresult );
 $playlistName = $playlist_rows[0];
-echo "********".$result_row;
+echo "********".$playlistName;
 $playlist_rows = mysql_fetch_row ( $playlistresult );
 $playlistName = $playlist_rows[0];
-echo "********".$result_row;
+echo "********".$playlistName;
 
 if ($where == "WHERE catagory = ''"){ //All catagories
 $query = "SELECT * from media";
