@@ -320,7 +320,7 @@ if (! $result) {
 		var PlaylistName = document.getElementById("addplaylist").value;
 		alert(PlaylistName);
 		var username = "<?php echo $_SESSION['username'] ;?>";
-		if(PlaylistName == createplaylist){
+		if(PlaylistName == "createplaylist"){
 		    $.ajax({
 		        url: 'createPlaylist.php',
 		        type: 'GET',
