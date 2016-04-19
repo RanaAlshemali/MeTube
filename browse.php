@@ -19,18 +19,7 @@ include_once "function.php";
 <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
      
-<script type="text/javascript">
-function saveDownload(id)
-{
-	$.post("media_download_process.php",
-	{
-       id: id,
-	},
-	function(message) 
-    { }
- 	);
-} 
-</script>
+ 
 <style >
 
 </style>

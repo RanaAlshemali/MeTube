@@ -18,19 +18,7 @@ include_once "function.php";
 <link rel="stylesheet" type="text/css" href="css/default.css" />
 <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-     
-<script type="text/javascript">
-function saveDownload(id)
-{
-	$.post("media_download_process.php",
-	{
-       id: id,
-	},
-	function(message) 
-    { }
- 	);
-} 
-</script>
+ 
 <style >
 #image11{
     position:relative;
@@ -225,7 +213,7 @@ if (! $result) {
 				?>
 			<div>
 			<div  style="float: left;">By:<?php echo $username;echo '<br />';?></div>
-			<div  style="float: right;"><a href="<?php echo $filenpath;?>" target="_blank" onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a></div>
+			<div  style="float: right;"><a href="<?php echo $filenpath;?>"  download>Download</a></div>
 			</div>
 			
 			
