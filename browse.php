@@ -248,7 +248,7 @@ if (! $result) {
 	</div>
 			
 			<div name="addplcontainer" id="<?php echo  $mediaid;?>" >
-			<select id="addplaylist" onchange="javascript:addplaylist(addplcontainer.id)">
+			<select id="addplaylist" onchange="javascript:addplaylist()">
 			<option value="addtoplaylist">Add to Playlist</option>
 			<option value="createplaylist">Create Playlist</option>
 <?php 	
