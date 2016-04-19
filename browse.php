@@ -141,7 +141,7 @@ if (! $result) {
     
     <div style="background: #339900; color: #FFFFFF; width: 150px;">Uploaded
 		Media</div>
-	<div ><table width="80%" cellpadding="5" cellspacing="20"  align="center" valign="center" >
+	<div ><table width="80%" cellpadding="5" cellspacing="20"  align="center" valign="center" border="1">
 		<?php
 		$num_rows = mysql_num_rows ( $result );
  
@@ -162,7 +162,7 @@ if (! $result) {
 			
 			for($j = 0; $j < $rowSize; $j ++) {
 				?>
-					<td width="20%" border="1">
+					<td width="20%">
 										<?php
 				$result_row = mysql_fetch_row ( $result );
 				
