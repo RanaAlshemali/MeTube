@@ -5,7 +5,7 @@ ini_set('display_errors', 0); ?>
 session_start();
 include_once "function.php";
 $username=$_SESSION['username'];
-$PlaylistName = $_GET['PlaylistName'];
+$PlaylistName = $_GET['playlist'];
 $mediaid =$_GET['id'];
  
 	$delete = "delete from playList where mediaid ='". $id . "' and username='" .$username."' and playlistname='" .$PlaylistName."'";
