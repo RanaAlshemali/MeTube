@@ -1,13 +1,15 @@
 <? error_reporting(0);
 ini_set('display_errors', 0); ?>
-
-
+<!DOCTYPE html>
 <?php
-session_start();
- if (!$_SESSION["loggedIn"])
- 	header('Location: index.php');
-?>
+session_start ();
 
+if ($_SESSION['username']=="")
+	$currentuser="";
+else 
+	$currentuser= $_SESSION['username'];
+include_once "function.php";
+?>
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
@@ -24,9 +26,9 @@ session_start();
 	?>
 	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
 	<a href="index.php">Home</a>  
-	<a href="#" style="color: #FF9900;"><strong>Upload File</strong></a>
+	<a href="media_upload.php" style="color: #FF9900;">Upload File</a>
 	<a href="UserChannel.php">My Channel</a>  
-	<a href="playlist.php">My Playlists</a>  
+	<a href="#"><strong>My Playlists</strong></a>  
 	<a href="favListdisplay.php">My Favorite List</a>  
     <a href="accountlist.php">Account Panel</a>
 	<a href="logout.php">logout</a>
@@ -35,6 +37,7 @@ session_start();
 <?php
 }
 ?>
+ 
 <form method="post" action="media_upload_process.php" enctype="multipart/form-data" >
  
   <p style="margin:0; padding:0">
