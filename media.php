@@ -47,6 +47,7 @@ if(isset($_GET['id'])) {
 	
 	$filename=$result_row[0];   ////0, 4, 2
 	$filepath=$result_row[4]; 
+ 
 	$type=$result_row[2];
 	if(substr($type,0,5)=="image") //view image
 	{
@@ -97,7 +98,7 @@ File is ready to download.
 <?php
 }
 ?>
-<div><a href="<?php echo $filenpath;?>"  download>Download</a></div>
+<div><a href="<?php echo  $result_row[4];?>"  download>Download</a></div>
 <hr>
 Comments:
 <?php 
