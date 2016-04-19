@@ -108,9 +108,9 @@ $query = "SELECT username, dateCreated, content FROM comments WHERE mediaid='".$
 $result = mysql_query($query);
 echo "<table border='1'>
 <tr>
-<th>username</th>
-<th>time</th>
-<th>comment</th>
+<th>By: </th>
+<th>On: </th>
+<td></td>
 </tr>";
 
 while($row = mysql_fetch_array($result))
