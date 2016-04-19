@@ -1,5 +1,7 @@
 <? error_reporting(0);
-ini_set('display_errors', 0); ?>
+ini_set('display_errors', 0); 
+ini_set('memory_limit','32M');
+?>
 <?php
 session_start();
 include_once "function.php";
@@ -49,9 +51,9 @@ if(!file_exists($dirfile))
 					$duration = $_POST['duration'];
 					$privacy = $_POST['privacy'];
 					$category = $_POST['category'];
-				  
+				       
 					$insert = "insert into media(mediaid, filename,username,type, path,description,keywords,duration,privacy,catagory)".
-							  "values(NULL,'".$medianame ."','$username','".$_FILES["file"]["type"]."', '$upfile','".$description ."','".$keywords ."','".$duration ."','".$privacy ."', '".$categroy ."')";
+							  "values(NULL,'".$medianame ."','$username','".$_FILES["file"]["type"]."', '$upfile','".$description ."','".$keywords ."','".$duration ."','".$privacy ."', '$category')";
 					$queryresult = mysql_query($insert)
 						  or die("Insert into Media error in media_upload_process.php " .mysql_error());
 					$result="0";

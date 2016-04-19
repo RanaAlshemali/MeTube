@@ -1,5 +1,7 @@
 <? error_reporting(0);
-ini_set('display_errors', 0); ?>
+ini_set('display_errors', 0); 
+ini_set('memory_limit','32M');
+?>
 <!DOCTYPE html>
 <?php
 session_start ();
@@ -73,11 +75,9 @@ echo '<br />';
   <option value="Education">Education</option>
   <option value="Science & Technology">Science & Technology</option>
   <option value="Nonprofits & Activism">Nonprofits & Activism</option>
-
 </select>
 </p>
 
-  
 <select name="privacy">
   <option value="public">Public</option>
   <option value="privet">Privet</option>
