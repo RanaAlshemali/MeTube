@@ -14,10 +14,7 @@ ini_set('display_errors', 0); ?>
 <script src="Scripts/AC_ActiveX.js" type="text/javascript"></script>
 <script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
 </head>
-
-<form action=""<?php $_PHP_SELF ?>"" method="get">
-<input type="submit" name="submit" value="Download File" />
-</form>
+ 
 
 
 <?php

@@ -84,7 +84,8 @@ if (! $result) {
 }
 ?>
     <br/><br/>
-    <div style="background: #339900; color: #FFFFFF; width: 150px;">My Playlists</div><br/>
+    <div style="background: #339900; color: #FFFFFF; width: 150px;"> My Playlists </div>
+    <br/>
 	<div ><table width="80%" cellpadding="5" cellspacing="15"  align="center" valign="center" border="1">
 		<?php
 		$num_rows = mysql_num_rows ( $result );
