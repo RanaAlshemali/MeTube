@@ -1,7 +1,5 @@
 <? error_reporting(0);
-ini_set('display_errors', 0); 
-ini_set('memory_limit','32M');
-?>
+ini_set('display_errors', 0); ?>
 <!DOCTYPE html>
 <?php
 session_start ();
@@ -18,12 +16,6 @@ include_once "function.php";
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Media Upload</title>
-
-<link rel="stylesheet" type="text/css" href="css/default.css" />
-<script type="text/javascript" src="js/jquery-latest.pack.js"></script>
-   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-     <link rel="stylesheet" href="assets/css/main.css" />
-
 </head>
 
 <body>
@@ -48,7 +40,7 @@ echo '<br />';
 echo '<br />';
 ?>
  
-<form method="post" name="upload-form" id="upload-form" action="media_upload_process.php" encoding="multipart/form-data" >
+<form method="post" action="media_upload_process.php" encoding="multipart/form-data" >
  
   <p style="margin:0; padding:0">
   <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
@@ -81,9 +73,11 @@ echo '<br />';
   <option value="Education">Education</option>
   <option value="Science & Technology">Science & Technology</option>
   <option value="Nonprofits & Activism">Nonprofits & Activism</option>
+
 </select>
 </p>
 
+  
 <select name="privacy">
   <option value="public">Public</option>
   <option value="privet">Privet</option>
@@ -95,13 +89,6 @@ echo '<br />';
  
                 
  </form>
- <script type="text/javascript">
- $( "form#upload-form" )
-	.attr( "enctype", "multipart/form-data" )
-	.attr( "encoding", "multipart/form-data" )
-;
-
-</script>
 
 </body>
 </html>
