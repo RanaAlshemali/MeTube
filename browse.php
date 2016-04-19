@@ -30,17 +30,16 @@ include_once "function.php";
 <?php if (!($currentuser == "")) {
 echo '<br />';?>
 <br>
-	<a href="#"><strong>  <p  style="font-size:40px">Hello <?php echo $_SESSION['username']; ?>!</p></strong></a>
+	<a href="#"><strong>  <p  style="font-size:40px">Welcome <?php echo $_SESSION['username']; ?>!</p></strong></a>
 	<a href="index.php"><strong>Home</strong></a>  
 	<a href="media_upload.php" style="color: #FF9900;">Upload File</a>
 	<a href="UserChannel.php">My Channel</a>  
     <a href="accountlist.php">Account Panel</a>
     <a href="logout.php">logout</a>
  <?php 
-} else {
+} else { echo '<br />';
 	?>
-
-	<p>Hello New Guest!</p>
+<a href="#"><strong>  <p  style="font-size:40px">Welcome New Guest!</p></strong></a>
 	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
 	<a href="login.php">Login or register</a>
 		<?php
