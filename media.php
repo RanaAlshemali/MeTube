@@ -82,7 +82,7 @@ Your browser does not support the video. Sorry.
 } else if (substr($type,0,5)=="audio") 
 {
  ?>
-
+ 
 <audio controls>
   <source src="<?php echo $result_row[4];?>" type="audio/mpeg">
 Your browser does not support the audio.
