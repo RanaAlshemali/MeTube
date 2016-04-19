@@ -93,13 +93,25 @@ $result = mysql_query ( $query );
 if (! $result) {
 	die ( "Could not query the media table in the database: <br />" . mysql_error () );
 }
+$num_rows = mysql_num_rows ( $result );
+if($num_rows ==0){
+	$width=0;
+}else if($num_rows ==1){
+	$width=20;
+}else if($num_rows ==2){
+	$width=40;
+}else if($num_rows ==3){
+	$width=60;
+}else if($num_rows >=4){
+	$width=80;
+}
 ?>
     
     <div style="background: #339900; color: #FFFFFF; width: 150px;">Uploaded
 		Media</div>
-	<div ><table width="80%" cellpadding="5" cellspacing="15"  align="center" valign="center" border="1">
+	<div ><table width="<?php echo $width;?>%" cellpadding="5" cellspacing="15"  align="center" valign="center" border="1">
 		<?php
-		$num_rows = mysql_num_rows ( $result );
+		
  
 		$size = (( int ) ($num_rows / 4)) + 1;
 		
