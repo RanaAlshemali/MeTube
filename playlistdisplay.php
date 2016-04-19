@@ -284,11 +284,13 @@ if (! $result) {
 		    location.reload();
 	}  function delplsong(id) {
 		 alert("in");
+		 alert(id);
 		var username = "<?php echo $_SESSION['username'] ;?>";
+		var playlist = "<?php echo $playlistname ;?>";
 		    $.ajax({
 		        url: 'delplsong.php',
 		        type: 'GET',
-		        data: {id:id, username:username},
+		        data: {id:id, username:username, playlist:playlist },
 		        success: function(data) {
 		            console.log(data); // Inspect this in your console
 		        }
