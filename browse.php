@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<a hef="browse.php"><img src="phpimages/phpmkrlogo1.png" alt="MeTube Logo"></a>
+<a href="browse.php"><img src="phpimages/phpmkrlogo1.png" alt="MeTube Logo"></a>
 <?php
 session_start ();
 error_reporting(0);
