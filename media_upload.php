@@ -36,6 +36,8 @@ include_once "function.php";
 	
 <?php
 }
+echo '<br />';
+echo '<br />';
 ?>
  
 <form method="post" action="media_upload_process.php" enctype="multipart/form-data" >
