@@ -28,6 +28,7 @@ include_once "function.php";
 <body>
 	
 <?php if (!($currentuser == "")) {?>
+<br>
 	<a href="#"><strong>  <p  style="font-size:40px">Hello <?php echo $_SESSION['username']; ?>!</p></strong></a>
 	<a href="index.php"><strong>Home</strong></a>  
 	<a href="media_upload.php" style="color: #FF9900;">Upload File</a>
