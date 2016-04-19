@@ -316,7 +316,8 @@ if (! $result) {
 	}
 	  function addplaylist(id) {
 		  alert(id);
-		var PlaylistName = document.getElementById(id);
+		var getSelect = document.getElementById(id);
+		var PlaylistName = getSelect[getSelect.selectedIndex].value;
 		alert(PlaylistName);
 		var n = id.length;
 	    id = id.substring(6, n);
