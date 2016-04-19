@@ -147,7 +147,7 @@ if (! $result) {
  
 		$size = (( int ) ($num_rows / 4)) + 1;
 		
-		for($i = $size; $i >= 1; $i ++) {
+		for($i = 1; $i <= $size; $i ++) {
 			
 			$rowSize;
 			if ($num_rows > 4) {
@@ -160,7 +160,7 @@ if (! $result) {
 			<tr>
 				<?php
 			
-			for($j = 0; $j < $rowSize; $j ++) {
+			for($j = $rowSize-1; $j >= 0; $j ++) {
 				?>
 					<td width="20%">
 										<?php
