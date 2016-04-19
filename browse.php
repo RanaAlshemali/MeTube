@@ -124,9 +124,9 @@ for($k=0; $k <$songsresult_num_rows; $k++){
 }
 // end 
 if ($where == "WHERE catagory = ''"){ //All catagories
-$query = "SELECT * from media";
+$query = "SELECT * from media ORDER BY mediaid DESC";
 } else {
-$query = "SELECT * from media $where ";
+$query = "SELECT * from media $where ORDER BY mediaid DESC";
 }
 
 //} else {
