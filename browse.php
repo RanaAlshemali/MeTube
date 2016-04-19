@@ -121,6 +121,16 @@ for($k=0; $k <$playlist_num_rows; $k++){
 	$playlistresult_array[] = $playlist_rows[0];
 }
 
+$querysongs = "SELECT * from playList Where username= '".$currentuser."'";
+$songsresult = mysql_query ( $querysongs );
+$songsresult_num_rows = mysql_num_rows ( $songsresult );
+$songsresult_array = [][];
+for($k=0; $k <$songsresult_num_rows; $k++){
+	$songs_rows = mysql_fetch_row ( $songsresult );
+	$songsresult_array[$k][0] = $songs_rows[0];
+	$songsresult_array[$k][1] = $songs_rows[2];
+	echo $songsresult_array[$k][0] ." ".	$songsresult_array[$k][1];
+}
 
 if ($where == "WHERE catagory = ''"){ //All catagories
 $query = "SELECT * from media";
