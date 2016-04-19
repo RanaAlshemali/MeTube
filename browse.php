@@ -334,8 +334,9 @@ if (! $result) {
 		    });
 		    window.location = "https://people.cs.clemson.edu/~ralshem/MeTube/playlist.php";
 			}else{
+				 alert("else");
 		    $.ajax({
-		        url: 'addtoPlaylist.php',
+		        url: 'addtoPlayList.php',
 		        type: 'GET',
 		        data: {id:id, PlaylistName :PlaylistName, username:username},
 		        success: function(data) {
