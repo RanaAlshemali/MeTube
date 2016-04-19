@@ -39,10 +39,11 @@ include_once "function.php";
 } else {
 	?>
 	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
+	  	<a href="index.php">Home</a>  
 	<a href="media_upload.php" style="color: #FF9900;">Upload File</a>
 	<a href="UserChannel.php">My Channel</a>  
 	<a href="playlist.php">My Playlists</a>  
-	<a href="favListdisplay.php">My Favorite List</a>  
+	<a href="#"><strong>My Favorite List</strong></a>  
     <a href="accountlist.php">Account Panel</a>
 	<a href="logout.php">logout</a>
 
