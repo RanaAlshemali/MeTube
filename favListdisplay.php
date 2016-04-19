@@ -116,7 +116,28 @@ $where.= ' AND lower(concat(username, \'\', filename, \'\', dateCreated, \'\', k
 }
 }
 //if ($where != "")  
+// 1
+$queryplaylist = "SELECT DISTINCT(playlistname) AS 	playlistname from playList Where username= '".$currentuser."'";
 
+$playlistresult = mysql_query ( $queryplaylist );
+$playlist_num_rows = mysql_num_rows ( $playlistresult );
+$playlistresult_array = [];
+for($k=0; $k <$playlist_num_rows; $k++){
+	$playlist_rows = mysql_fetch_row ( $playlistresult );
+	$playlistresult_array[] = $playlist_rows[0];
+}
+
+
+$querysongs = "SELECT * from playList Where username= '".$currentuser."'";
+$songsresult = mysql_query ( $querysongs );
+$songsresult_num_rows = mysql_num_rows ( $songsresult );
+$songsresult_array = array(array());
+for($k=0; $k <$songsresult_num_rows; $k++){
+	$songs_rows = mysql_fetch_row ( $songsresult );
+	$songsresult_array[$k][0] = $songs_rows[2];
+	$songsresult_array[$k][1] = $songs_rows[0];
+}
+// end
 if ($where == "WHERE catagory = ''"){ //All catagories
 $query = "SELECT * FROM media INNER JOIN favList ON media.mediaid =favList.mediaid WHERE favList.username ='".$currentuser."'";
 } else {
@@ -242,7 +263,35 @@ if (! $result) {
 			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/></div>
 			<?php }?>
 			</div>
-				
+							 <?php echo '<br />';?>
+			<div name="addplcontainer"  >
+			<select id="select<?php echo  $mediaid;?>"  onchange="javascript:addplaylist(this.id)">
+			<option value="addtoplaylist">Add to Playlist</option>
+			<option value="createplaylist">Create Playlist</option>
+<?php 	
+			if(!($currentuser == "")){
+			 for($k=0; $k <$playlist_num_rows; $k++){
+			  $bool = 0;
+			 $playlistName = $playlistresult_array[$k];
+			 	for($n=0; $n <$songsresult_num_rows;$n++){
+			 		if($songsresult_array[$n][0] == $mediaid && $songsresult_array[$n][1]== $playlistName){
+			 		if ($bool ==0){?>
+			 			<option value="<?php echo  $playlistName;?>" selected> Added to <?php echo  $playlistName;?> </option>;
+			 	<?php	 $bool++;
+			 		 
+			 		}}}
+			 		if($bool == 0){
+			 	?>
+ 	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
+ <?php 	 	  $bool++;
+			 		}
+			 	
+			} 
+			 }
+			?>
+
+
+			</div>
 			
 			</div>
 			
@@ -299,7 +348,35 @@ if (! $result) {
 		    });
 		    location.reload();
 	}
-
+  function addplaylist(id) {
+		var getSelect = document.getElementById(id);
+		var PlaylistName = getSelect[getSelect.selectedIndex].value;
+		var n = id.length;
+	    id = id.substring(6, n);
+		var username = "<?php echo $_SESSION['username'] ;?>";
+		if(PlaylistName == "createplaylist"){
+		    $.ajax({
+		        url: 'playlist.php',
+		        type: 'GET',
+		        data: {username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		    window.location = "https://people.cs.clemson.edu/~ralshem/MeTube/playlist.php";
+			}else{
+		    $.ajax({
+		        url: 'addtoPlayList.php',
+		        type: 'GET',
+		        data: {id:id, PlaylistName :PlaylistName, username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		    location.reload();
+		}
+		  
+	}
  
 </script>
 

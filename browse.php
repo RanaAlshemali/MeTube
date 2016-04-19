@@ -132,8 +132,7 @@ for($k=0; $k <$songsresult_num_rows; $k++){
 	$songsresult_array[$k][0] = $songs_rows[2];
 	$songsresult_array[$k][1] = $songs_rows[0];
 }
-echo 	"playlist_num_rows " .$playlist_num_rows. "  songsresult_num_rows  " . $songsresult_num_rows;
-
+// end 
 if ($where == "WHERE catagory = ''"){ //All catagories
 $query = "SELECT * from media";
 } else {
