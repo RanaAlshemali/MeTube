@@ -14,7 +14,7 @@ include_once "function.php";
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Media browse</title>
+<title>My Favorites</title>
 <link rel="stylesheet" type="text/css" href="css/default.css" />
 <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -124,8 +124,7 @@ if($num_rows ==0){
 	$width=80;
 }?>
     
-    <div style="background: #339900; color: #FFFFFF; width: 150px;">Uploaded
-		Media</div>
+    <div style="background: #339900; color: #FFFFFF; width: 150px;">My Favorites</div>
 	<div ><table width="<?php echo $width;?>%" cellpadding="5" cellspacing="15"  align="center" valign="center" border="1">
 		<?php
 		$num_rows = mysql_num_rows ( $result );
