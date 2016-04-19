@@ -19,15 +19,8 @@ include_once "function.php";
 <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
  
-<style >
-#image11{
-    position:relative;
-   top:50%;
-   left:50%;
-   margin-top:100px;
-   margin-left:110px;
-}
-</style>
+
+<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body>

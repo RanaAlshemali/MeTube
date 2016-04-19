@@ -18,6 +18,7 @@ include_once "function.php";
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Media Upload</title>
+<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body>
