@@ -96,9 +96,9 @@ for($k=0; $k <$songsresult_num_rows; $k++){
 }
 
 if ($where == "WHERE catagory = ''"){ //All catagories
-$query = "SELECT * from media Where username= '".$currentuser."'";
+$query = "SELECT * from media Where username= '".$currentuser."' ORDER BY mediaid DESC";
 } else {
-$query = "SELECT * from media $where AND username= '".$currentuser."'";
+$query = "SELECT * from media $where AND username= '".$currentuser."' ORDER BY mediaid DESC";
 }
 //} else {
 //$query = "SELECT * from media";
