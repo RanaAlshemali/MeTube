@@ -162,7 +162,7 @@ if (! $result) {
 			
 			for($j = $rowSize-1; $j >= 0; $j --) {
 				?>
-					<td width="20%">
+					<td>
 										<?php
 				$result_row = mysql_fetch_row ( $result );
 				
