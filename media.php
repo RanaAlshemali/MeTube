@@ -13,6 +13,7 @@ ini_set('display_errors', 0); ?>
 <title>Media</title>
 <script src="Scripts/AC_ActiveX.js" type="text/javascript"></script>
 <script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<link rel="stylesheet" href="assets/css/main.css" />
 </head>
  
 
