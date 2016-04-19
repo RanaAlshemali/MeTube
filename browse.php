@@ -28,7 +28,7 @@ include_once "function.php";
 <body>
 	
 <?php if (!($currentuser == "")) {?>
-	  <p  style="font-size:20px">Hello <?php echo $_SESSION['username']; ?>!</p>
+	<a href="#"><strong>  <p  style="font-size:40px">Hello <?php echo $_SESSION['username']; ?>!</p></strong></a>
 	<a href="index.php"><strong>Home</strong></a>  
 	<a href="media_upload.php" style="color: #FF9900;">Upload File</a>
 	<a href="UserChannel.php">My Channel</a>  
