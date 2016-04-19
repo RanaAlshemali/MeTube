@@ -13,7 +13,7 @@ $mediaid =$_GET['id'];
 	$queryresult = mysql_query($insert)
 	or die("Insert into favList in delFac.php " .mysql_error());
 
-		header('Location: playlist.php');
+
 	
 
 
