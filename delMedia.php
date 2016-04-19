@@ -20,6 +20,9 @@ $id = $_GET['id'];
 	$queryresult = mysql_query($delete)
 	or die("Delete from comments in delFac.php " .mysql_error());
 	
+	$delete = "delete from playList where mediaid ='". $id . "' and username='" .$username."'";
+	$queryresult = mysql_query($delete)
+	or die("Delete media from media in delMedia.php " .mysql_error());
 		header('Location: browse.php');
  
 
