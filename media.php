@@ -97,7 +97,7 @@ File is ready to download.
 <?php
 }
 ?>
-<div  style="float: right;"><a href="<?php echo $filenpath;?>"  download>Download</a></div>
+<div><a href="<?php echo $filenpath;?>"  download>Download</a></div>
 <hr>
 Comments:
 <?php 
