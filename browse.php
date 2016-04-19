@@ -259,7 +259,7 @@ if (! $result) {
 			<?php }
 			// 2?>
 	</div>
-			
+			 <?php echo '<br />';?>
 			<div name="addplcontainer"  >
 			<select id="select<?php echo  $mediaid;?>"  onchange="javascript:addplaylist(this.id)">
 			<option value="addtoplaylist">Add to Playlist</option>
