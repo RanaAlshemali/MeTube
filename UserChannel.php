@@ -260,33 +260,38 @@ if (! $result) {
 			}?>
 			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/></div>
 			</div>
-				
-						<div name="addplcontainer"  >
+						 <?php echo '<br />';?>
+			<div name="addplcontainer"  >
 			<select id="select<?php echo  $mediaid;?>"  onchange="javascript:addplaylist(this.id)">
 			<option value="addtoplaylist">Add to Playlist</option>
 			<option value="createplaylist">Create Playlist</option>
 <?php 	
 			if(!($currentuser == "")){
 			 for($k=0; $k <$playlist_num_rows; $k++){
-			  $bool = "true";
+			  $bool = 0;
 			 $playlistName = $playlistresult_array[$k];
 			 	for($n=0; $n <$songsresult_num_rows;$n++){
- 					if($bool =="true"){
-			 		if($songsresult_array[$n][0] == $mediaid && $songsresult_array[$n][1]== $playlistName){?>
+			 		if($songsresult_array[$n][0] == $mediaid && $songsresult_array[$n][1]== $playlistName){
+			 		if ($bool ==0){?>
 			 			<option value="<?php echo  $playlistName;?>" selected> Added to <?php echo  $playlistName;?> </option>;
-			 	<?php	 $bool == "false";
+			 	<?php	 $bool++;
 			 		 
-			 		}else{
+			 		}}}
+			 		if($bool == 0){
 			 	?>
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
- <?php 	 	  $bool == "false";
+ <?php 	 	  $bool++;
 			 		}
-			 	}
+			 	
 			} 
 			 }
-			}?>
+			?>
 
 
+			</div>	
+			
+			</div>
+			
 			</div>
 			 <?php 	
 			 
@@ -369,7 +374,6 @@ if (! $result) {
 		}
 		  
 	}
-
  
 </script>
 
