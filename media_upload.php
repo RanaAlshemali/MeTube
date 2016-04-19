@@ -48,7 +48,7 @@ echo '<br />';
 echo '<br />';
 ?>
  
-<form method="post" name="upload-form" id="upload-form" action="media_upload_process.php" enctype="multipart/form-data" >
+<form method="post" name="upload-form" id="upload-form" action="media_upload_process.php" encoding="multipart/form-data" >
  
   <p style="margin:0; padding:0">
   <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
