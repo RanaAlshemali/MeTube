@@ -28,7 +28,7 @@ include_once "function.php";
 <body>
 	
 <?php if (!($currentuser == "")) {?>
-	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
+	  <p  style="font-size:20px">Hello <?php echo $_SESSION['username']; ?>!</p>
 	<a href="index.php"><strong>Home</strong></a>  
 	<a href="media_upload.php" style="color: #FF9900;">Upload File</a>
 	<a href="UserChannel.php">My Channel</a>  
@@ -38,7 +38,7 @@ include_once "function.php";
 } else {
 	?>
 
-	<p>Welcome New Guest</p>
+	<p>Hello New Guest!</p>
 	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
 	<a href="login.php">Login or register</a>
 		<?php
