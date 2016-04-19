@@ -260,7 +260,7 @@ if (! $result) {
  <?php }
 			} ?>
 
-		</select><?php echo  $playlistName;?>
+
 			</div>
 			 <?php 	
 			 
@@ -315,6 +315,7 @@ if (! $result) {
 		    location.reload();
 	}
 	  function addplaylist(id) {
+		  alert(id);
 		var PlaylistName = document.getElementById("addplaylist").value;
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		if(PlaylistName == createplaylist){
