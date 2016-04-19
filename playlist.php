@@ -86,6 +86,7 @@ if (! $result) {
 			for($j = 0; $j < $num_rows; $j ++) {
 				?>
 				<tr>	<td >
+				
 										<?php
 				$result_row = mysql_fetch_row ( $result );
 				
@@ -93,7 +94,14 @@ if (! $result) {
 		 
 				?>
 			
-			<div> <a href="playlistdisplay.php?playlist=<?php echo $PlaylistName;?>"><?php echo $PlaylistName;?></a></div>
+			<div>
+			<div  style="float: left;"><a href="playlistdisplay.php?playlist=<?php echo $PlaylistName;?>"><?php echo $PlaylistName;?></a></div>
+			<div  style="float: right;"> 			
+			<img id="<?php echo  $PlaylistName;?>" src="uploads/deletePL1.png" height="20" width="20" onClick="javascript:delpaylist(this.id)"/>
+
+		</div>
+			</div>
+		
 			</td></tr> 
 				<?php
 		}
@@ -101,7 +109,20 @@ if (! $result) {
 		</table>
  </div>
  <script  type="text/javascript">
- 
+ function delpaylist(id) {
+		var username = "<?php echo $_SESSION['username'] ;?>";
+		var playlist = "<?php echo $playlistname ;?>";
+
+		    $.ajax({
+		        url: 'delplaylist.php',
+		        type: 'GET',
+		        data: {id:id, username:username, playlist:playlist },
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		    location.reload();
+	}
 </script>
 
 </body>
