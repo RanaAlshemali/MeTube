@@ -112,8 +112,14 @@ $where.= ' AND lower(concat(username, \'\', filename, \'\', dateCreated, \'\', k
 }
 //if ($where != "")  
 $queryplaylist = "SELECT DISTINCT(playlistname) AS 	playlistname from playList Where username= '".$currentuser."'";
+
 $playlistresult = mysql_query ( $queryplaylist );
 $playlist_num_rows = mysql_num_rows ( $playlistresult );
+$playlistresult_array = [];
+for($k=0; $k <$playlist_num_rows; $k++){
+	$playlist_rows = mysql_fetch_row ( $playlistresult );
+	$playlistresult_array[] = $playlist_rows[0];
+}
 
 
 if ($where == "WHERE catagory = ''"){ //All catagories
@@ -248,8 +254,7 @@ if (! $result) {
 <?php 	
 			if(!($currentuser == "")){
 			 for($k=0; $k <$playlist_num_rows; $k++){
-			 $playlist_rows = mysql_fetch_row ( $playlistresult );
-			 $playlistName = $playlist_rows[0];
+			 $playlistName = $playlistresult_array[$k];
 			 	?>
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
  <?php }
