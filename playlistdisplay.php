@@ -285,8 +285,10 @@ if (! $result) {
 	}  function delplsong(id) {
 		 alert("in");
 		 alert(id);
+		 
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		var playlist = "<?php echo $playlistname ;?>";
+		alert(playlist);
 		    $.ajax({
 		        url: 'delplsong.php',
 		        type: 'GET',
