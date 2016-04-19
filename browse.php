@@ -316,8 +316,7 @@ if (! $result) {
 	}
 	  function addplaylist(id) {
 		  alert(id);
-
-		var PlaylistName = document.getElementById(id).value;
+		var PlaylistName = document.getElementById(id);
 		alert(PlaylistName);
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		if(PlaylistName == "createplaylist"){
