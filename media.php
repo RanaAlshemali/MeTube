@@ -108,18 +108,20 @@ $query = "SELECT username, dateCreated, content FROM comments WHERE mediaid='".$
 $result = mysql_query($query);
 echo "<table border='1'>
 <tr>
+<th>comment</th>
 <th>By: </th>
 <th>On: </th>
-</tr>
-		<tr></tr>";
+</tr>";
 
 while($row = mysql_fetch_array($result))
 {
+
 echo "<tr>";
-echo "<td> By: " . $row['username'] . "</td>";
-echo "<td> On: " . $row['dateCreated'] . "</td>";
+echo "<td>" . $row['content'] . "</td>";
+echo "<td>" . $row['username'] . "</td>";
+echo "<td>" . $row['dateCreated'] . "</td>";
+
 echo "</tr>";
-echo "<tr>" . $row['content'] . "</tr>";
 }
 echo "</table>";/*echo "<table>";
 
