@@ -49,37 +49,7 @@ include_once "function.php";
 }
 ?>
 <a href='media_upload.php' style="color: #FF9900;">Upload File</a>
-<form  method="GET" action="<?php $_PHP_SELF ?>"> 
-<input  type="text" name="search"> 
-<input  type="submit" name="submit" value="Search"> 
-</form> 
-
-<form name="formCatagory" action = "<?php $_PHP_SELF ?>" method = "GET">
-<p>
-View by Catagory:
-<select name="formCatagory" onchange="this.form.submit()">
-<option value="" >Select Catagory...</option>  
-<option value="" >All Catagories</option>
-  <!--<option value="1=1">All Catagories</option>-->
-  <option value="Film & Animation">Film & Animation</option>
-  <option value="Autos & Vehicles">Autos & Vehicles</option>
-  <option value="Music">Music</option>
-  <option value="Pets & Animals">Pets & Animals</option>
-  <option value="Sports">Sports</option>
-  <option value="Gaming">Gaming</option>
-  <option value="People & Blogs">People & Blogs</option>
-  <option value="Comedy">Comedy</option>
-  <option value="Entertainment">Entertainment</option>
-  <option value="Film & Animation">Film & Animation</option>
-  <option value="Howto & Style">Howto & Style</option>
-  <option value="Education">Education</option>
-  <option value="Science & Technology">Science & Technology</option>
-  <option value="Nonprofits & Activism">Nonprofits & Activism</option>
-
-</select>
-</p> 
-</form>
-	
+ 
 	<div id='upload_result'>
 
 </div>
