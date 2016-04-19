@@ -109,10 +109,9 @@ if (! $result) {
 		</table>
  </div>
  <script  type="text/javascript">
- function delpaylist(id) {
+ function delpaylist(playlist) {
 		var username = "<?php echo $_SESSION['username'] ;?>";
-		var playlist = "<?php echo $playlistname ;?>";
-		
+		alert(playlist);
 		    $.ajax({
 		        url: 'delplaylist.php',
 		        type: 'GET',
