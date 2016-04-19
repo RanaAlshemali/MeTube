@@ -231,7 +231,7 @@ if (! $result) {
 				?>
 			<div>
 			<div  style="float: left;">By:<?php echo $username;echo '<br />';?></div>
-			<div  style="float: right;"><a href="<?php echo $filenpath;?>" target="_blank" onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a></div>
+			<div  style="float: right;"><a href="<?php echo $filenpath;?>"  download>Download</a></div>
 			</div>
 			
 			
