@@ -7,6 +7,16 @@ session_start();
  if (!$_SESSION["loggedIn"])
  	header('Location: index.php');
 ?>
+
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Media Upload</title>
+</head>
+
+<body>
 <?php if ($currentuser == "") {
 	header('Location: index.php');
 	$_SESSION ["loggedIn"] = false;
@@ -25,16 +35,6 @@ session_start();
 <?php
 }
 ?>
-<!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Media Upload</title>
-</head>
-
-<body>
-
 <form method="post" action="media_upload_process.php" enctype="multipart/form-data" >
  
   <p style="margin:0; padding:0">
