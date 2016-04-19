@@ -124,7 +124,7 @@ for($k=0; $k <$playlist_num_rows; $k++){
 $querysongs = "SELECT * from playList Where username= '".$currentuser."'";
 $songsresult = mysql_query ( $querysongs );
 $songsresult_num_rows = mysql_num_rows ( $songsresult );
-$songsresult_array = [][];
+$songsresult_array = array(array());
 for($k=0; $k <$songsresult_num_rows; $k++){
 	$songs_rows = mysql_fetch_row ( $songsresult );
 	$songsresult_array[$k][0] = $songs_rows[0];
