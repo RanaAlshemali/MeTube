@@ -110,8 +110,8 @@ echo "<table border='1'>
 <tr>
 <th>By: </th>
 <th>On: </th>
-<td></td>
-</tr>";
+</tr>
+		<tr></tr>";
 
 while($row = mysql_fetch_array($result))
 {
