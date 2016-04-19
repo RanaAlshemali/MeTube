@@ -267,18 +267,18 @@ if (! $result) {
 <?php 	
 			if(!($currentuser == "")){
 			 for($k=0; $k <$playlist_num_rows; $k++){
-			  $bool = "true";
+			  $bool = 0;
 			 $playlistName = $playlistresult_array[$k];
 			 	for($n=0; $n <$songsresult_num_rows;$n++){
- 					if($bool =="true"){
+ 					if($bool ==0){
 			 		if($songsresult_array[$n][0] == $mediaid && $songsresult_array[$n][1]== $playlistName){?>
 			 			<option value="<?php echo  $playlistName;?>" selected> Added to <?php echo  $playlistName;?> </option>;
-			 	<?php	 $bool == "false";
+			 	<?php	 $bool++;
 			 		 
 			 		}else{
 			 	?>
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
- <?php 	 	  $bool == "false";
+ <?php 	 	  $bool++;
 			 		}
 			 	}
 			} 
