@@ -40,7 +40,7 @@ include_once "function.php";
 	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
 	<a href="index.php">Home</a>  
 	<a href="media_upload.php" style="color: #FF9900;">Upload File</a>
-	<a href="#"><strong>My Channel</strong></a>  
+	<a href="UserChannel.php"><strong>My Channel</strong></a>  
 	<a href="playlist.php">My Playlists</a>  
 	<a href="favListdisplay.php">My Favorite List</a>  
     <a href="accountlist.php">Account Panel</a>
