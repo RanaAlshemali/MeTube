@@ -1,25 +1,24 @@
 <? error_reporting(0);
 ini_set('display_errors', 0); ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <?php
 session_start ();
 
-if (!$_SESSION["loggedIn"])
+if ($_SESSION['username']=="")
 	$currentuser="";
 else 
 	$currentuser= $_SESSION['username'];
 include_once "function.php";
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml">
+ 
 <head>
-
+<meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Media browse</title>
 <link rel="stylesheet" type="text/css" href="css/default.css" />
 <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-     
+ 
 <style >
 #image11{
     position:relative;
@@ -41,8 +40,8 @@ include_once "function.php";
 	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
 	<a href="index.php">Home</a>  
 	<a href="media_upload.php" style="color: #FF9900;">Upload File</a>
-	<a href="#"><strong>My Channel</strong></a>  
-	<a href="playlist.php">My Playlists</a>  
+	<a href="UserChannel.php">My Channel</a>  
+	<a href="#"><strong>My Playlists</strong></a>  
 	<a href="favListdisplay.php">My Favorite List</a>  
     <a href="accountlist.php">Account Panel</a>
 	<a href="logout.php">logout</a>
@@ -52,7 +51,7 @@ include_once "function.php";
 }
 ?>
  
-	 
+ 
 	<div id='upload_result'>
 
 </div>
