@@ -127,8 +127,8 @@ $songsresult_num_rows = mysql_num_rows ( $songsresult );
 $songsresult_array = array(array());
 for($k=0; $k <$songsresult_num_rows; $k++){
 	$songs_rows = mysql_fetch_row ( $songsresult );
-	$songsresult_array[$k][0] = $songs_rows[0];
-	$songsresult_array[$k][1] = $songs_rows[2];
+	$songsresult_array[$k][0] = $songs_rows[2];
+	$songsresult_array[$k][1] = $songs_rows[0];
 	echo $songsresult_array[$k][0] ." ".	$songsresult_array[$k][1];
 }
 
@@ -265,10 +265,14 @@ if (! $result) {
 			if(!($currentuser == "")){
 			 for($k=0; $k <$playlist_num_rows; $k++){
 			 $playlistName = $playlistresult_array[$k];
+			 	for($n=0; $n <$songs_rows;$n++){
+			 		if($songsresult_array[$n][0] == $mediaid && $songsresult_array[$n][1]== $playlistName){
+			 			echo "<option value='".$playlistName."' selected> Added to ". $playlistName." </option>";
+			 		}else{
 			 	?>
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
  <?php }
-			} ?>
+			} }}?>
 
 
 			</div>
