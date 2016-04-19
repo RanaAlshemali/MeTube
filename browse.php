@@ -111,6 +111,7 @@ $where.= ' AND lower(concat(username, \'\', filename, \'\', dateCreated, \'\', k
 }
 }
 //if ($where != "")  
+// 1
 $queryplaylist = "SELECT DISTINCT(playlistname) AS 	playlistname from playList Where username= '".$currentuser."'";
 
 $playlistresult = mysql_query ( $queryplaylist );
@@ -129,7 +130,6 @@ for($k=0; $k <$songsresult_num_rows; $k++){
 	$songs_rows = mysql_fetch_row ( $songsresult );
 	$songsresult_array[$k][0] = $songs_rows[2];
 	$songsresult_array[$k][1] = $songs_rows[0];
-	echo $songsresult_array[$k][0] ." ".	$songsresult_array[$k][1];
 }
 
 if ($where == "WHERE catagory = ''"){ //All catagories
@@ -254,7 +254,8 @@ if (! $result) {
 					if($username == $currentuser){?>
 			
 			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/></div>
-			<?php }?>
+			<?php }
+			// 2?>
 	</div>
 			
 			<div name="addplcontainer"  >
