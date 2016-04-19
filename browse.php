@@ -325,14 +325,15 @@ if (! $result) {
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		if(PlaylistName == "createplaylist"){
 		    $.ajax({
-		        url: 'createPlaylist.php',
+		        url: 'playlist.php',
 		        type: 'GET',
-		        data: {PlaylistName :PlaylistName, username:username},
+		        data: {username:username},
 		        success: function(data) {
 		            console.log(data); // Inspect this in your console
 		        }
 		    });
-		}else{
+		    window.location = "https://people.cs.clemson.edu/~ralshem/MeTube/playlist.php";
+			}else{
 		    $.ajax({
 		        url: 'addtoPlaylist.php',
 		        type: 'GET',
@@ -341,8 +342,9 @@ if (! $result) {
 		            console.log(data); // Inspect this in your console
 		        }
 		    });
-		}
 		    location.reload();
+		}
+		  
 	}
  
 </script>
