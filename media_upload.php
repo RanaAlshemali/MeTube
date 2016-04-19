@@ -7,6 +7,24 @@ session_start();
  if (!$_SESSION["loggedIn"])
  	header('Location: index.php');
 ?>
+<?php if ($currentuser == "") {
+	header('Location: index.php');
+	$_SESSION ["loggedIn"] = false;
+} else {
+	?>
+	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
+	<a href="index.php">Home</a>  
+	<a href="#" style="color: #FF9900;"><strong>Upload File</strong></a>
+	<a href="UserChannel.php">My Channel</a>  
+	<a href="playlist.php">My Playlists</a>  
+	<a href="favListdisplay.php">My Favorite List</a>  
+    <a href="accountlist.php">Account Panel</a>
+	<a href="logout.php">logout</a>
+
+	
+<?php
+}
+?>
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
