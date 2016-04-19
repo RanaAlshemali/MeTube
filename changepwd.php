@@ -1,3 +1,5 @@
+<? error_reporting(0);
+ini_set('display_errors', 0); ?>
 <?php
 if (session_id() == "") session_start(); // Initialize Session data
 ob_start(); // Turn on output buffering

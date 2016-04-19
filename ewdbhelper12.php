@@ -1,3 +1,5 @@
+<? error_reporting(0);
+ini_set('display_errors', 0); ?>
 <?php
 if (!isset($EW_RELATIVE_PATH)) $EW_RELATIVE_PATH = "";
 if (!isset($EW_ERROR_FN)) $EW_ERROR_FN = "ew_ErrorFn";
