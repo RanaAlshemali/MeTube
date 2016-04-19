@@ -1,3 +1,5 @@
+<? error_reporting(0);
+ini_set('display_errors', 0); ?>
 <!-- Begin Main Menu -->
 <?php $RootMenu = new cMenu(EW_MENUBAR_ID) ?>
 <?php

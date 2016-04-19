@@ -1,3 +1,5 @@
+<? error_reporting(0);
+ini_set('display_errors', 0); ?>
 <!DOCTYPE html>
 <?php
 session_start ();
@@ -41,6 +43,7 @@ include_once "function.php";
 	<a href="playlist.php">My Playlists</a>  
 	<a href="favListdisplay.php">My Favorite List</a>  
 	<a href="logout.php">logout</a>
+        <a href="accountlist.php">Account Panel</a>
 	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
 <?php
  

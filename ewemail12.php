@@ -1,3 +1,5 @@
+<? error_reporting(0);
+ini_set('display_errors', 0); ?>
 <form id="ewEmailForm" class="form-horizontal ewForm ewEmailForm" action="<?php echo ew_CurrentPage() ?>">
 <?php if ($Page->CheckToken) { ?>
 <input type="hidden" name="<?php echo EW_TOKEN_NAME ?>" value="<?php echo $Page->Token ?>">
