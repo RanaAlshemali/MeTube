@@ -147,7 +147,7 @@ if (! $result) {
  
 		$size = (( int ) ($num_rows / 4)) + 1;
 		
-		for($i = 1; $i <= $size; $i ++) {
+		for($i = $size; $i >= 1; $i ++) {
 			
 			$rowSize;
 			if ($num_rows > 4) {
