@@ -116,9 +116,9 @@ echo "<table border='1'>
 while($row = mysql_fetch_array($result))
 {
 echo "<tr>";
-echo "<td>" . $row['username'] . "</td>";
-echo "<td>" . $row['dateCreated'] . "</td>";
-echo "<td>" . $row['content'] . "</td>";
+echo "<td> By: " . $row['username'] . "</td>";
+echo "<td> On: " . $row['dateCreated'] . "</td>";
+echo "<tr>" . $row['content'] . "</tr>";
 echo "</tr>";
 }
 echo "</table>";/*echo "<table>";
