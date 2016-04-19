@@ -275,7 +275,8 @@ if (! $result) {
 			 		}else{
 			 	?>
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
- <?php 	 }
+ <?php 	 	continue(2);
+			 		}
 			} }}?>
 
 
