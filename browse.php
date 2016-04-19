@@ -237,7 +237,7 @@ if (! $result) {
 				?>
 			<div>
 			<div  style="float: left;">By:<?php echo $username;echo '<br />';?></div>
-			<div  style="float: right;"><a href="<?php echo $filenpath;?>" target="_blank" onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a></div>
+			<div  style="float: right;"><a href="<?php echo $filenpath;?>"  download>Download</a></div>
 			</div>
 			
 			
@@ -269,7 +269,6 @@ if (! $result) {
 			 	for($n=0; $n <$songsresult_num_rows;$n++){
  					if($bool =="true"){
 			 		if($songsresult_array[$n][0] == $mediaid && $songsresult_array[$n][1]== $playlistName){?>
-			 		<script type="text/javascript"> alert("IN")</script>
 			 			<option value="<?php echo  $playlistName;?>" selected> Added to <?php echo  $playlistName;?> </option>;
 			 	<?php	 $bool == "false";
 			 		 
