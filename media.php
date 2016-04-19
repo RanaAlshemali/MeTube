@@ -118,8 +118,8 @@ while($row = mysql_fetch_array($result))
 echo "<tr>";
 echo "<td> By: " . $row['username'] . "</td>";
 echo "<td> On: " . $row['dateCreated'] . "</td>";
-echo "<tr>" . $row['content'] . "</tr>";
 echo "</tr>";
+echo "<tr>" . $row['content'] . "</tr>";
 }
 echo "</table>";/*echo "<table>";
 
