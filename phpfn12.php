@@ -4255,6 +4255,9 @@ class cAdvancedSecurity {
 
 	// User Validated event
 	function User_Validated(&$rs) {
+              $_SESSION['username']=$rs['username']; //Set the $_SESSION['username']^M
+                $_SESSION["loggedIn"] = true;
+                header('Location: browse.php');
 
 		// Example:
 		//$_SESSION['UserEmail'] = $rs['Email'];

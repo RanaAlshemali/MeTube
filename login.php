@@ -341,9 +341,9 @@ class clogin extends caccount {
 				$_SESSION[EW_SESSION_USER_LOGIN_TYPE] = $this->LoginType; // Save user login type
 				$_SESSION[EW_SESSION_USER_PROFILE_USER_NAME] = $this->Username; // Save login user name
 				$_SESSION[EW_SESSION_USER_PROFILE_LOGIN_TYPE] = $this->LoginType; // Save login type
-				$_SESSION['username']=$this->Username; //Set the $_SESSION['username']
-				$_SESSION["loggedIn"] = true;
-				header('Location: browse.php');
+				//$_SESSION['username']=$this->Username; //Set the $_SESSION['username']
+				//$_SESSION["loggedIn"] = true;
+				//header('Location: browse.php');
 			} else {
 				if ($Security->IsLoggedIn()) {
 					if ($this->getFailureMessage() == "")
