@@ -264,11 +264,14 @@ if (! $result) {
 <?php 	
 			if(!($currentuser == "")){
 			 for($k=0; $k <$playlist_num_rows; $k++){
+			  
 			 $playlistName = $playlistresult_array[$k];
 			 	for($n=0; $n <$songs_rows;$n++){
-			 		if($songsresult_array[$n][0] == $mediaid && $songsresult_array[$n][1]== $playlistName){
-			 			echo "<option value='".$playlistName."' selected> Added to ". $playlistName." </option>";
-			 		}else{
+ 
+			 		if($songsresult_array[$n][0] == $mediaid && $songsresult_array[$n][1]== $playlistName){?>
+			 		<script type="text/javascript"> alert("IN")</script>
+			 			<option value="<?php echo  $playlistName;?>" selected> Added to <?php echo  $playlistName;?> </option>;
+			 	<?php	}else{
 			 	?>
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
  <?php }
