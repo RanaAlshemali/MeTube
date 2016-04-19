@@ -27,24 +27,24 @@ include_once "function.php";
 
 <body>
 	
-<?php if ($currentuser == "") {?>
-		<p>Welcome New Guest</p>
+<?php if (!($currentuser == "")) {?>
+	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
+	<a href="media_upload.php" style="color: #FF9900;">Upload File</a>
+	<a href="UserChannel.php">My Channel</a>  
+    <a href="accountlist.php">Account Panel</a>
+    <a href="logout.php">logout</a>
+ <?php 
+} else {
+	?>
+
+	<p>Welcome New Guest</p>
+	<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
 	<a href="login.php">Login or register</a>
 		<?php
 	$_SESSION ["loggedIn"] = false;
-} else {
-	?>
-	  <p>Welcome <?php echo $_SESSION['username']; ?></p>
-	<a href="UserChannel.php">My Channel</a>  
-	<a href="logout.php">logout</a>
-        <a href="accountlist.php">Account Panel</a>
-
-
-<?php
-
 }
 ?>
-		<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
+		
 <form  method="GET" action="<?php $_PHP_SELF ?>"> 
 <input  type="text" name="search"> 
 <input  type="submit" name="submit" value="Search"> 
