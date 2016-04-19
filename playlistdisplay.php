@@ -218,7 +218,13 @@ if (! $result) {
 				<img id="<?php echo  $mediaid;?>" src="uploads/Star-Full.png" height="20" width="20" onClick="javascript:addFav(this.id)"/>
 			<?php		
 			}?>
-			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/deletePL1.png" height="20" width="20" onClick="javascript:delplsong(this.id)"/>
+				<?php
+				if($username == $currentuser){?>
+			
+			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/>
+			<?php }?>
+		</div>
 			</div>
 				
 			
@@ -269,6 +275,18 @@ if (! $result) {
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
 		        url: 'delMedia.php',
+		        type: 'GET',
+		        data: {id:id, username:username},
+		        success: function(data) {
+		            console.log(data); // Inspect this in your console
+		        }
+		    });
+		    location.reload();
+	}  function delplsong(id) {
+		 alert("in");
+		var username = "<?php echo $_SESSION['username'] ;?>";
+		    $.ajax({
+		        url: 'delplsong.php',
 		        type: 'GET',
 		        data: {id:id, username:username},
 		        success: function(data) {

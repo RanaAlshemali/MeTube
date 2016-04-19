@@ -112,8 +112,14 @@ $where.= ' AND lower(concat(username, \'\', filename, \'\', dateCreated, \'\', k
 }
 //if ($where != "")  
 $queryplaylist = "SELECT DISTINCT(playlistname) AS 	playlistname from playList Where username= '".$currentuser."'";
+
 $playlistresult = mysql_query ( $queryplaylist );
 $playlist_num_rows = mysql_num_rows ( $playlistresult );
+$playlistresult_array = [];
+for($k=0; $k <$playlist_num_rows; $k++){
+	$playlist_rows = mysql_fetch_row ( $playlistresult );
+	$playlistresult_array[] = $playlist_rows[0];
+}
 
 
 if ($where == "WHERE catagory = ''"){ //All catagories
@@ -241,21 +247,20 @@ if (! $result) {
 			<?php }?>
 	</div>
 			
-			<div name="addplcontainer" id="<?php echo  $mediaid;?>" >
-			<select id="addplaylist" onchange="addplaylist(addplcontainer.id)">
+			<div name="addplcontainer"  >
+			<select id="select<?php echo  $mediaid;?>"  onchange="javascript:addplaylist(this.id)">
 			<option value="addtoplaylist">Add to Playlist</option>
 			<option value="createplaylist">Create Playlist</option>
 <?php 	
 			if(!($currentuser == "")){
 			 for($k=0; $k <$playlist_num_rows; $k++){
-			 $playlist_rows = mysql_fetch_row ( $playlistresult );
-			 $playlistName = $playlist_rows[0];
+			 $playlistName = $playlistresult_array[$k];
 			 	?>
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
  <?php }
 			} ?>
 
-		</select><?php echo  $playlistName;?>
+
 			</div>
 			 <?php 	
 			 
@@ -310,28 +315,33 @@ if (! $result) {
 		    location.reload();
 	}
 	  function addplaylist(id) {
-		var PlaylistName = document.getElementById("addplaylist").value;
+		var getSelect = document.getElementById(id);
+		var PlaylistName = getSelect[getSelect.selectedIndex].value;
+		var n = id.length;
+	    id = id.substring(6, n);
 		var username = "<?php echo $_SESSION['username'] ;?>";
-		if(PlaylistName == createplaylist){
+		if(PlaylistName == "createplaylist"){
 		    $.ajax({
-		        url: 'createPlaylist.php',
+		        url: 'playlist.php',
 		        type: 'GET',
-		        data: {PlaylistName :PlaylistName, username:username},
+		        data: {username:username},
 		        success: function(data) {
 		            console.log(data); // Inspect this in your console
 		        }
 		    });
-		}else{
+		    window.location = "https://people.cs.clemson.edu/~ralshem/MeTube/playlist.php";
+			}else{
 		    $.ajax({
-		        url: 'addtoPlaylist.php',
+		        url: 'addtoPlayList.php',
 		        type: 'GET',
 		        data: {id:id, PlaylistName :PlaylistName, username:username},
 		        success: function(data) {
 		            console.log(data); // Inspect this in your console
 		        }
 		    });
-		}
 		    location.reload();
+		}
+		  
 	}
  
 </script>
