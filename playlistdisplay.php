@@ -50,7 +50,7 @@ include_once "function.php";
 <?php
 }
 ?>
-<a href='media_upload.php' style="color: #FF9900;">Upload File</a>
+ 
  
 	<div id='upload_result'>
 
