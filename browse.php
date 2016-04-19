@@ -272,10 +272,10 @@ if (! $result) {
 			 		<script type="text/javascript"> alert("IN")</script>
 			 			<option value="<?php echo  $playlistName;?>" selected> Added to <?php echo  $playlistName;?> </option>;
 			 	<?php	 
-			 		}else{
+			 		continue 2;}else{
 			 	?>
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
- <?php 	 	continue(2);
+ <?php 	 	continue 2;
 			 		}
 			} }}?>
 
