@@ -316,10 +316,9 @@ if (! $result) {
 	}
 	  function addplaylist(id) {
 		  alert(id);
-		  var e = document.getElementById("ddlViewBy");
-		  var strUser = e.options[e.selectedIndex].value;
-		  
+
 		var PlaylistName = document.getElementById("addplaylist").value;
+		alert(PlaylistName);
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		if(PlaylistName == createplaylist){
 		    $.ajax({
