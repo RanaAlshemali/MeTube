@@ -283,7 +283,7 @@ if (! $result) {
 		    });
 		    location.reload();
 	}  function delplsong(id) {
-
+		 alert("in");
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
 		        url: 'delplsong.php',

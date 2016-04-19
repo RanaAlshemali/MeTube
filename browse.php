@@ -315,13 +315,10 @@ if (! $result) {
 		    location.reload();
 	}
 	  function addplaylist(id) {
-		  alert(id);
 		var getSelect = document.getElementById(id);
 		var PlaylistName = getSelect[getSelect.selectedIndex].value;
-		alert(PlaylistName);
 		var n = id.length;
 	    id = id.substring(6, n);
-	    alert(id);
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		if(PlaylistName == "createplaylist"){
 		    $.ajax({
@@ -334,7 +331,6 @@ if (! $result) {
 		    });
 		    window.location = "https://people.cs.clemson.edu/~ralshem/MeTube/playlist.php";
 			}else{
-				 alert("else");
 		    $.ajax({
 		        url: 'addtoPlayList.php',
 		        type: 'GET',
