@@ -112,11 +112,11 @@ if (! $result) {
  function delpaylist(id) {
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		var playlist = "<?php echo $playlistname ;?>";
-
+		
 		    $.ajax({
 		        url: 'delplaylist.php',
 		        type: 'GET',
-		        data: {id:id, username:username, playlist:playlist },
+		        data: { playlist:playlist },
 		        success: function(data) {
 		            console.log(data); // Inspect this in your console
 		        }
