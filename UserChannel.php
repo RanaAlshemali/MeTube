@@ -51,38 +51,6 @@ include_once "function.php";
 }
 ?>
  
-		
-<form  method="GET" action="<?php $_PHP_SELF ?>"> 
-<input  type="text" name="search"> 
-<input  type="submit" name="submit" value="Search"> 
-</form> 
-
-<form name="formCatagory" action = "<?php $_PHP_SELF ?>" method = "GET">
-<p>
-View by Catagory:
-<select name="formCatagory" onchange="this.form.submit()">
-<option value="" >Select Catagory...</option>  
-<option value="" >All Catagories</option>
-  <!--<option value="1=1">All Catagories</option>-->
-  <option value="Film & Animation">Film & Animation</option>
-  <option value="Autos & Vehicles">Autos & Vehicles</option>
-  <option value="Music">Music</option>
-  <option value="Pets & Animals">Pets & Animals</option>
-  <option value="Sports">Sports</option>
-  <option value="Gaming">Gaming</option>
-  <option value="People & Blogs">People & Blogs</option>
-  <option value="Comedy">Comedy</option>
-  <option value="Entertainment">Entertainment</option>
-  <option value="Film & Animation">Film & Animation</option>
-  <option value="Howto & Style">Howto & Style</option>
-  <option value="Education">Education</option>
-  <option value="Science & Technology">Science & Technology</option>
-  <option value="Nonprofits & Activism">Nonprofits & Activism</option>
-
-</select>
-</p> 
-</form>
-
 	<div id='upload_result'>
 
 </div>
@@ -90,7 +58,7 @@ View by Catagory:
 	<br />
 
 <?php
-
+$currentuser=  $_SESSION['username'];
 $where = "WHERE catagory = ''";
 if(isset($_GET['formCatagory']) )
  {
@@ -165,7 +133,7 @@ if (! $result) {
 			
 			for($j = 0; $j < $rowSize; $j ++) {
 				?>
-					<td >
+					<td width="20%">
 										<?php
 				$result_row = mysql_fetch_row ( $result );
 				

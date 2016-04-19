@@ -85,7 +85,7 @@ if (! $result) {
 ?>
     <br/><br/>
     <div style="background: #339900; color: #FFFFFF; width: 150px;">My Playlists: </div><br/>
-	<div ><table width="75%" cellpadding="5" cellspacing="15"  align="center" valign="center" border="1">
+	<div ><table width="80%" cellpadding="5" cellspacing="15"  align="center" valign="center" border="1">
 		<?php
 		$num_rows = mysql_num_rows ( $result );
  
@@ -95,7 +95,7 @@ if (! $result) {
 			
 			for($j = 0; $j < $num_rows; $j ++) {
 				?>
-				<tr>	<td >
+				<tr>	<td width="20%">
 				
 										<?php
 				$result_row = mysql_fetch_row ( $result );
