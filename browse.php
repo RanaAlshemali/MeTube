@@ -248,7 +248,7 @@ if (! $result) {
 	</div>
 			
 			<div name="addplcontainer"  >
-			<select id="<?php echo  $mediaid;?>"  onchange="javascript:addplaylist(this.id)">
+			<select id="select<?php echo  $mediaid;?>"  onchange="javascript:addplaylist(this.id)">
 			<option value="addtoplaylist">Add to Playlist</option>
 			<option value="createplaylist">Create Playlist</option>
 <?php 	
@@ -318,6 +318,9 @@ if (! $result) {
 		  alert(id);
 		var PlaylistName = document.getElementById(id);
 		alert(PlaylistName);
+		var n = id.length;
+	    id = id.substring(6, n);
+	    alert(id);
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		if(PlaylistName == "createplaylist"){
 		    $.ajax({
