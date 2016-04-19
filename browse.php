@@ -271,11 +271,11 @@ if (! $result) {
 			 		if($songsresult_array[$n][0] == $mediaid && $songsresult_array[$n][1]== $playlistName){?>
 			 		<script type="text/javascript"> alert("IN")</script>
 			 			<option value="<?php echo  $playlistName;?>" selected> Added to <?php echo  $playlistName;?> </option>;
-			 	<?php	continue(2);
+			 	<?php	 
 			 		}else{
 			 	?>
  	 <option value="<?php echo  $playlistName;?>">Add to <?php echo  $playlistName;?></option>
- <?php 	continue(2);}
+ <?php 	 }
 			} }}?>
 
 
