@@ -160,7 +160,7 @@ if (! $result) {
 			<tr>
 				<?php
 			
-			for($j = $rowSize-1; $j >= 0; $j --) {
+			for($j = 0; $j < $rowSize; $j ++) {
 				?>
 					<td width="20%">
 										<?php
