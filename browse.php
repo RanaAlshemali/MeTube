@@ -293,11 +293,11 @@ if (! $result) {
   function addFav(id) {
 
 		var username = "<?php echo $_SESSION['username'] ;?>";
-		alert("called");
+
 		    $.ajax({
 		        url: 'addFav.php',
 		        type: 'GET',
-		        data: "id="+ id,
+		        data: {id:id, username:username},
 		        success: function(data) {
 		            console.log(data); // Inspect this in your console
 		        }
