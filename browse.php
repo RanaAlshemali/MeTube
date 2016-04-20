@@ -290,7 +290,7 @@ if (! $result) {
  <script  type="text/javascript">
  $( document ).ready(function() {
 	 addFav= function(id) {
-
+	 alert(id);
 		var username = "<?php echo $_SESSION['username'] ;?>";
 
 		    $.ajax({
