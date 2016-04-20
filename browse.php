@@ -308,7 +308,7 @@ function delFav(id) {
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
 		        url: 'delFav.php',
-		        type: 'GET',
+		        type: 'POST',
 		        data: {id:id, username:username},
 		        success: function(data) {
 		            console.log(data); // Inspect this in your console
