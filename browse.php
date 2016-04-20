@@ -245,7 +245,7 @@ if (! $result) {
 			}
 					if($username == $currentuser){?>
 			
-			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id); return false;"/></div>
 			<?php }
 			// 2?>
 	</div>
