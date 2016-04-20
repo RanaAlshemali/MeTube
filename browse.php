@@ -17,8 +17,9 @@ include_once "function.php";
 <title>Media browse</title>
 <link rel="stylesheet" type="text/css" href="css/default.css" />
 <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
- 
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <link rel="stylesheet" href="assets/css/main.css" />
+ 
 <style >
 
 </style>
@@ -288,9 +289,9 @@ if (! $result) {
 		</table>
  </div>
  <script  type="text/javascript">
- $( document ).ready(function() {
-	 addFav= function(id) {
-	 alert(id);
+
+  function addFav(id) {
+
 		var username = "<?php echo $_SESSION['username'] ;?>";
 
 		    $.ajax({
@@ -303,12 +304,12 @@ if (! $result) {
 		    });
 		    location.reload();
 	}
-function delFav(id) {
+  function delFav(id) {
 
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
 		        url: 'delFav.php',
-		        type: 'POST',
+		        type: 'GET',
 		        data: {id:id, username:username},
 		        success: function(data) {
 		            console.log(data); // Inspect this in your console
@@ -316,7 +317,7 @@ function delFav(id) {
 		    });
 		    location.reload();
 	}
-function delMedia(id) {
+  function delMedia(id) {
 
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
@@ -358,9 +359,6 @@ function delMedia(id) {
 		}
 		  
 	}
-   });
-	  
-
  
 </script>
 
