@@ -293,7 +293,7 @@ if (! $result) {
   function addFav(id) {
 
 		var username = "<?php echo $_SESSION['username'] ;?>";
-		"cityName="+$cityName,
+ s
 		    $.ajax({
 		        url: 'addFav.php',
 		        type: 'GET',
