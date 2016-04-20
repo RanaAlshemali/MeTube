@@ -293,7 +293,7 @@ if (! $result) {
   function addFav(id) {
 
 		var username = "<?php echo $_SESSION['username'] ;?>";
-
+		alert("called");
 		    $.ajax({
 		        url: 'addFav.php',
 		        type: 'GET',
@@ -318,7 +318,7 @@ if (! $result) {
 		    location.reload();
 	}
   function delMedia(id) {
-alert("called");
+
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
 		        url: 'delMedia.php',
