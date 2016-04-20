@@ -288,7 +288,7 @@ if (! $result) {
 		</table>
  </div>
  <script  type="text/javascript">
- defaultPrevented;
+ getPreventDefault();
 	  function addFav(id) {
 
 			var username = "<?php echo $_SESSION['username'] ;?>";
