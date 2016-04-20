@@ -289,76 +289,78 @@ if (! $result) {
 		</table>
  </div>
  <script  type="text/javascript">
- 
-  function addFav(id) {
+ $( document ).ready(function() {
+	  function addFav(id) {
 
-		var username = "<?php echo $_SESSION['username'] ;?>";
+			var username = "<?php echo $_SESSION['username'] ;?>";
 
-		    $.ajax({
-		        url: 'addFav.php',
-		        type: 'GET',
-		        data: {id:id, username:username},
-		        success: function(data) {
-		            console.log(data); // Inspect this in your console
-		        }
-		    });
-		    location.reload();
-	}
-  function delFav(id) {
-
-		var username = "<?php echo $_SESSION['username'] ;?>";
-		    $.ajax({
-		        url: 'delFav.php',
-		        type: 'GET',
-		        data: {id:id, username:username},
-		        success: function(data) {
-		            console.log(data); // Inspect this in your console
-		        }
-		    });
-		    location.reload();
-	}
-  function delMedia(id) {
-
-		var username = "<?php echo $_SESSION['username'] ;?>";
-		    $.ajax({
-		        url: 'delMedia.php',
-		        type: 'GET',
-		        data: {id:id, username:username},
-		        success: function(data) {
-		            console.log(data); // Inspect this in your console
-		        }
-		    });
-		    location.reload();
-	}
-	  function addplaylist(id) {
-		var getSelect = document.getElementById(id);
-		var PlaylistName = getSelect[getSelect.selectedIndex].value;
-		var n = id.length;
-	    id = id.substring(6, n);
-		var username = "<?php echo $_SESSION['username'] ;?>";
-		if(PlaylistName == "createplaylist"){
-		    $.ajax({
-		        url: 'playlist.php',
-		        type: 'GET',
-		        data: {username:username},
-		        success: function(data) {
-		            console.log(data); // Inspect this in your console
-		        }
-		    });
-		    window.location = "https://people.cs.clemson.edu/~ralshem/MeTube/playlist.php";
-			}else{
-		    $.ajax({
-		        url: 'addtoPlayList.php',
-		        type: 'GET',
-		        data: {id:id, PlaylistName :PlaylistName, username:username},
-		        success: function(data) {
-		            console.log(data); // Inspect this in your console
-		        }
-		    });
-		    location.reload();
+			    $.ajax({
+			        url: 'addFav.php',
+			        type: 'GET',
+			        data: {id:id, username:username},
+			        success: function(data) {
+			            console.log(data); // Inspect this in your console
+			        }
+			    });
+			    location.reload();
 		}
-		  
-	}
+	  function delFav(id) {
+
+			var username = "<?php echo $_SESSION['username'] ;?>";
+			    $.ajax({
+			        url: 'delFav.php',
+			        type: 'GET',
+			        data: {id:id, username:username},
+			        success: function(data) {
+			            console.log(data); // Inspect this in your console
+			        }
+			    });
+			    location.reload();
+		}
+	  function delMedia(id) {
+
+			var username = "<?php echo $_SESSION['username'] ;?>";
+			    $.ajax({
+			        url: 'delMedia.php',
+			        type: 'GET',
+			        data: {id:id, username:username},
+			        success: function(data) {
+			            console.log(data); // Inspect this in your console
+			        }
+			    });
+			    location.reload();
+		}
+		  function addplaylist(id) {
+			var getSelect = document.getElementById(id);
+			var PlaylistName = getSelect[getSelect.selectedIndex].value;
+			var n = id.length;
+		    id = id.substring(6, n);
+			var username = "<?php echo $_SESSION['username'] ;?>";
+			if(PlaylistName == "createplaylist"){
+			    $.ajax({
+			        url: 'playlist.php',
+			        type: 'GET',
+			        data: {username:username},
+			        success: function(data) {
+			            console.log(data); // Inspect this in your console
+			        }
+			    });
+			    window.location = "https://people.cs.clemson.edu/~ralshem/MeTube/playlist.php";
+				}else{
+			    $.ajax({
+			        url: 'addtoPlayList.php',
+			        type: 'GET',
+			        data: {id:id, PlaylistName :PlaylistName, username:username},
+			        success: function(data) {
+			            console.log(data); // Inspect this in your console
+			        }
+			    });
+			    location.reload();
+			}
+			  
+		}
+	   });
+
  
 </script>
 
