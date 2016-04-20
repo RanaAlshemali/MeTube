@@ -19,7 +19,6 @@ include_once "function.php";
 <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
  
 <link rel="stylesheet" href="assets/css/main.css" />
- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <style >
 
 </style>
