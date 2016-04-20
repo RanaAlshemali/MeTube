@@ -245,7 +245,7 @@ if (! $result) {
 			}
 					if($username == $currentuser){?>
 			
-			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id); return false;"/></div>
+			<img id="<?php echo  $mediaid;?>" src="uploads/delete.png" height="20" width="20" onClick="javascript:delMedia(this.id)"/></div>
 			<?php }
 			// 2?>
 	</div>
@@ -318,7 +318,7 @@ if (! $result) {
 		    location.reload();
 	}
   function delMedia(id) {
-
+alert("called");
 		var username = "<?php echo $_SESSION['username'] ;?>";
 		    $.ajax({
 		        url: 'delMedia.php',
