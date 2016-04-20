@@ -6,7 +6,7 @@ session_start();
 include_once "function.php";
 $username=$_SESSION['username'];
 
-$id = $_POST['id'];
+$id = $_GET['id'];
  
 	$insert = "insert into favList(favid, mediaid,username)".
 			"values(NULL,'". $id . "','" .$username."')";
