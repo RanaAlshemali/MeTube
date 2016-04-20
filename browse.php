@@ -289,7 +289,7 @@ if (! $result) {
  </div>
  <script  type="text/javascript">
  $( document ).ready(function() {
-	   function addFav(id) {
+	 addFav= function(id) {
 
 		var username = "<?php echo $_SESSION['username'] ;?>";
 
